@@ -1,0 +1,592 @@
+Delivered-To: alokns1@gmail.com
+Received: by 2002:a05:6a21:594:b0:1ee:a636:2ea with SMTP id lw20csp120995pzb;
+        Tue, 25 Feb 2025 01:47:40 -0800 (PST)
+X-Google-Smtp-Source: AGHT+IH9Kep8zg9aFVwnc9KRTIp5egf+PB6GvYHZ0xShSM5PWTMY7W4jwXpNEvkFeeExTFiI3Y/N
+X-Received: by 2002:a05:6902:240e:b0:e5d:defb:3774 with SMTP id 3f1490d57ef6-e5e8b067942mr11253663276.45.1740476860065;
+        Tue, 25 Feb 2025 01:47:40 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1740476860; cv=none;
+        d=google.com; s=arc-20240605;
+        b=dEQw5cqGCZuByzg+Uhxwjqe23jNO+6fLUKOBKU0eebYOvmMf4l7PCS+msMcYhDqo/G
+         Hx9zUbOmtLfof4ru0t748aFNuBvU2tFEavnhmdmpx7ad1g+iBQpKU6R2L/PUatm/nqtb
+         vcHY4z+XQ7ZAcYM4nhorTxeME/1rodyoi75k+XGUNwkJmLsqzUQsFBWTRfIQGnJnF+MK
+         Gzs3eS3fWGbsRXVbHWTP9r9/9ebtdKVaRbkh4bJl3vdRq/GMih4iLWp4gr9RrMGrj6oD
+         1hkecarnFQYYmJRYGK1hHLR7XJPLEunwpNwZiQbiV98oNEO4aC3mmw8Eo4QF52AZ5Lo1
+         wTZw==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=subject:reply-to:mime-version:date:to:message-id:from
+         :dkim-signature;
+        bh=c2x1HKPf9BiG1wXcp7AFahaa2RzFGfjjop9f2QZQqI0=;
+        fh=Ji/RwdX+O/fe9XPULx9UANPReTbQNHrzpiODIkoy8fI=;
+        b=JmCstrm8W3ljHvG+RXJX8toa9DGJtJKjb2v9CwWTcmsKWwBg7CcNuwxxOQMVgd7vxW
+         1Gy5yB/reMqveRg57b3RQ/SGBNDRvhrwWK4IJAT6mbo6v/B8SAxy+2uXmMLWakYipV98
+         3aFRSEXbGcbGyG8N3MjkwXeVH4+COdo1gWzuctIDfWwpDEEuyODkN7M0VvchE4vMXWfg
+         Sls5hyk6sUGSX8RajyMRTfoZZSc1usBFqueEhti2G+WTnTllktFBjKhbWhVK8YUgbJbv
+         i2VdJBRXzg1XIkQAU7ZcRu1fiLZGIylXkZ30d1GMqncnce6/NwrdoX5+Vdch43HcwSxM
+         PALw==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@info.quidco.com header.s=scph0123 header.b=RPbAJlVt;
+       spf=pass (google.com: domain of msprvs1=20151ncbyiyd_=bounces-1898-676@info.quidco.com designates 137.22.229.106 as permitted sender) smtp.mailfrom="msprvs1=20151NcBYiyd_=bounces-1898-676@info.quidco.com";
+       dmarc=pass (p=QUARANTINE sp=NONE dis=NONE) header.from=quidco.com
+Return-Path: <msprvs1=20151NcBYiyd_=bounces-1898-676@info.quidco.com>
+Received: from wvkmv40b.info.quidco.com (wvkmv40b.info.quidco.com. [137.22.229.106])
+        by mx.google.com with ESMTPS id 3f1490d57ef6-e607b3d42dfsi795131276.8.2025.02.25.01.47.39
+        for <alokns1@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Tue, 25 Feb 2025 01:47:40 -0800 (PST)
+Received-SPF: pass (google.com: domain of msprvs1=20151ncbyiyd_=bounces-1898-676@info.quidco.com designates 137.22.229.106 as permitted sender) client-ip=137.22.229.106;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@info.quidco.com header.s=scph0123 header.b=RPbAJlVt;
+       spf=pass (google.com: domain of msprvs1=20151ncbyiyd_=bounces-1898-676@info.quidco.com designates 137.22.229.106 as permitted sender) smtp.mailfrom="msprvs1=20151NcBYiyd_=bounces-1898-676@info.quidco.com";
+       dmarc=pass (p=QUARANTINE sp=NONE dis=NONE) header.from=quidco.com
+Return-Path: <msprvs1=20151NcBYiyd_=bounces-1898-676@info.quidco.com>
+X-MSFBL: NQS4aPGqb7K6ylLXEbCycReJoiNEgsPvO/wQThmL4Z0=|eyJyIjoiYWxva25zMUB
+	nbWFpbC5jb20iLCJ0ZW5hbnRfaWQiOiJzcGNldSIsIm1lc3NhZ2VfaWQiOiI2N2J
+	kYmI5MWJkNjczOGMxNWY5YyIsInN1YmFjY291bnRfaWQiOiI2NzYiLCJjdXN0b21
+	lcl9pZCI6IjE4OTgifQ==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=info.quidco.com;
+	s=scph0123; t=1740476859; i=@info.quidco.com;
+	bh=c2x1HKPf9BiG1wXcp7AFahaa2RzFGfjjop9f2QZQqI0=;
+	h=From:Message-ID:To:Date:Content-Type:Subject:From:To:Cc:Subject;
+	b=RPbAJlVtG7YE8SmXCf7srBhOD4s8hXQbvDvT8zrjJrmEJBvuyINmieS8qrif5MZmH
+	 sNYuIWHZnB00MXgJhL8zbxSEVlhW0Dcd09qfv9oj3nNBzYdfFPrlT41IcGgRlaOJ3x
+	 55mAAvfac7rJ7Bl4P5rHCSK+Z9vRjeM+TjiBurn8=
+Received: from [10.95.193.58] ([10.95.193.58])
+	by i-045c07984841a8083.mta3vrest.sd.prd.sparkpost (ecelerity 4.8.0.74368 r(msys-ecelerity:tags/4.8.0.17)) with REST
+	id C9/FD-24195-BB19DB76; Tue, 25 Feb 2025 09:47:39 +0000
+From: "Quidco" <quidco@info.quidco.com>
+Message-ID: <C9.FD.24195.BB19DB76@i-045c07984841a8083.mta3vrest.sd.prd.sparkpost>
+To: alokns1@gmail.com
+Date: Tue, 25 Feb 2025 09:47:39 +0000
+Content-Type: multipart/alternative; boundary="_----3N0OJJw42vPX4JS7YxHQbQ===_16/FD-24195-BB19DB76"
+MIME-Version: 1.0
+Reply-To: no-reply@quidco.com
+Subject: New Quidco account holder agreement
+
+--_----3N0OJJw42vPX4JS7YxHQbQ===_16/FD-24195-BB19DB76
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; charset="UTF-8"
+
+Please read these terms of service=0A=0A=0A=0AQuidco (=0Ahttps://clicks.qui=
+dco.com/f/a/GeWrO-klseHyGckFhBrUqQ~~/AAAHahA~/0TLuEQ2ClqEJ18h7Yb6xPEStsVfTa=
+EsBA7VIf5WLsCYCLF__FqBFRrXEvMvZs3OBsz5-WL-4MWtOPQlHV51Cm7m_uJi-BeJy76pN8txm=
+W8B5Y9oFEPoTnNQLch8Rtb7S3nKh7RVn-LP5sL3QlCE-aP5hkl5623SrMIt05BxIqPeNut-CegZ=
+br6fbvBMW37XsLET4RkKoKT1I4pi6nVwDq65YlYjt9ChWJVAFTpIw0ZY6slbmrkdpVNNGxzZwji=
+0eURROfNirOrVL2Vjegucr4iJXnw_aTs-UnvWk7sQok-tO7z16RJ0qKiH83NonO3qa )=0A=0AA=
+ccount Holder=0AAgreement=0A=0AWe=E2=80=99re reaching out to inform you tha=
+t we=E2=80=99ve updated our Account=0AHolder Agreement, effective February =
+24, 2025. We've updated=0Athese terms to bring them into line with current =
+law and best=0Apractice.=0A=0AWe've also endeavoured to make these easier f=
+or you to=0Aunderstand.=0A=0AWe encourage you to review the updated Account=
+ Holder Agreement=0Ahere ( https://clicks.quidco.com/f/a/x0-VrfMQdqh8ZRCa5c=
+MmbA~~/AAAHahA~/CkveqV3Jel2cxzWIYSJ-BEua5O9F_RwS07xKFOi_0fEAAf6mD102mjyAWeB=
+b54FZ-fpE_KBxdMe8N4HiayiKeaFYQJcY2lJYOODd92H5uzwKKqEMRJhhOeOzP8AS02DwLTLOch=
+jzvNQdZrMhlGs5gEV5MZP9-CZmasSxI3AFZkqbSI8JUtY_qf9qzo67755G99A1XQajfxU37p05V=
+zgsRO37GRxJl2nOa9RtXRjQAONIbMdfdXv5u593VzeJPbmRNvYsmJU3xVMB0j6_mTn-UkoEkCl9=
+eVQNEtczwriz2algJGMEw1f5dcl7hcLWI_CrlyPjCYmab2bX44iHBv97CfZcFKKoXfkyyhBNycH=
+tZcI~=0A).=0A ---=0A=0AQuidco=0A(https://clicks.quidco.com/f/a/G_voZMHHy2UX=
+kMFB-o4IUA~~/AAAHahA~/0TLuEQ2ClqEJ18h7Yb6xPEStsVfTaEsBA7VIf5WLsCYCLF__FqBFR=
+rXEvMvZs3OBsz5-WL-4MWtOPQlHV51Cm7m_uJi-BeJy76pN8txmW8B5Y9oFEPoTnNQLch8Rtb7S=
+3nKh7RVn-LP5sL3QlCE-aP5hkl5623SrMIt05BxIqPeNut-CegZbr6fbvBMW37XsLET4RkKoKT1=
+I4pi6nVwDq65YlYjt9ChWJVAFTpIw0ZaW-K17mQjiEomudJz_BxgoGnZhvv5vWIFHsHhYXbkL-9=
+d2ktNPRqSwqYSKe_LMmynB59tP1TgCeFJ3R13335j3)=0A=0ADownload the Quidco=0Aapp=
+=0AApple Store (https://clicks.quidco.com/f/a/4aGMeBAN0objq8OhHAqtkQ~~/AAAH=
+ahA~/8ibiGaoJOvZkez2vnpOBqyQC9Qw8kxmSH9x9WVv2uj2zMG0KiqQKNRetZAIOU2sWQXiSKz=
+5HtDHW274ztdxY9msjX4x4k8LIg_JSML1PB45ZT7o0bv5C7pqqZ6WnybqVwTK4yGcJyUOPG1eCA=
+Q5AJuKLQDJ_djzBq0-ds5Je6wA~)=0AGoogle Play (https://clicks.quidco.com/f/a/K=
+Oy8MrKaKK_Tk6qI0Dn97g~~/AAAHahA~/L5xdP8z10K_g3qQhCOM8FQHvt3wegNBbhhy5fenAXl=
+JyG1XaP6b4StUYWfyFduayyJrco7REjjbLSjlWktpELcLai8zTHpmd2I6FS1PEdqwKUfkKd7ADw=
+CHwUZMz4PFkGVMPxovH_tajFUof0-sOwA~~)=0A=0Aalokns1@gmail.com=0A=0A Contact Q=
+uidco at MONY Group=0AHouse, St. David's Park, Ewloe, Chester, CH5 3UZ. Qui=
+dco Limited=0Ais an appointed representative of MONY Group Financial Limite=
+d,=0Awhich is authorised and regulated by the Financial Conduct=0AAuthority=
+ (FCA FRN 303190). Please note only the following=0Aproducts are regulated =
+by the FCA; Insurance, credit cards,=0Aloans, mortgages. MONY Group Financi=
+al Limited, registered in=0AEngland No. 3157344. Registered Office: MONY Gr=
+oup House, St.=0ADavid's Park, Ewloe, CH5 3UZ. =0A
+--_----3N0OJJw42vPX4JS7YxHQbQ===_16/FD-24195-BB19DB76
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/html; charset="UTF-8"
+
+<!DOCTYPE html>=0A<html xml:lang=3D"en" lang=3D"en" xmlns=3D"http://www.w3.=
+org/1999/xhtml" xmlns:v=3D"urn:schemas-microsoft-com:vml" xmlns:o=3D"urn:sc=
+hemas-microsoft-com:office:office" style=3D"margin: 0; padding: 0;">=0A  <h=
+ead>=0A<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3DUT=
+F-8">=0A<!--Yahoo Android will strip this--><style>@font-face {=0Afont-fami=
+ly: 'Quicksand'; font-style: normal; font-weight: 700; font-display: swap; =
+src: url('https://fonts.gstatic.com/s/quicksand/v31/6xK-dSZaM9iE8KbpRA_LJ3z=
+8mH9BOJvgkBgv18E.ttf') format('truetype');=0A}=0A@font-face {=0Afont-family=
+: 'saans'; font-style: normal; font-weight: normal; src: url(https://cdn.br=
+aze.eu/appboy/communication/assets/font_assets/files/66f578dcd81c36182303d5=
+a0/original.woff2=3F1727363292) format('woff2');=0A}=0A@font-face {=0Afont-=
+family: 'Museo Slab'; src: url(https://moneysavingexpert.scdn3.secure.raxcd=
+n.com/images/fonts/19062012/museo_slab_500-webfont.woff) format("woff"); fo=
+nt-weight: 500; font-style: normal;=0A}=0A@font-face {=0Afont-family: 'Muse=
+o Slab 700'; src: url(https://cdn.braze.eu/appboy/communication/assets/font=
+_assets/files/6763c4154f07a20063debe10/original.woff2=3F1734591509) format(=
+"woff"); font-weight: 700; font-style: normal;=0A}=0Abody {=0A-webkit-text-=
+size-adjust: none; -ms-text-size-adjust: none; -webkit-font-smoothing: anti=
+aliased; margin: 0 auto !important; padding: 0 !important; width: auto !imp=
+ortant;=0A}=0Aimg {=0Adisplay: block; line-height: 100%; outline: none; tex=
+t-decoration: none;=0A}=0A@media only screen and (max-width: 490px) {=0A  h=
+tml {=0A    -webkit-text-size-adjust: none !important; -moz-text-size-adjus=
+t: none !important; text-size-adjust: none !important;=0A  }=0A  .bgwrapper=
+ {=0A    width: 100% !important; background-size: 100% 100% !important;=0A =
+ }=0A  .ContentCards {=0A    width: 85%; height: auto; background-color: #F=
+FFFFF; box-shadow: 0px 0px 10px #BFBDBD; border-radius: 8px; align-content:=
+ center; border: 1px solid #E5E4E5; vertical-align: middle;=0A  }=0A  .Cont=
+entCardsIcon {=0A    width: 96px; height: auto; background-color: #FFFFFF; =
+box-shadow: 0px 0px 10px #BFBDBD; border-radius: 8px; align-content: center=
+; vertical-align: middle;=0A  }=0A  .annualCol3copy {=0A    width: 100%; di=
+splay: inline-block; text-align: center; vertical-align: middle; background=
+-color: #F6F3F9; padding: 10px 0px; height: 65px;=0A  }=0A  .border0 {=0A  =
+  border: 0px !important;=0A  }=0A  .borders {=0A    border-left: 1px solid=
+ #DECFE7 !important;=0A  }=0A  .borderTop {=0A    border-top: 1px solid #DE=
+CFE7 !important;=0A  }=0A  .borderRight {=0A    border-right: 1px solid #DE=
+CFE7 !important;=0A  }=0A  .borderRight2 {=0A    border-right: 2px solid #D=
+ECFE7 !important;=0A  }=0A  .borderLeft {=0A    border-left: 1px solid #DEC=
+FE7 !important;=0A  }=0A  .borderLeft2 {=0A    border-left: 2px solid #DECF=
+E7 !important;=0A  }=0A  .borderBottom {=0A    border-bottom: 1px solid #DE=
+CFE7 !important;=0A  }=0A  .templateColumns {=0A    width: 100% !important;=
+=0A  }=0A  .templateColumnContainer {=0A    display: block !important; widt=
+h: 100% !important;=0A  }=0A  .columnImage {=0A    height: auto !important;=
+ max-width: 480px !important; width: 100% !important;=0A  }=0A  .bgTranspar=
+ent {=0A    background: transparent !important;=0A  }=0A  .paddingTop-16 {=
+=0A    padding-top: 16px !important;=0A  }=0A  .paddingHorz-32 {=0A    padd=
+ing: 0px 32px !important;=0A  }=0A  .paddingHorz-24 {=0A    padding: 0px 24=
+px !important;=0A  }=0A  .paddingHorz-16 {=0A    padding: 0px 16px !importa=
+nt;=0A  }=0A  .paddingHorz-8 {=0A    padding: 0px 8px !important;=0A  }=0A =
+ .padding-0 {=0A    padding: 0 !important;=0A  }=0A  .centerContent {=0A   =
+ text-align: center !important; float: none !important; margin: 0 auto;=0A =
+ }=0A  .leftAlign {=0A    text-align: left !important; float: left;=0A  }=
+=0A  .rightAlign {=0A    text-align: right !important; float: right;=0A  }=
+=0A  .fs14 {=0A    font-size: 14px !important;=0A  }=0A  .table100 {=0A    =
+width: 100% !important; height: auto !important;=0A  }=0A  .table95 {=0A   =
+ width: 95% !important;=0A  }=0A  .table90 {=0A    width: 90% !important;=
+=0A  }=0A  .table50 {=0A    width: 50% !important;=0A  }=0A  .desktop {=0A =
+   display: none !important; width: 0 !important; height: 0 !important; max=
+-height: 0px !important; visibility: hidden !important;=0A  }=0A  .mobile {=
+=0A    display: block !important; width: 100% !important; height: auto !imp=
+ortant; max-height: none !important; visibility: visible !important;=0A  }=
+=0A  .mobileImage {=0A    display: block !important; height: auto !importan=
+t; max-height: none !important; visibility: visible !important; overflow: v=
+isible !important;=0A  }=0A  .headerGroup {=0A    display: table-header-gro=
+up !important;=0A  }=0A  .footerGroup {=0A    display: table-footer-group !=
+important;=0A  }=0A}=0A</style>=0A</head>=0A  <head>=0A    <!--Help charact=
+er display properly.-->=0A    <meta http-equiv=3D"Content-Type" content=3D"=
+text/html; charset=3Dutf-8">=0A    <!--Set the initial scale of the email.-=
+->=0A    <meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-s=
+cale=3D1">=0A    <!--Force Outlook clients to render with a better MS engin=
+e.-->=0A    <meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3DEdge">=0A =
+   <!--Help prevent blue links and autolinking-->=0A    <meta name=3D"forma=
+t-detection" content=3D"telephone=3Dno, date=3Dno, address=3Dno, email=3Dno=
+">=0A    <!--prevent Apple from reformatting and zooming messages.-->=0A   =
+ <meta name=3D"x-apple-disable-message-reformatting">=0A    =0A    <!-- Glo=
+bal stylesheet -->=0A<!-- Outlook resets -->=0A<!--[if mso]>=0A  <style>=0A=
+     body, table, th, td, h1, h2, h3, h4, h5, h6, strong, p, a, span {=0A  =
+   font-family: Helvetica, Arial, sans-serif !important;=0A     }=0A  </sty=
+le>=0A  <![endif]-->=0A=0A<!--[if mso]><xml>=0A  <o:OfficeDocumentSettings>=
+=0A  <o:AllowPNG/>=0A  <o:PixelsPerInch>96</o:PixelsPerInch>=0A  </o:Office=
+DocumentSettings>=0A  </xml><![endif]-->=0A<!--[if gte mso 9]>=0A  <style>=
+=0A    sup { font-size: 100% !important; }=0A  </style> =0A<![endif]-->=0A=
+=0A=0A<!--[if (gte mso 9)|(IE)]>=0A  <style type=3D"text/css">=0A  table {=
+=0A  border-collapse: collapse;=0A  border-spacing: 0;=0A  mso-table-lspace=
+: 0pt !important;=0A  mso-table-rspace: 0pt !important; }=0A  </style>=0A<!=
+[endif]-->=0A=0A<!-- Correct superscripts in Outlook-->=0A<!--[if (gte mso =
+9)|(IE)]>=0A  <style>=0A  sup{font-size:100% !important;}=0A  </style>=0A<!=
+[endif]-->=0A<!--[if !mso]><!-->=0A=0A<!--<![endif]-->=0A=0A=0A  </head>=0A=
+  <body id=3D"body" class=3D"body body-fix" style=3D"-webkit-text-size-adju=
+st: none; -ms-text-size-adjust: none; -webkit-font-smoothing: antialiased; =
+width: auto !important; margin: 0 auto; padding: 0;">=0D=0A<div style=3D"co=
+lor:transparent;visibility:hidden;opacity:0;font-size:0px;border:0;max-heig=
+ht:1px;width:1px;margin:0px;padding:0px;border-width:0px!important;display:=
+none!important;line-height:0px!important;"><img border=3D"0" width=3D"1" he=
+ight=3D"1" src=3D"https://clicks.quidco.com/q/Rei6JXkxKvov68tLSrDMig~~/AAAH=
+ahA~/5okJRW2gnUgluE5Q4_avkedVfo36q3NQSn_dljFEltLjvoxkgK5veNraNEMsR2RUsgEG6U=
+wG1hpPzRDVn_OTlw~~" alt=3D""/></div>=0D=0A=0A<div style=3D"display:none !im=
+portant;visibility:hidden;mso-hide:all;font-size:1px;color:#ffffff;line-hei=
+ght:1px;max-height:0px;max-width:0px;opacity:0;overflow:hidden;">Please rea=
+d these terms of service carefully before using Quidco</div>=0A    <div rol=
+e=3D"article" aria-roledescription=3D"email" aria-label=3D"" xml:lang=3D"en=
+" lang=3D"en">=0A      <!-- HIDDEN PREHEADER -->=0A      <div class=3D"pre-=
+header" style=3D"display: none;">&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=
+=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=
+=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=
+=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=
+=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=
+=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=
+=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=
+=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=
+=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=
+=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=
+=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=
+=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=
+=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=
+=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=
+=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=
+=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=
+=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=
+=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=
+=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=
+=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=
+=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=
+=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=
+=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=
+=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=
+=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=
+=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=
+=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=
+=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=
+=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=
+=8C&nbsp;</div>=0A      <!-- START OF EMAIL -->=0A      <table align=3D"cen=
+ter" style=3D"border-collapse: collapse; font-family: 'Helvetica Neue', Ari=
+al, sans-serif; mso-table-lspace: 0pt; mso-table-rspace: 0pt;" bgcolor=3D"#=
+F6F3F9">=0A        <tr>=0A          <td style=3D"border-collapse: collapse;=
+ border-width: 0;">=0A            <table align=3D"center" class=3D"table100=
+" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" role=3D"presentation" st=
+yle=3D"width: 600px; box-shadow: 0 16px 24px 2px rgba(44,49,52,.16); border=
+-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt; border: =
+1px solid #E5E6E6;" bgcolor=3D"#F6F3F9">=0A              <tr>=0A           =
+     <td class=3D"tPad-0" align=3D"center" valign=3D"top" style=3D"border-c=
+ollapse: collapse; border-width: 0;">=0A                =0A=0A=0A =0A=0A=0A=
+=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=
+=0A =0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=
+=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=
+=0A=0A=0A=0A=0A=0A=0A =0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A<table width=3D"6=
+00" align=3D"center" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" role=
+=3D"presentation" class=3D"table100" style=3D"border-collapse: collapse; ms=
+o-table-lspace: 0pt; mso-table-rspace: 0pt;" bgcolor=3D"#FFFFFF">=0A  <tr>=
+=0A    <td style=3D"border-collapse: collapse; border-width: 0;">=0A      <=
+table width=3D"568" align=3D"center" cellpadding=3D"0" cellspacing=3D"0" bo=
+rder=3D"0" role=3D"presentation" class=3D"table90" style=3D"border-collapse=
+: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">=0A        <tr>=
+=0A          <td height=3D"24" style=3D"border-collapse: collapse; border-w=
+idth: 0;">&nbsp;</td>=0A        </tr>=0A        =0A        =0A        =0A=
+=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A  =0A        =
+=0A            =0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A        <tr>=
+=0A          <td align=3D"center" style=3D"border-collapse: collapse; borde=
+r-width: 0;"><a href=3D"https://clicks.quidco.com/f/a/GeWrO-klseHyGckFhBrUq=
+Q~~/AAAHahA~/0TLuEQ2ClqEJ18h7Yb6xPEStsVfTaEsBA7VIf5WLsCYCLF__FqBFRrXEvMvZs3=
+OBsz5-WL-4MWtOPQlHV51Cm7m_uJi-BeJy76pN8txmW8B5Y9oFEPoTnNQLch8Rtb7S3nKh7RVn-=
+LP5sL3QlCE-aP5hkl5623SrMIt05BxIqPeNut-CegZbr6fbvBMW37XsLET4RkKoKT1I4pi6nVwD=
+q65YlYjt9ChWJVAFTpIw0ZY6slbmrkdpVNNGxzZwji0eURROfNirOrVL2Vjegucr4iJXnw_aTs-=
+UnvWk7sQok-tO7z16RJ0qKiH83NonO3qa"  data-msys-sublink=3D"open-in-app"  targ=
+et=3D"_blank"><img src=3D"https://cdn.braze.eu/appboy/communication/assets/=
+image_assets/images/649ab1abb4a0ec65667c0f31/original.png=3F1687859627" wid=
+th=3D"124" alt=3D"Quidco" border=3D"0" style=3D"display: block; line-height=
+: 100%; outline: none; text-decoration: none;"></a></td>=0A        </tr>=0A=
+        <tr>=0A          <td height=3D"24" style=3D"border-collapse: collap=
+se; border-width: 0;">&nbsp;</td>=0A        </tr>=0A      </table>=0A    </=
+td>=0A  </tr>=0A</table>=0A=0A=0A  =0A  =0A  =0A  =0A  =0A  =0A  =0A  =0A  =
+=0A  =0A  =0A  =0A  =0A  =0A  =0A  =0A  =0A  =0A  =0A  =0A  =0A  =0A  =0A  =
+=0A  =0A  =0A  =0A  =0A  =0A  =0A  =0A  =0A  =0A  =0A  =0A  =0A  =0A  =0A  =
+=0A  =0A  =0A  =0A  =0A  =0A  =0A  =0A  =0A  =0A  =0A  =0A  =0A  =0A  =0A  =
+=0A  =0A  =0A  =0A  =0A  =0A  =0A  =0A  =0A  =0A  =0A  =0A  =0A  =0A  =0A  =
+=0A  =0A  =0A  =0A  =0A  =0A  =0A  =0A  =0A  =0A  =0A  =0A  =0A  =0A  =0A  =
+=0A  =0A  =0A  =0A  =0A  =0A  =0A  =0A  =0A  =0A  =0A  =0A  =0A  =0A  =0A  =
+=0A  =0A  =0A  =0A=0A=0A=0A  =0A  =0A  =0A  =0A  =0A  =0A  =0A  =0A  =0A  =
+=0A  =0A  =0A  =0A  =0A  =0A  =0A  =0A  =0A  =0A  =0A=0A=0A  =0A  =0A  =0A =
+ =0A  =0A  =0A  =0A  =0A  =0A  =0A  =0A  =0A=0A=0A  =0A=0A=0A=0A  =0A  =0A =
+ =0A  =0A  =0A  =0A  =0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=
+=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=
+=0A=0A=0A=0A=0A=0A=0A=0A =0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A<table width=
+=3D"600" align=3D"center" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" =
+role=3D"presentation" class=3D"table100" style=3D"border-radius: 0px; borde=
+r-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt;" bgcolo=
+r=3D"#F9F9F9">=0A    <tr>=0A        <td align=3D"center" valign=3D"middle" =
+style=3D"border-collapse: collapse; border-width: 0;">=0A            <table=
+ width=3D"552" align=3D"center" cellpadding=3D"0" cellspacing=3D"0" border=
+=3D"0" role=3D"presentation" class=3D"table90" style=3D"border-collapse: co=
+llapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">=0A                =
+=0A                    <tr>=0A                        <td align=3D"left" va=
+lign=3D"middle" style=3D"border-collapse: collapse; border-width: 0;">=0A  =
+                          <table width=3D"552" align=3D"center" cellpadding=
+=3D"0" cellspacing=3D"0" border=3D"0" role=3D"presentation" class=3D"table1=
+00" style=3D"border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rs=
+pace: 0pt;">=0A                                <tr>=0A                     =
+               <td height=3D"16" style=3D"line-height: 0px; font-size: 0px;=
+ border-collapse: collapse; border-width: 0;">&nbsp;</td>=0A               =
+                 </tr>=0A                                <tr>=0A           =
+                         <td align=3D"left" valign=3D"middle" style=3D"bord=
+er-collapse: collapse; border-width: 0;">=0A                               =
+         <table width=3D"100%" align=3D"left" cellpadding=3D"0" cellspacing=
+=3D"0" border=3D"0" role=3D"presentation" style=3D"border-collapse: collaps=
+e; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">=0A                      =
+                      =0A                                            =0A   =
+                                              <tr>=0A                      =
+                              <td height=3D"8" style=3D"line-height: 0px; f=
+ont-size: 0px; border-collapse: collapse; border-width: 0;">&nbsp;</td>=0A =
+                                               </tr>=0A                    =
+                        =0A                                            =0A =
+                                               <tr>=0A                     =
+                               <td align=3D"left" style=3D"font-weight: lig=
+ht; font-size: 24px; color: #000000; line-height: 28px; font-family: 'Helve=
+tica Neue','Arial', Helvetica, sans-serif; border-collapse: collapse; borde=
+r-width: 0;" class=3D"leftAlign">Account Holder Agreement</td>=0A          =
+                                      </tr>=0A                             =
+               =0A                                            =0A          =
+                                      <tr>=0A                              =
+                      <td height=3D"4" style=3D"line-height: 0px; font-size=
+: 0px; border-collapse: collapse; border-width: 0;">&nbsp;</td>=0A         =
+                                       </tr>=0A                            =
+                    <tr>=0A                                                =
+    <td align=3D"left" style=3D"font-weight: normal; font-size: 16px; color=
+: #000000; line-height: 22px; font-family: 'Helvetica Neue','Arial', Helvet=
+ica, sans-serif; border-collapse: collapse; border-width: 0;" class=3D"left=
+Align"><br>We=E2=80=99re reaching out to inform you that we=E2=80=99ve upda=
+ted our Account Holder Agreement, effective February 24, 2025. We've update=
+d these terms to bring them into line with current law and best practice.<b=
+r><br>We've also endeavoured to make these easier for you to understand. <b=
+r><br>We encourage you to review the updated Account Holder Agreement <a hr=
+ef=3D"https://clicks.quidco.com/f/a/x0-VrfMQdqh8ZRCa5cMmbA~~/AAAHahA~/Ckveq=
+V3Jel2cxzWIYSJ-BEua5O9F_RwS07xKFOi_0fEAAf6mD102mjyAWeBb54FZ-fpE_KBxdMe8N4Hi=
+ayiKeaFYQJcY2lJYOODd92H5uzwKKqEMRJhhOeOzP8AS02DwLTLOchjzvNQdZrMhlGs5gEV5MZP=
+9-CZmasSxI3AFZkqbSI8JUtY_qf9qzo67755G99A1XQajfxU37p05VzgsRO37GRxJl2nOa9RtXR=
+jQAONIbMdfdXv5u593VzeJPbmRNvYsmJU3xVMB0j6_mTn-UkoEkCl9eVQNEtczwriz2algJGMEw=
+1f5dcl7hcLWI_CrlyPjCYmab2bX44iHBv97CfZcFKKoXfkyyhBNycHtZcI~" target=3D"_bla=
+nk" style=3D"color: #1d7bce; text-decoration: underline;">here</a>.</td>=0A=
+                                                </tr>=0A                   =
+                         =0A                                            <tr=
+>=0A                                                <td height=3D"24" style=
+=3D"line-height: 0px; font-size: 0px; border-collapse: collapse; border-wid=
+th: 0;">&nbsp;</td>=0A                                            </tr>=0A =
+                                       </table>=0A                         =
+           </td>=0A                                    =0A                 =
+               </tr>=0A                            </table>=0A             =
+           </td>=0A                    </tr>=0A                =0A         =
+       =0A=0A                =0A                =0A            </table>=0A =
+       </td>=0A    </tr>=0A    =0A        <tr>=0A            <td height=3D"=
+0" style=3D"line-height: 0px; font-size: 0px; border-collapse: collapse; bo=
+rder-width: 0;">&nbsp;</td>=0A        </tr>=0A    =0A</table>=0A=0A=0A  =0A=
+  =0A  =0A  =0A  =0A  =0A  =0A  =0A  =0A  =0A  =0A  =0A  =0A  =0A  =0A  =0A=
+  =0A  =0A  =0A  =0A  =0A  =0A  =0A  =0A  =0A  =0A  =0A  =0A  =0A  =0A  =0A=
+  =0A  =0A  =0A  =0A  =0A  =0A  =0A  =0A  =0A  =0A  =0A  =0A  =0A  =0A  =0A=
+  =0A  =0A  =0A  =0A  =0A  =0A  =0A  =0A  =0A  =0A  =0A  =0A  =0A  =0A  =0A=
+  =0A  =0A  =0A  =0A  =0A  =0A  =0A  =0A  =0A  =0A  =0A  =0A  =0A  =0A  =0A=
+  =0A  =0A  =0A  =0A  =0A  =0A  =0A  =0A  =0A  =0A  =0A  =0A  =0A  =0A  =0A=
+  =0A  =0A  =0A  =0A  =0A  =0A  =0A  =0A  =0A  =0A  =0A=0A=0A=0A  =0A  =0A =
+ =0A  =0A  =0A  =0A  =0A  =0A  =0A  =0A  =0A  =0A  =0A  =0A  =0A  =0A  =0A =
+ =0A  =0A  =0A=0A=0A  =0A  =0A  =0A  =0A  =0A  =0A  =0A  =0A  =0A  =0A  =0A=
+  =0A=0A=0A  =0A=0A=0A=0A  =0A  =0A  =0A  =0A  =0A  =0A  =0A=0A=0A=0A=0A   =
+   =0A      =0A=0A=0A=0A      =0A      =0A      =0A      =0A      =0A      =
+=0A      <tr>=0A        <td class=3D"table100" width=3D"600" align=3D"cente=
+r" bgcolor=3D"#FFFFFF" style=3D"border-collapse: collapse; border-width: 0;=
+">=0A          <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" widt=
+h=3D"100%" role=3D"presentation" style=3D"border-collapse: collapse; mso-ta=
+ble-lspace: 0pt; mso-table-rspace: 0pt;">=0A            =0A            =0A =
+           =0A            =0A            <tr>=0A              <td align=3D"=
+left" style=3D"font-weight: normal; font-size: 11px; color: #7b7979; line-h=
+eight: 16px; font-family: 'Helvetica Neue','Arial', Helvetica, sans-serif; =
+padding-top: 10px; padding-left: 16px; padding-right: 16px; border-collapse=
+: collapse; border-width: 0;">=0A                <p style=3D"margin: 0; pad=
+ding: 0;">=0A                  =0A                  =0A                  =
+=0A                    =0A                  =0A                  =0A       =
+           =0A                </p>                  =0A              </td>=
+=0A            </tr>=0A            <tr>=0A              <td align=3D"left" =
+style=3D"font-weight: normal; font-size: 11px; color: #7b7979; line-height:=
+ 16px; font-family: 'Helvetica Neue','Arial', Helvetica, sans-serif; paddin=
+g-top: 10px; padding-left: 16px; padding-right: 16px; border-collapse: coll=
+apse; border-width: 0;">=0A                <p style=3D"margin: 0; padding: =
+0;">=0AContact Quidco at MONY Group House, St. David's Park, Ewloe, Chester=
+, CH5 3UZ.<br><br>=0AQuidco Limited is an appointed representative of MONY =
+Group Financial Limited, which is authorised and regulated by the Financial=
+ Conduct Authority (FCA FRN 303190). Please note only the following product=
+s are regulated by the FCA; Insurance, credit cards, loans, mortgages.<br><=
+br>=0AMONY Group Financial Limited, registered in England No. 3157344. Regi=
+stered Office: MONY Group House, St. David's Park, Ewloe, CH5 3UZ.=0A</p>=
+=0A              </td>=0A            </tr>=0A          </table>=0A        <=
+/td>=0A      </tr>=0A      <tr>=0A        <td class=3D"table100" align=3D"c=
+enter" bgcolor=3D"#FFFFFF" style=3D"border-collapse: collapse; border-width=
+: 0;">=0A          <table class=3D"table100" width=3D"600" cellspacing=3D"0=
+" cellpadding=3D"0" border=3D"0" bgcolor=3D"#FFFFFF" align=3D"center" role=
+=3D"presentation" style=3D"border-collapse: collapse; mso-table-lspace: 0pt=
+; mso-table-rspace: 0pt;">=0A            <tr>=0A              <td bgcolor=
+=3D"#FFFFFF" valign=3D"top" style=3D"font-family: 'Helvetica Neue','Arial',=
+ Helvetica, sans-serif; font-weight: bold; font-size: 12px; color: #1d7bce;=
+ line-height: 16px; line-break: auto; border-collapse: collapse; padding: 1=
+6px 10px 0px; border-width: 0;" align=3D"center" class=3D"desktop"> =0A    =
+            =0A                  =0A                  =0A                  =
+=0A                  =0A                  =0A                  =0A=0A=0A=0A=
+=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=
+=0A=0A=0A=0A=0A=0A                  =0A                  <a href=3D"https:/=
+/clicks.quidco.com/f/a/mUGa8dA_nUTmhy_qykpVNw~~/AAAHahA~/2T_83-kkNgosUo-ggx=
+Bnv7eotEsXxMyDpl-BX2RAUTxSxCfIm7YrwksN20RG-8-M91d4B85ZFvxTuaOWrgjEyqQCr3XCw=
+ZOmIPmDjviQ72PryCIjUxJoNXxM5jEOXG8uW8kBN18sg9x3nFxDxKqxIleDqjIe8lJKn8zTtftt=
+QpMRXb6e_VWlElCPfSTVxGugUncJK6W8oqQ8RalS4YBHVzRpj5Q-hx37s6ygudM_oUxM1-6FNAy=
+zaxocBlHeOvcO9kXloTtt5HxTb4yqIDlVIuKrF_Chvw0l1Wng_3EBasuXMQhECuoNHSngUciUJn=
+NIGuA8Mqf9uEKydNTB_pw8VA~~" style=3D"color: #1d7bce; text-decoration: none;=
+" target=3D"_blank">Privacy&nbsp;policy</a>=0A                =0A          =
+        =0A                  =0A                  =0A                  =0A =
+                 =0A                  =0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=
+=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A      =
+            =0A                  &nbsp;&nbsp;|&nbsp;&nbsp;<a href=3D"https:=
+//clicks.quidco.com/f/a/g_7jutGoVvfN3D8KkFWLQA~~/AAAHahA~/CkveqV3Jel2cxzWIY=
+SJ-BEua5O9F_RwS07xKFOi_0fEAAf6mD102mjyAWeBb54FZ-fpE_KBxdMe8N4HiayiKeeVblLpk=
+dM0QD7ntAXU6mtXq2-OnamjHJ6fXflMHHefhLGHMlggb9WTbEfkwom_x5WKJhFesKHSxNbytDMP=
+w4bIphugHQ-Mck1GdCcbU3MyEWiB1paSRYRlXuAIpwzQ8pV0oa2D2pLRGCmHta4XEDvgUKJ7Gvz=
+OcfirheorcdB4UHhbAUZIK8nsKvAINbLbBZSW6a9U0wwEf6cgGagQZX4aSg4O9vhdS67poeE9Z3=
+slw1iWgeC_fOsy93W--vkHUJ7n7I89nuOFunJtVxp-3ALs~" style=3D"color: #1d7bce; t=
+ext-decoration: none;" target=3D"_blank">Terms&nbsp;&&nbsp;conditions</a>=
+=0A                =0A                  =0A                  =0A           =
+       =0A                  =0A                  =0A                  =0A=
+=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=
+=0A=0A=0A=0A=0A=0A=0A=0A=0A                  =0A                  &nbsp;&nb=
+sp;|&nbsp;&nbsp;<a href=3D"https://clicks.quidco.com/f/a/vohpB7kQxNaIfmIk9p=
+YDYw~~/AAAHahA~/eFig5eRF8jtLzODN_uVoSQ4MwZSWir6QExXfhDKkHwaL2-h4ZQJ3Ge2F0IK=
+UBdW-kQ7GQotoY_UthH7leSwqxxFNC7nh-vaA8n68YbjxxiBVFwKBW72hSFOS0cayN7Fbn72qeO=
+Euxlu_sfxJOm6gfbHwLq3S0kXnlRH-L134Wwj5o-nGcgMwYDyLCruvwlgj1ZOed0dPy20MvMmoA=
+E9VnfFM1rUEYtg4KUbMbkZKtif5yQ3OwVHUvftOxxgk_dQ8jQ41oeTGrfMDzaAA6sb5uCWkWvyF=
+oM0PO5tjq-qRhKn8n_FWS7V9cSRGsUnsxNWD" style=3D"color: #1d7bce; text-decorat=
+ion: none;" target=3D"_blank">Quidco&nbsp;Support</a>=0A                =0A=
+                  =0A                  =0A                  =0A            =
+      =0A                  =0A                  =0A=0A=0A=0A=0A=0A=0A=0A=0A=
+=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=
+=0A                  =0A                    =0A                =0A         =
+     </td>=0A            </tr>    =0A            <!--[if mso]><!-->=0A     =
+       <tr>=0A              <td valign=3D"middle" style=3D"display: none; w=
+idth: 0; height: 0; visibility: hidden; border-collapse: collapse; border-w=
+idth: 0;" class=3D"mobile">=0A                <table width=3D"100%" align=
+=3D"center" cellspacing=3D"0" cellpadding=3D"0" border=3D"0" role=3D"presen=
+tation" style=3D"border-collapse: collapse; mso-table-lspace: 0pt; mso-tabl=
+e-rspace: 0pt;">=0A                  <tr>=0A                    <td style=
+=3D"font-family: 'Helvetica Neue','Arial', Helvetica, sans-serif; font-weig=
+ht: bold; font-size: 12px; color: #1d7bce; line-height: 20px; border-collap=
+se: collapse; padding: 32px 16px 0px; border-width: 0;">=0A                =
+      =0A                        =0A                        =0A            =
+            =0A                        =0A                        =0A      =
+                  =0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=
+=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A                        =0A=
+                          <div style=3D"border-top: 1px solid #F4F3F5; bord=
+er-bottom: 1px solid #F4F3F5; padding: 16px 0px;"><a href=3D"https://clicks=
+.quidco.com/f/a/oTOuJVIR8X-d0Ud0uHTTRw~~/AAAHahA~/2T_83-kkNgosUo-ggxBnv7eo=
+tEsXxMyDpl-BX2RAUTxSxCfIm7YrwksN20RG-8-M91d4B85ZFvxTuaOWrgjEyqQCr3XCwZOmIPm=
+DjviQ72PryCIjUxJoNXxM5jEOXG8uW8kBN18sg9x3nFxDxKqxIleDqjIe8lJKn8zTtfttQpMRXb=
+6e_VWlElCPfSTVxGugUncJK6W8oqQ8RalS4YBHVzRpj5Q-hx37s6ygudM_oUxM1-6FNAyzaxocB=
+lHeOvcO8QFNTYCbTogrqAtVdqR7AlcoOoIeRF3kivtS8pPzCIk1_cpd23ViL-6QeLiunPlnNmov=
+YXXIlAZnnH3cewtu2A~~" style=3D"color: #1d7bce; text-decoration: none;" targ=
+et=3D"_blank">Privacy&nbsp;policy</a></div>=0A                      =0A    =
+                    =0A                        =0A                        =
+=0A                        =0A                        =0A                  =
+      =0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=
+=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A                        =0A            =
+              <div style=3D"border-bottom: 1px solid #F4F3F5; padding: 16px=
+ 0px;"><a href=3D"https://clicks.quidco.com/f/a/mmm9ZaN3ei8kPDTU9cdC6w~~/AA=
+AHahA~/CkveqV3Jel2cxzWIYSJ-BEua5O9F_RwS07xKFOi_0fEAAf6mD102mjyAWeBb54FZ-fpE=
+_KBxdMe8N4HiayiKeeVblLpkdM0QD7ntAXU6mtXq2-OnamjHJ6fXflMHHefhLGHMlggb9WTbEfk=
+wom_x5WKJhFesKHSxNbytDMPw4bIphugHQ-Mck1GdCcbU3MyEWiB1paSRYRlXuAIpwzQ8pV0oa2=
+D2pLRGCmHta4XEDvgUKJ7GvzOcfirheorcdB4UHhbAUZIK8nsKvAINbLbBZb4ymbTpf7T6IumDi=
+ruSpvwbTKfgRIZaLtpACcfO43wgcz6oRmOYyCj-iPaAR3TkDb-XB7Q9a6ZFwlFesZ2zD_g~" st=
+yle=3D"color: #1d7bce; text-decoration: none;" target=3D"_blank">Terms&nbsp=
+;&&nbsp;conditions</a></div>=0A                      =0A                   =
+     =0A                        =0A                        =0A             =
+           =0A                        =0A                        =0A=0A=0A=
+=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=
+=0A=0A=0A=0A=0A=0A=0A                        =0A                          <=
+div style=3D"border-bottom: 1px solid #F4F3F5; padding: 16px 0px;"><a href=
+=3D"https://clicks.quidco.com/f/a/hDa1i6CvR7ZPu-mTrKbQnA~~/AAAHahA~/eFig5eR=
+F8jtLzODN_uVoSQ4MwZSWir6QExXfhDKkHwaL2-h4ZQJ3Ge2F0IKUBdW-kQ7GQotoY_UthH7leS=
+wqxxFNC7nh-vaA8n68YbjxxiBVFwKBW72hSFOS0cayN7Fbn72qeOEuxlu_sfxJOm6gfbHwLq3S0=
+kXnlRH-L134Wwj5o-nGcgMwYDyLCruvwlgj1ZOed0dPy20MvMmoAE9VnfFM1rUEYtg4KUbMbkZK=
+tif5yQ3OwVHUvftOxxgk_dQ8JhT1bWLzaJg2RxB50fu8HbOrYrXLBZzyavzSCalIUa1ZZPFJk-x=
+UZzSVgVoG5wzz" style=3D"color: #1d7bce; text-decoration: none;" target=3D"_=
+blank">Quidco&nbsp;Support</a></div>=0A                      =0A           =
+             =0A                        =0A                        =0A     =
+                   =0A                        =0A                        =
+=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=
+=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A                        =0A                  =
+        =0A                      =0A                    </td>=0A           =
+       </tr>=0A                </table>=0A              </td>=0A           =
+ </tr>=0A            <!--<![endif]-->          =0A            <tr>=0A      =
+        <td style=3D"font-size: 2px; line-height: 2px; border-collapse: col=
+lapse; border-width: 0;" height=3D"32">&nbsp;</td>=0A            </tr>=0A  =
+        </table>=0A          <table width=3D"100%" cellspacing=3D"0" cellpa=
+dding=3D"0" border=3D"0" bgcolor=3D"#FFFFFF" role=3D"presentation" style=3D=
+"border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">=
+=0A            <tr>=0A              <td align=3D"center" style=3D"padding-b=
+ottom: 20px; border-collapse: collapse; border-width: 0;">=0A              =
+  <table cellspacing=3D"0" cellpadding=3D"0" align=3D"center" role=3D"prese=
+ntation" style=3D"border-collapse: collapse; mso-table-lspace: 0pt; mso-tab=
+le-rspace: 0pt;">=0A                  <tr>=0A                    =0A       =
+               =0A                      =0A                      =0A       =
+               =0A                      =0A                      =0A       =
+               =0A                      =0A                      <td width=
+=3D"36" valign=3D"bottom" align=3D"center" style=3D"border-collapse: collap=
+se; border-width: 0;">=0A                        <a href=3D"https://clicks.=
+quidco.com/f/a/ERBLs7bYZsSGFvFRm9g1tA~~/AAAHahA~/nGudySRhlYV-rQjvqakPvOaBQB=
+jIkFildrlO9uQFrisvG5BEFhAB3iTMjLjQqYL8oDZ1BW9sHE9cGVZWuyjp7XlwtlJQ7bUZvSyQS=
+QXoAoyDmz_dR5vzPFhalfdQbk4e"><img alt=3D"Facebook" src=3D"https://cdn.braze=
+.eu/appboy/communication/assets/image_assets/images/649c0b41e9ac441903bee7=
+46/original.png=3F1687948096" width=3D"36" height=3D"auto" border=3D"0" sty=
+le=3D"display: block; height: auto; width: 36px; line-height: 100%; outline=
+: none; text-decoration: none;"></a>=0A                      </td>=0A      =
+              =0A                      =0A                      =0A        =
+              =0A                      =0A                      =0A        =
+              =0A                      =0A                      =0A        =
+                <td width=3D"16" style=3D"border-collapse: collapse; border=
+-width: 0;">&nbsp;</td>=0A                      =0A                      <t=
+d width=3D"36" valign=3D"bottom" align=3D"center" style=3D"border-collapse:=
+ collapse; border-width: 0;">=0A                        <a href=3D"https://=
+clicks.quidco.com/f/a/qoSAggALtbaCiVLykIEV5Q~~/AAAHahA~/U00raAkAcWF-8tcJLOA=
+LhftxcODcCevbkwwsi12RvMGqfAq_OpIEOQ38hglDOv_0UblEylxlz-vEDBuhWgCS7iZ5C06xY1=
+KzYGWD9J1hEVk~"><img alt=3D"X" src=3D"https://cdn.braze.eu/appboy/communica=
+tion/assets/image_assets/images/6513e745e05b60006d687835/original.png=3F169=
+5803205" width=3D"36" height=3D"auto" border=3D"0" style=3D"display: block;=
+ height: auto; width: 36px; line-height: 100%; outline: none; text-decorati=
+on: none;"></a>=0A                      </td>=0A                    =0A    =
+                  =0A                      =0A                      =0A    =
+                  =0A                      =0A                      =0A    =
+                  =0A                      =0A                        <td w=
+idth=3D"16" style=3D"border-collapse: collapse; border-width: 0;">&nbsp;</t=
+d>=0A                      =0A                      <td width=3D"36" valign=
+=3D"bottom" align=3D"center" style=3D"border-collapse: collapse; border-wid=
+th: 0;">=0A                        <a href=3D"https://clicks.quidco.com/f/a=
+/CwxjnNBMj0YhmAYgriCvHw~~/AAAHahA~/ajzYxIJgFU8f0yLhgGLbJLwEz6OKSn6MGA0OEwO1=
+f1cYW949kZYXUhw9-59A0-Lo16i2jw1OI7I7T6LuPDXsbYFFw1Kz5V1llWnpokBlnGigels6zJz=
+nrYEZu2Ypuq3C"><img alt=3D"Instagram" src=3D"https://cdn.braze.eu/appboy/co=
+mmunication/assets/image_assets/images/649c0b40e9ac441a64bee661/original.pn=
+g=3F1687948096" width=3D"36" height=3D"auto" border=3D"0" style=3D"display:=
+ block; height: auto; width: 36px; line-height: 100%; outline: none; text-d=
+ecoration: none;"></a>=0A                      </td>=0A                    =
+=0A                      =0A                      =0A                      =
+=0A                      =0A                      =0A                      =
+=0A                      =0A                      =0A                      =
+  <td width=3D"16" style=3D"border-collapse: collapse; border-width: 0;">&n=
+bsp;</td>=0A                      =0A                      <td width=3D"36"=
+ valign=3D"bottom" align=3D"center" style=3D"border-collapse: collapse; bor=
+der-width: 0;">=0A                        <a href=3D"https://clicks.quidco.=
+com/f/a/1Wty_R4iTGUgd_bTdpVwHg~~/AAAHahA~/L5xdP8z10K_g3qQhCOM8Fb_pgDcvqP3Ta=
+py8tLVA2TTomYi1ZZW2D91o6FKJfuTmBbXG-UQ-t2fmlJtGhrxskqdtoMLiAVYOe37_h0JUwd9I=
+EP-XRu27ef27PK6aDc44L2mXXbaHp8mhQBP7b4QfRw~~"><img alt=3D"Youtube" src=3D"h=
+ttps://cdn.braze.eu/appboy/communication/assets/image_assets/images/649c0b4=
+04e7f726a4349addd/original.png=3F1687948096" width=3D"36" height=3D"auto" b=
+order=3D"0" style=3D"display: block; height: auto; width: 36px; line-height=
+: 100%; outline: none; text-decoration: none;"></a>=0A                     =
+ </td>=0A                    =0A                  </tr>=0A                <=
+/table>=0A              </td>=0A            </tr>=0A          </table>=0A  =
+        <table class=3D"table100" width=3D"600" cellspacing=3D"0" cellpaddi=
+ng=3D"0" border=3D"0" bgcolor=3D"#FFFFFF" align=3D"center" role=3D"presenta=
+tion" style=3D"border-collapse: collapse; mso-table-lspace: 0pt; mso-table-=
+rspace: 0pt;">=0A            <tr>=0A              <td class=3D"leftAlign" s=
+tyle=3D"font-weight: normal; font-size: 11px; color: #7b7979; line-height: =
+16px; font-family: 'Helvetica Neue','Arial', Helvetica, sans-serif; padding=
+-left: 25px; padding-right: 12px; border-collapse: collapse; border-width: =
+0;" align=3D"center">=0A                <p style=3D"margin: 0; padding: 0;"=
+>Email reference ID: 54f63a161da5416ff445945b78b4bd047ff51dd4</p>=0A       =
+       </td>=0A            </tr>         =0A            <tr>=0A            =
+  <td height=3D"22" style=3D"border-collapse: collapse; border-width: 0;">=
+=0A                <table width=3D"200" border=3D"0" align=3D"center" cellp=
+adding=3D"0" cellspacing=3D"0" role=3D"presentation" style=3D"border-collap=
+se: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">=0A           =
+       <tr>=0A                    <td height=3D"22" width=3D"200" style=3D"=
+min-width: 200px; border-collapse: collapse; border-width: 0;">&nbsp;</td>=
+=0A                    <td height=3D"22" width=3D"200" style=3D"min-width: =
+200px; border-collapse: collapse; border-width: 0;" class=3D"desktop">&nbsp=
+;</td>=0A                    <td height=3D"22" width=3D"200" style=3D"min-w=
+idth: 200px; border-collapse: collapse; border-width: 0;" class=3D"desktop"=
+>&nbsp;</td>=0A                  </tr>=0A                </table>=0A       =
+       </td>=0A            </tr>=0A          </table>=0A        </td>=0A   =
+   </tr>=0A      =0A      =0D=0A=0D=0A=0D=0A  =0D=0A=0D=0A=0D=0A=0D=0A=0D=
+=0A=0A    </table>=0A    </td>=0A    </tr>=0A    </table>=0A  </div>=0A</bo=
+dy>=0A</html>
+--_----3N0OJJw42vPX4JS7YxHQbQ===_16/FD-24195-BB19DB76--
+
