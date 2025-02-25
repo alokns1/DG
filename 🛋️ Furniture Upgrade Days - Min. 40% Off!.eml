@@ -1,0 +1,117 @@
+Delivered-To: alokns1@gmail.com
+Received: by 2002:a05:6a21:594:b0:1ee:a636:2ea with SMTP id lw20csp115049pzb;
+        Tue, 25 Feb 2025 01:32:03 -0800 (PST)
+X-Google-Smtp-Source: AGHT+IGupA4AwQdArZUvEb/A2vmBvtDQZtNTBjGSKIEdwtukYS0jyCmzNwcyqbPHVoAqptSBwWZ4
+X-Received: by 2002:a05:6000:1887:b0:38f:6333:eb67 with SMTP id ffacd0b85a97d-38f708260a9mr14316049f8f.43.1740475923646;
+        Tue, 25 Feb 2025 01:32:03 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1740475923; cv=none;
+        d=google.com; s=arc-20240605;
+        b=L1p7RsIISUclqjSLzwHer7XNG+bWrHWMmkTbeGjxzQ/GaUDfyDqYPb7StQ/lK5gHED
+         TYwCYf7KY4UdMB+fwaoRYnTIvOp9M3hyDFju/bhSAmne0oQD33C/FlKmiwNugGfLclLn
+         MUKhYz1e7IJsVOCxJIRxZq2HaZBva4SlKEVqoBZr9GcIk7voLkWFinjhvIFLrU96fwye
+         0/U/263BquyR+OpNHgXxE8zbNsYSaO1pgHx0OUQ8hCijVxKYjNIrHnvycxkN/mXQf913
+         iugaYR7QrlMNDIVoXXaOQuot+swxkphcNz8E9rPpKGGeT9k1aWDEadbqIXnMvqjS+Fqw
+         z3bA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=feedback-id:list-unsubscribe-post:list-unsubscribe
+         :content-transfer-encoding:mime-version:subject:message-id:to
+         :reply-to:from:date:dkim-signature;
+        bh=ZWtijrBUq0WpsA5eWx6X3ct5eKrse+LemZUsTaQKYNs=;
+        fh=Ji/RwdX+O/fe9XPULx9UANPReTbQNHrzpiODIkoy8fI=;
+        b=Sget4QfE8uyhqF9VvIuUY39Wb+9pFnP5yxoFNWd/ADrIEjs4T4HrYi5gzJluRLBEH2
+         GrBPLvpUObCAFZdI5gjB3KlIGXMPDpgReaSrWjqbTKQ0mG0YlOusu68+dptOw/Vsb5lU
+         vw2n/IzWVkj0RxgG7bXw2mzYfchsF++qV2URcrhjzZdu0mS52BWnozPMFTnvWQf5xvDK
+         jiPSMAc3wARjzn9/d2VVLNnGKJT1nGLiCX6ap3wKd6hZ1m4C26dIX4PqSDc+BTnq6qRQ
+         elvvAKv4HQeHdyOn/TClr2NPGne89NoRfI2PFmh0u7Khof/lHOQbtDjinXWjpYdR5aPU
+         GxSQ==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@jobalertshub.com header.s=default header.b=AiP+CC3k;
+       spf=pass (google.com: domain of bounce+noreply-alokns1=gmail.com@jobalertshub.com designates 164.132.135.204 as permitted sender) smtp.mailfrom="bounce+noreply-alokns1=gmail.com@jobalertshub.com";
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=jobalertshub.com
+Return-Path: <bounce+noreply-alokns1=gmail.com@jobalertshub.com>
+Received: from jobhost.jobalertshub.com (jobhost.jobalertshub.com. [164.132.135.204])
+        by mx.google.com with ESMTPS id ffacd0b85a97d-390cd8d889csi752032f8f.427.2025.02.25.01.32.03
+        for <alokns1@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
+        Tue, 25 Feb 2025 01:32:03 -0800 (PST)
+Received-SPF: pass (google.com: domain of bounce+noreply-alokns1=gmail.com@jobalertshub.com designates 164.132.135.204 as permitted sender) client-ip=164.132.135.204;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@jobalertshub.com header.s=default header.b=AiP+CC3k;
+       spf=pass (google.com: domain of bounce+noreply-alokns1=gmail.com@jobalertshub.com designates 164.132.135.204 as permitted sender) smtp.mailfrom="bounce+noreply-alokns1=gmail.com@jobalertshub.com";
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=jobalertshub.com
+Received: from localhost (jobhost.jobalertshub.com [164.132.135.204])
+	by jobhost.jobalertshub.com (Postfix) with ESMTP id 4ED80C2C6A7B
+	for <alokns1@gmail.com>; Tue, 25 Feb 2025 15:02:03 +0530 (IST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=jobalertshub.com;
+	s=default; t=1740475923;
+	bh=p9gWKhyAVdlAvZ4wL2mxJKUD+Euta3vPkEb0fI0WPmQ=;
+	h=Date:From:Reply-To:To:Subject:List-Unsubscribe:From;
+	b=AiP+CC3k0La7kg+iTyzyvvNJcQ23P4fllCRTnmu8VapK8GNo581GwzjJ3F2zHqnvO
+	 JTlWughJz9EJqojJT0/g1I8XLUMFmjG01Ln9tk/eEVdoV1upxvOU14HZS8IU7aehFO
+	 TQ1bEFvAMLEpNG6kpyfcU2Dhlvt/BonElKLnkeC0=
+Date: Tue, 25 Feb 2025 15:02:03 +0530 (IST)
+From: Amazon <noreply@jobalertshub.com>
+Reply-To: Amazon <noreply@jobalertshub.com>
+To: alokns1@gmail.com
+Message-ID: <35789.1.528.tx5dSfIaD7olW9DPR4p6c88Co@jobalertshub.com>
+Subject: =?UTF-8?Q?=F0=9F=9B=8B=EF=B8=8F_Furniture_Upgrade_Days_-_Min._40%_Off!?=
+MIME-Version: 1.0
+Content-Type: text/html;charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+List-Unsubscribe: <https://jobalertshub.com/unsubscribe/list/yAEfm3pMH_F0FA1uE0C3SGvlsdpB1l5mzYrR1z_4jaK85_lvuQ0Jg9MsSTmskmrclkL2-nMFnlKVep2KlfVFAVM0LxG4rfchHxzETishUUuK_yDU6IcL0LOFQ3owEwLp_b0eWGDe1lQQi6MatwcXq5q0xeXCdWGUvzyWU9XuC1JbLKKC43ltCeWmlXGgwBHkprJwIFj9EQgzk8w7Z2mrmAYQyMmwBgBZMnDwVDJzAmuK_yDU6IcL0LOFQ3owEwLp4lEaIXj3UHCzxKj0LVgY2YC1N_33lbEARiV42Amu28GoyfpseOu1WdorQOywY3iGCbPFvXtER-rTsIUh_BhxeA==?source=email-client-unsub-button>, <mailto:unsubscribe@jobalertshub.com?subject=unsubscribe_yAEfm3pMH_F0FA1uE0C3SGvlsdpB1l5mzYrR1z_4jaK85_lvuQ0Jg9MsSTmskmrclkL2-nMFnlKVep2KlfVFAVM0LxG4rfchHxzETishUUuK_yDU6IcL0LOFQ3owEwLp_b0eWGDe1lQQi6MatwcXq5q0xeXCdWGUvzyWU9XuC1JbLKKC43ltCeWmlXGgwBHkprJwIFj9EQgzk8w7Z2mrmAYQyMmwBgBZMnDwVDJzAmuK_yDU6IcL0LOFQ3owEwLp4lEaIXj3UHCzxKj0LVgY2YC1N_33lbEARiV42Amu28GoyfpseOu1WdorQOywY3iGCbPFvXtER-rTsIUh_BhxeA==>
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+Feedback-ID: 35789:JOBALERTSHUB
+
+<!DOCTYPE html><html><head>    <meta name=3D"viewport" content=3D"width=3Dd=
+evice-width, initial-scale=3D1">    <title>Furniture Upgrade Days - Min. 40=
+% Off</title></head><body style=3D"margin: 0; padding: 0; font-family: Aria=
+l, sans-serif; background-color: #f8f8f8;">    <table role=3D"presentation"=
+ width=3D"100%" cellspacing=3D"0" cellpadding=3D"0" border=3D"0" align=3D"c=
+enter">        <tr>            <td align=3D"center">                <table =
+role=3D"presentation" width=3D"600" cellspacing=3D"0" cellpadding=3D"0" bor=
+der=3D"0" style=3D"background-color: #ffffff; border-radius: 10px; overflow=
+: hidden; margin: 20px auto;">                    <!-- Banner Image -->    =
+                <tr>                        <td align=3D"center">=09<a href=
+=3D"http://jobalertshub.com/trk/click/yAEfm3pMH_F0FA1uE0C3SGvlsdpB1l5mzYrR1=
+z_4jaK85_lvuQ0Jg9MsSTmskmrclkL2-nMFnlKVep2KlfVFAVM0LxG4rfchHxzETishUUuK_yDU=
+6IcL0LOFQ3owEwLp_b0eWGDe1lQQi6MatwcXq5q0xeXCdWGUvzyWU9XuC1JbLKKC43ltCeWmlXG=
+gwBHkprJwIFj9EQgzk8w7Z2mrmAYQyMmwBgBZMnDwVDJzAmuK_yDU6IcL0LOFQ3owEwLp4lEaIX=
+j3UHCzxKj0LVgY2YC1N_33lbEARiV42Amu28GoyfpseOu1WdorQOywY3iGCbPFvXtER-rTsIUh_=
+BhxeA=3D=3D?lid=3D1">                            <img src=3D"http://jobaler=
+tshub.com/images/2822134784/fud.jpg" alt=3D"Furniture Upgrade Days - Min. 4=
+0% Off" width=3D"100%" style=3D"max-width: 600px; display: block;"></a>    =
+                    </td>                    </tr>                    <!-- =
+Heading -->                    <tr>                        <td align=3D"cen=
+ter" style=3D"padding: 20px;">                            <h1 style=3D"colo=
+r: #ff6600; font-size: 24px; margin: 0;">=F0=9F=9B=8B=EF=B8=8F Furniture Up=
+grade Days - Min. 40% Off!</h1>                        </td>               =
+     </tr>                                                          <!-- CT=
+A Button -->                    <tr>                        <td align=3D"ce=
+nter" style=3D"padding: 20px;">                            <a href=3D"http:=
+//jobalertshub.com/trk/click/yAEfm3pMH_F0FA1uE0C3SGvlsdpB1l5mzYrR1z_4jaK85_=
+lvuQ0Jg9MsSTmskmrclkL2-nMFnlKVep2KlfVFAVM0LxG4rfchHxzETishUUuK_yDU6IcL0LOFQ=
+3owEwLp_b0eWGDe1lQQi6MatwcXq5q0xeXCdWGUvzyWU9XuC1JbLKKC43ltCeWmlXGgwBHkprJw=
+IFj9EQgzk8w7Z2mrmAYQyMmwBgBZMnDwVDJzAmuK_yDU6IcL0LOFQ3owEwLp4lEaIXj3UHCzxKj=
+0LVgY2YC1N_33lbEARiV42Amu28GoyfpseOu1WdorQOywY3iGCbPFvXtER-rTsIUh_BhxeA=3D=
+=3D?lid=3D1" style=3D"background-color: #ff6600; color: #fff; padding: 12px=
+ 20px; text-decoration: none; font-size: 18px; font-weight: bold; border-ra=
+dius: 5px; display: inline-block;">=F0=9F=91=89 Shop Now & Upgrade Your Hom=
+e!</a>                        </td>                    </tr>               =
+ </table><table border=3D"0" width=3D"100%" cellspacing=3D"0" cellpadding=
+=3D"0" style=3D"margin-top:50px;"><tbody><tr><td style=3D"text-align: cente=
+r; padding: 3px 0;"><p style=3D"line-height: 22px; color: #999;">Don't want=
+ to receive our emails anymore? <a style=3D"color: #1b75bb;" href=3D"http:/=
+/jobalertshub.com/unsubscribe?id=3DyAEfm3pMH_F0FA1uE0C3SGvlsdpB1l5mzYrR1z_4=
+jaK85_lvuQ0Jg9MsSTmskmrclkL2-nMFnlKVep2KlfVFAVM0LxG4rfchHxzETishUUuK_yDU6Ic=
+L0LOFQ3owEwLp_b0eWGDe1lQQi6MatwcXq5q0xeXCdWGUvzyWU9XuC1JbLKKC43ltCeWmlXGgwB=
+HkprJwIFj9EQgzk8w7Z2mrmAYQyMmwBgBZMnDwVDJzAmuK_yDU6IcL0LOFQ3owEwLp4lEaIXj3U=
+HCzxKj0LVgY2YC1N_33lbEARiV42Amu28GoyfpseOu1WdorQOywY3iGCbPFvXtER-rTsIUh_Bhx=
+eA=3D=3D">Unsubscribe now</a></p></td></tr></tbody></table>            </td=
+>        </tr>    </table></body></html><img src=3D"https://jobalertshub.co=
+m/track/open/yAEfm3pMH_F0FA1uE0C3SGvlsdpB1l5mzYrR1z_4jaK85_lvuQ0Jg9MsSTmskm=
+rclkL2-nMFnlKVep2KlfVFAVM0LxG4rfchHxzETishUUuK_yDU6IcL0LOFQ3owEwLp_b0eWGDe1=
+lQQi6MatwcXq5q0xeXCdWGUvzyWU9XuC1JbLKKC43ltCeWmlXGgwBHkprJwIFj9EQgzk8w7Z2mr=
+mAYQyMmwBgBZMnDwVDJzAmuK_yDU6IcL0LOFQ3owEwLp4lEaIXj3UHCzxKj0LVgY2YC1N_33lbE=
+ARiV42Amu28GoyfpseOu1WdorQOywY3iGCbPFvXtER-rTsIUh_BhxeA=3D=3D?d=3Djobalerts=
+hub.com&sid=3D73379" width=3D"1" height=3D"1"/>

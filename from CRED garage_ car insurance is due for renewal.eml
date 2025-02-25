@@ -1,0 +1,324 @@
+Delivered-To: alokns1@gmail.com
+Received: by 2002:a05:6a21:594:b0:1ee:a636:2ea with SMTP id lw20csp23020pzb;
+        Mon, 24 Feb 2025 21:18:17 -0800 (PST)
+X-Google-Smtp-Source: AGHT+IHIVYEZKdoQo6G1aw/gd1lV55q45NxYoogAZ+ESULUl69FQ0zsQ5sj2Wwyzed5qC3JQcs+w
+X-Received: by 2002:ac8:5910:0:b0:472:4c9:617e with SMTP id d75a77b69052e-472228da463mr243906551cf.31.1740460697048;
+        Mon, 24 Feb 2025 21:18:17 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1740460697; cv=none;
+        d=google.com; s=arc-20240605;
+        b=Gflp7LZN10pxYbaQrWvQ/BtJGVZZbkuteXnpPbSmumhcMffTpDOFR8jDIB5A8Dxhn2
+         mgG0z+0iGLum5Bh+gp/IghWT2mkuXl0jBRgsoutN25PB/XAOEOf4GkNnuC9AqSO2NsYe
+         mzvlK14nEsY963volYQgbARD/M4ld7nSdamyymvh1WMUuVQ2HBUpdJ1ZGhPrq+Qq0iKE
+         0ircug0FcwUUqnHKG88Hz5ykdd1Jwd+/T9QFUJqmgpBI1lI+Kl5CgERAvHpOZOFuJHJS
+         Yoe+V2x0JzSyGqecjrgXRJhPm81Dwt3ON+FXDR9Esig4j77hVjp3uzFyYwkVURUujUmk
+         443g==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=list-unsubscribe-post:feedback-id:reply-to:list-unsubscribe
+         :content-transfer-encoding:mime-version:message-id:subject:from:to
+         :date:dkim-signature:dkim-signature;
+        bh=pRwYwBJhb6dR1ZFbfoJsatYR1Nq+7VhochXLKlsq9oQ=;
+        fh=6CdfxT0jTjZJ14qGKIv2skAaqcvDSaDqJT9bn43BXnI=;
+        b=fNBAKA44iQQYUjkDTzlyZsrHApJN6D49aqOWQtEujn+OIKBSsukpITkRByl6kOCmMS
+         NSWDeB2DLa3mN+4wBEjcesJm3+LJZGSsGziUFopToAsTFc03IS02RiaT10CMBdfjU738
+         ozj76ceSEJOAp37sLdsWULhuLnk9WlLB9Fj6Zn0ar1cKYsZ0WNoeYPqwnOOI4t98zlnp
+         gcLrqUvKSE0iQDJfR3K9PAo1PFIZameUSsZBb1cP5j6eR6AQxLHHmb+Vi4WamM6aKsVA
+         pqLzkM+xxQM+OhrL7kYdLHvY2+TAHIV/WHHD79dC61TwNNOniWTqJQcWfhCuqnIetAzi
+         RA5A==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@cred.club header.s=nc2048 header.b=fKkihji+;
+       dkim=pass header.i=@env.etransmail.com header.s=fnc header.b=BEAUNBHt;
+       spf=pass (google.com: domain of 17404227660733485-186456-1-gmail.com@delivery.cred.club designates 103.69.40.32 as permitted sender) smtp.mailfrom=17404227660733485-186456-1-gmail.com@delivery.cred.club;
+       dmarc=pass (p=QUARANTINE sp=QUARANTINE dis=NONE) header.from=cred.club
+Return-Path: <17404227660733485-186456-1-gmail.com@delivery.cred.club>
+Received: from 32.mail.dnspost.com (32.mail.dnspost.com. [103.69.40.32])
+        by mx.google.com with ESMTPS id d75a77b69052e-47377e2ec04si7598611cf.138.2025.02.24.21.18.16
+        for <alokns1@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
+        Mon, 24 Feb 2025 21:18:17 -0800 (PST)
+Received-SPF: pass (google.com: domain of 17404227660733485-186456-1-gmail.com@delivery.cred.club designates 103.69.40.32 as permitted sender) client-ip=103.69.40.32;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@cred.club header.s=nc2048 header.b=fKkihji+;
+       dkim=pass header.i=@env.etransmail.com header.s=fnc header.b=BEAUNBHt;
+       spf=pass (google.com: domain of 17404227660733485-186456-1-gmail.com@delivery.cred.club designates 103.69.40.32 as permitted sender) smtp.mailfrom=17404227660733485-186456-1-gmail.com@delivery.cred.club;
+       dmarc=pass (p=QUARANTINE sp=QUARANTINE dis=NONE) header.from=cred.club
+DKIM-Signature: a=rsa-sha256; bh=pRwYwBJhb6dR1ZFbfoJsatYR1Nq+7VhochXLKlsq9oQ=;
+ c=relaxed/relaxed; d=cred.club;
+ h=DKIM-Signature:Date:To:From:Subject:Message-Id:MIME-Version:Content-Type:Content-Transfer-Encoding:List-Unsubscribe:Reply-To:Feedback-Id:X-Dkim-Options:X-Job:X-Fncid:X-Mta-Source:X-Abuse-Reports-To:X-Injtime:X-Traffic-Type:X-Mailer:List-Unsubscribe-Post;
+ s=nc2048; t=1740460706; v=1;
+ b=fKkihji+821UiKVOpTVg5sWJUgBqeoLqqhDRlsmmaEIP+8iFf9+7hxUwruFWiPyGOqb4/vJd
+ 0pq9pgQBqqSeqjCEH6FwqXf5Jb9tefjRZ+s+1rRCcRvzBXOGdB4RR+Jse1LYQDhEme4ndUEAEnT
+ qW9Up8Q3AzUS6iALo+BC5xq1ktkGAbXZvZE+naBtJpZDK27lJFOiyYRkQhS34h5iASV2A90+Ndb
+ K3ufAZdrUjKbJBUA4PUdWUraVd4LevLrh3NHMs6V9Ya4BRzcJxx3BTgkfU+xYMM2BKkYlVuuUyr
+ VffBJqyeUQWK5X6c5DZDAnX61rFreZkYFLieP6qkgn7YQ==
+DKIM-Signature: a=rsa-sha256; bh=pRwYwBJhb6dR1ZFbfoJsatYR1Nq+7VhochXLKlsq9oQ=;
+ c=relaxed/relaxed; d=env.etransmail.com;
+ h=Date:To:From:Subject:Message-Id:MIME-Version:Content-Type:Content-Transfer-Encoding:List-Unsubscribe:Reply-To:Feedback-Id:X-Dkim-Options:X-Job:X-Fncid:X-Mta-Source:X-Abuse-Reports-To:X-Injtime:X-Traffic-Type:X-Mailer:List-Unsubscribe-Post;
+ s=fnc; t=1740460706; v=1;
+ b=BEAUNBHtrNzEq6qwFQOCWnlEkyirW2bv0rxMb1JhV2iakcDFh/w3pwFe8KUA4zLmtVKrAWKI
+ NBOqPyhpJv1G5gvc95NrQyQonzwFfKsSziXDnFK9E9rRt5WXZtDALqpjNJMHwubnzDugdHu+8W+
+ S7qHZFLOcMMJ6I+nXniTnY0o=
+Date: Tue, 25 Feb 2025 10:48:16 +0530
+To: <alokns1@gmail.com>
+From: =?UTF-8?B?Q1JFRA==?= <no-reply@cred.club>
+Subject: =?UTF-8?B?ZnJvbSBDUkVEIGdhcmFnZTogY2FyIGluc3VyYW5jZSBpcyBkdWUgZm9yIHJlbmV3YWw=?=
+Message-Id: <fbvxiu17404227660733485@cred.club>
+MIME-Version: 1.0
+Content-Type: multipart/alternative; boundary="_----------=_1740460696274001027"
+Content-Transfer-Encoding: binary
+List-Unsubscribe: <https://delivery.cred.club/NERDPS?id=186456=YR4HBQpUAgdQGRZGRkUYQ0JFGRhGRBJDE0UQQ0QSQUMUQhcUEkIWEkZFFkZGRRhDQlVFXgVdBFoHBwRXUQdUAFdUBQYAUAcGBFJXUgVXXVYGVw4AUQIDWlAEU1tSAlhSUlQBAQYDB1ZUXQdfBAcKV1VQDERXUwZTB1cCVFIEUVQHUQMMBx5eRhIVRVxJSlwGDgxPXRQdHABBAFRNB14UARsscmZ2MmUNDwFKEFU=>, <mailto:17404227660733485-186456-fncunsub@usub.ftrans03.com?subject=Unsubscribe>
+Reply-To: no-reply@cred.club
+Feedback-Id: 186456:202502:1:falconide
+X-Dkim-Options: 
+X-Job: prodcred:186456:202502
+X-Fncid: 186456-17404227660733485-0
+X-Mta-Source: prodcred_186456
+X-Abuse-Reports-To: abuse@pepipost.com
+X-Injtime: 1740460696
+X-Traffic-Type: 186456-2
+X-Mailer: NetcoreCloud Mailer
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+
+This is a multi-part message in MIME format.
+
+--_----------=_1740460696274001027
+Content-Disposition: inline
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; charset="utf-8"
+
+                                                                           =
+                                                                           =
+                                                                           =
+                                                                           =
+                                                                           =
+                                                                           =
+                      your insurance policy expires in 30 days             =
+                                                                           =
+                                                renew insurance for your KI=
+A Seltos on CRED garage by using your member privileges.                   =
+                                                                           =
+                                                                           =
+                                                                           =
+                                                                           =
+                                 exclusive offers                          =
+                                                                           =
+                                                                           =
+        priority assistance                                                =
+                                                                           =
+                                                             seamless claim=
+s                                                                          =
+                                                                           =
+                                                                           =
+                                                                click below=
+ to renew your insurance with a policy handpicked for your car.            =
+                                                                           =
+                                                                           =
+                                                                           =
+           View plans                                                      =
+                                                                           =
+                                                                           =
+                                                                           =
+                                                                           =
+                                                                           =
+                                                                           =
+                                                                           =
+                                                                           =
+                                                                           =
+                                                                           =
+                                                                           =
+                                                                           =
+                                                                           =
+                                                                           =
+                                                                           =
+                                                                           =
+                                                                           =
+                                                                           =
+                                                                           =
+                                                                           =
+                                                                           =
+ copyright =C2=A92023 Dreamplug Technologies Pvt Ltd. All rights reserved. =
+                                                                   unsubscr=
+ibe                                                                        =
+                                                                           =
+                      =C2=A0
+Click here to unsubscribe=
+=
+
+--_----------=_1740460696274001027
+Content-Disposition: inline
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/html; charset="utf-8"
+
+<!DOCTYPE html><html lang=3D"en">   <head>      <meta http-equiv=3D"Content=
+-Type" content=3D"text/html; charset=3DUTF-8" />      <meta         name=3D=
+"viewport"         content=3D"width=3Ddevice-width, initial-scale=3D1.0, us=
+er-scalable=3Dno"         />      <meta http-equiv=3D"X-UA-Compatible" cont=
+ent=3D"ie=3Dedge" />      <title>CRED</title>      <style type=3D"text/css"=
+>         body {            margin-left: 0px;            margin-top: 0px;  =
+          margin-right: 0px;            margin-bottom: 0px;            font=
+-family: Helvetica;            background: #f8f8f8;        }        p {    =
+        margin: 0;            padding: 0;        }      </style>   </head> =
+  <body>      <table         width=3D"100%"         cellspacing=3D"0"      =
+   cellpadding=3D"0"         style=3D"border-collapse: collapse; width: 100=
+%"         bgcolor=3D"#f8f8f8";         >         <tbody>            <tr>  =
+             <td>                  <table                     border=3D"0" =
+                    align=3D"center"                     cellspacing=3D"0" =
+                    cellpadding=3D"0"                     style=3D"        =
+                font-family: Open Sans, -apple-system,                     =
+   BlinkMacSystemFont, Roboto, Helvetica Neue,                        Helve=
+tica, Arial, sans-serif;                        font-size: 16px;           =
+             width: 100%;                        min-width: 562px;         =
+               max-width: 562px;                        background:#f8f8f8;=
+                        border-spacing:0;                        padding:50=
+px;                     "                     >                     <tbody>=
+                        <tr>                           <td valign=3D"center=
+" align=3D"center" style=3D"padding-top: 50px;">                           =
+   <img                                src=3D"https://email-assets.cred.clu=
+b/mailer/insurance-reminder/assets/cred-logo.png"                          =
+      width=3D"42"                                 alt=3D"cred-logo"       =
+                          title=3D"CRED"                                 />=
+                           </td>                        </tr>              =
+          <tr>                            <td style=3D"padding-top: 48px;" =
+align=3D"center">                                <img src=3D"https://images=
+.credcdn.in/garage-assets/vehicle-images/Seltos_Aurora_Black_Pearl.png" wid=
+th=3D"333" alt=3D"vehicle-image" />                            </td>       =
+                 </tr>                        <tr>                         =
+   <td style=3D"padding: 30px 56px 0 56px; font-size: 32px; font-weight: 70=
+0; line-height: 41.6px;" align=3D"center">                                y=
+our insurance policy expires in <span style=3D"color: #F08D32;">30 days</sp=
+an>                            </td>                        </tr>          =
+              <tr>                            <td style=3D"padding: 30px 48=
+px 0 48px; font-size: 16px; font-weight: 400; line-height: 24px; color: #16=
+1616; width: 368px;" align=3D"center">                                renew=
+ insurance for your <span style=3D"font-weight: 600;">KIA Seltos</span> on =
+CRED garage by using your member privileges.                            </t=
+d>                        </tr>                        <tr>                =
+            <td style=3D"padding-top: 30px; width: 400px;">                =
+                <table style=3D"padding: 24px 28px 20px 28px; border: 0.4px=
+ solid #686868;" align=3D"center">                                    <tbod=
+y>                                        <tr align=3D"center">            =
+                                <td style=3D"padding-right: 32px;">        =
+                                        <img src=3D"https://email-assets.cr=
+ed.club/mailer/insurance-reminder/assets/exclusive-logo-updated.png" height=
+=3D"58" alt=3D"exclusive-logo" />                                          =
+      <p style=3D"font-size: 14px; line-height: 19px; color: #161616; font-=
+weight: 400; padding-top: 4px;">exclusive offers</p>                       =
+                     </td>                                            <td s=
+tyle=3D"padding-right: 32px;">                                             =
+   <img src=3D"https://email-assets.cred.club/mailer/insurance-reminder/ass=
+ets/assistance-logo-updated.png" height=3D"58" alt=3D"assistance-logo" />  =
+                                              <p style=3D"font-size: 14px; =
+line-height: 19px; color: #161616; font-weight: 400; padding-top: 4px;">pri=
+ority assistance</p>                                            </td>      =
+                                      <td>                                 =
+               <img src=3D"https://email-assets.cred.club/mailer/insurance-=
+reminder/assets/claim-logo-updated.png" height=3D"58" alt=3D"claim-logo" />=
+                                                <p style=3D"font-size: 14px=
+; line-height: 19px; color: #161616; font-weight: 400; padding-top: 4px;">s=
+eamless claims</p>                                            </td>        =
+                                </tr>                                    </=
+tbody>                                </table>                            <=
+/td>                        </tr>                        <tr>              =
+              <td style=3D"padding: 40px 48px 0 48px; font-size: 16px; font=
+-weight: 400; line-height: 24px; color: #161616; width: 380px;"  align=3D"c=
+enter">                                click below to renew your insurance =
+with a policy handpicked for your car.                            </td>    =
+                    </tr>                        <tr>                      =
+     <td style=3D"padding-top:38px;text-align: center;">                   =
+              <table align=3D"center">                                    <=
+td></td>                                    <td>                           =
+            <a href=3D"https://delivery.cred.club/NERDPS?id=3D186456=3Ddx4H=
+BQpUAgdQGQUFAAcMUVIEWgoCUABTVlNTU1UHWAFWU1YFBFAGC1YEUAADUgwBAVJFXgVdBFoHBwR=
+XUQdUAFdUBQYAUAcGBFJXUgVXXVYGVw4AUQIDWlAEU1tSAlhSUlQBAQYDB1ZUXQdfBAcKV1VQDE=
+RXUwZTB1cCVFIEUVQHUQMMBx5eRhIVRVxJSlwGDgxPXRQdHABBAFRNB14UARsscmZ2MmUNDwFKE=
+FU=3D&fl=3DXBZDREFYGR0HFUZIBRddB0wGVU0ES1lVABwfEhVGVxBCFE4=3D" target=3D"_b=
+lank" style=3D"cursor: pointer;"> <button style=3D"font-weight: 700;font-si=
+ze:16px;padding: 16px 64px;background:#080808;;color:#f5f5f5;;border:0; cur=
+sor: pointer;margin-bottom: 0px;line-height: 19px;">View plans<img src=3D"h=
+ttps://email-assets.cred.club/mailer/shield/arrow_icon.png" style=3D"paddin=
+g-left: 15px; height: 10px; width: 25px;"/></button></a>                   =
+                 </td>                                    <td></td>        =
+                         </table>                           </td>          =
+              </tr>                        <tr align=3D"center">           =
+                 <td style=3D"padding-top:50px;">                          =
+      <div style=3D"border-top:1px solid #080808;opacity: 0.6;"> </div>    =
+                        </td>                        </tr>                 =
+       <tr>                            <td style=3D"padding-top: 32px;">   =
+                             <table border=3D"0" cellpadding=3D"0" cellspac=
+ing=3D"0" align=3D"center" style=3D"width: 480px" >                        =
+            <tbody>                                       <tr>             =
+                               <td style=3D"width: 195px;"></td>           =
+                                 <td valign=3D"center" style=3D" width: 20p=
+x; height: 20px;">                                                <a href=
+=3D"https://delivery.cred.club/NERDPS?id=3D186456=3Ddx4HBQpUAgdQGQFQBQdbUFY=
+BDllTAVAHA1UHBgcGUQFXUA5QBAYCAV5RUlAFAVoHVAZFXgVdBFoHBwRXUQdUAFdUBQYAUAcGBF=
+JXUgVXXVYGVw4AUQIDWlAEU1tSAlhSUlQBAQYDB1ZUXQdfBAcKV1VQDERXUwZTB1cCVFIEUVQHU=
+QMMBx5eRhIVRVxJSlwGDgxPXRQdHABBAFRNB14UARsscmZ2MmUNDwFKEFU=3D&fl=3DXBZDREFY=
+GR0SEl8SEgBKTQEKVBcFFlcHbAZcFgY=3D" target=3D"_blank" style=3D" text-decora=
+tion: none;" >                                                     <img src=
+=3D"https://email-assets.cred.club/mailer/insurance-reminder/assets/twitter=
+-logo.png" alt=3D"" style=3D"opacity: 0.9; width: 14px; height: 15px; margi=
+n-top: 2px"/>                                                </a>          =
+                                  </td>                                    =
+        <td style=3D"width: 20px;"></td>                                   =
+         <td valign=3D"center" style=3D" width: 20px; height: 20px;">      =
+                                           <a href=3D"https://delivery.cred=
+.club/NERDPS?id=3D186456=3Ddx4HBQpUAgdQGVdXVgFZBgdUCQFeUQcAUQMCUFJRAwIGUVIH=
+CgZVV1dSBQBVBAxVV1FFXgVdBFoHBwRXUQdUAFdUBQYAUAcGBFJXUgVXXVYGVw4AUQIDWlAEU1t=
+SAlhSUlQBAQYDB1ZUXQdfBAcKV1VQDERXUwZTB1cCVFIEUVQHUQMMBx5eRhIVRVxJSlwGDgxPXR=
+QdHABBAFRNB14UARsscmZ2MmUNDwFKEFU=3D&fl=3DXBZDREFYGR0REkFICgxWCAcBUFZIB10OH=
+AZfDhRTDxobAUVRVgNGQkk=3D" target=3D"_blank" style=3D" text-decoration: non=
+e;" >                                                     <img src=3D"https=
+://email-assets.cred.club/mailer/insurance-reminder/assets/linkedin-logo.pn=
+g" alt=3D"" style=3D"opacity: 0.9; width: 18px; height: 18px;"/>           =
+                                     </a>                                  =
+           </td>                                            <td style=3D"wi=
+dth: 20px;"></td>                                            <td valign=3D"=
+center" align=3D"center" style=3D"width: 20px; height: 20px;">             =
+                                    <a href=3D"https://delivery.cred.club/N=
+ERDPS?id=3D186456=3Ddx4HBQpUAgdQGVJQBVUNBlcDWAFSAVAFUgQIUwcGAgcCUlUDBwcHCld=
+QDwRRVQFTVVxFXgVdBFoHBwRXUQdUAFdUBQYAUAcGBFJXUgVXXVYGVw4AUQIDWlAEU1tSAlhSUl=
+QBAQYDB1ZUXQdfBAcKV1VQDERXUwZTB1cCVFIEUVQHUQMMBx5eRhIVRVxJSlwGDgxPXRQdHABBA=
+FRNB14UARsscmZ2MmUNDwFKEFU=3D&fl=3DXBZDREFYGR0REkFIDwtLFwMCS1kLSlEMXkpTEQFW=
+PgBYF1Ub" target=3D"_blank" style=3D" text-decoration: none;" >            =
+                                         <img src=3D"https://email-assets.c=
+red.club/mailer/insurance-reminder/assets/instagram-logo.png" alt=3D"" styl=
+e=3D"opacity: 0.9; width: 16px; height: 16px; margin-top: 3px;"/>          =
+                                       </a>                                =
+             </td>                                            <td style=3D"=
+width: 195px;">                                          </td>             =
+                          </tr>                                    </tbody>=
+                                 </table>                            </td> =
+                       </tr>                        <tr>                   =
+         <td style=3D"padding-top:16px;padding-bottom: 56px;">             =
+                   <p style=3D"font-size: 12px;font-weight: 400;line-height=
+: 24px;letter-spacing: 0.24px;text-align: center;color:#080808">copyright &=
+copy;2023 Dreamplug Technologies Pvt Ltd. All rights reserved.</p>         =
+                       <p  style=3D"font-size: 12px;font-weight: 400;line-h=
+eight: 24px;letter-spacing: 0.24px;text-align: center;">                   =
+                 <a href=3D"https://delivery.cred.club/NERDPS?id=3D186456=
+=3Ddx4HBQpUAgdQGQMHVAMLVVRXWwhfUAFXBlICBQILUwcGBFIEAlIPBwcBAVIEVgAHAVxFXgVd=
+BFoHBwRXUQdUAFdUBQYAUAcGBFJXUgVXXVYGVw4AUQIDWlAEU1tSAlhSUlQBAQYDB1ZUXQdfBAc=
+KV1VQDERXUwZTB1cCVFIEUVQHUQMMBx5eRhIVRVxJSlwGDgxPXRQdHABBAFRNB14UARsscmZ2Mm=
+UNDwFKEFU=3D&fl=3DXBZDREFYGR0TC0UTBBZbEQsHXBYFFlcHHQZcFgYdBA5VC1sZQQdERA8GU=
+0kQVBcWDBZMWhUHQApRAA=3D=3D&ext=3DdG9rZW49ZXlKMGVYQWlPaUpLVjFRaUxDSmhiR2NpT=
+2lKSVV6STFOaUo5LmV5SnBaQ0k2SW1GaU1tVTBOR05oTFdRMU1ESXRORGN3WlMxaU5HSmhMVE5p=
+TmprMFl6YzFNall3TlNKOS5QU1NlNzVhMXRmZkJBR3REVXlvZG1jSFVXOFlUQ1lidkQ3Z244Vk5=
+INm5V" target=3D"_blank" style=3D" text-decoration: none;color:#080808 ;" >=
+unsubscribe</a >                                 </p>                      =
+      </td>                        </tr>                     </tbody>      =
+            </table>               </td>            </tr>         </tbody> =
+     </table>   <p>&nbsp;<br></p>
+<img src=3D'https://delivery.cred.club/NERDPS?id=3D186456=3Dex4HBQpUAgdQGRZ=
+GRkUYQ0JFGRhGRBJDE0UQQ0QSQUMUQhcUEkIWEkZFFkZGRRhDQlVFXgVdBFoHBwRXUQdUAFdUBQ=
+YAUAcGBFJXUgVXXVYGVw4AUQIDWlAEU1tSAlhSUlQBAQYDB1ZUXQdfBAcKV1VQDERXUwZTB1cCV=
+FIEUVQHUQMMBx5eRhIVRVxJSlwGDgxPXRQdHABBAFRNB14UARsscmZ2MmUNDwFKEFU=3D' alt=
+=3D'' /></body></html>Click <a href=3D"https://delivery.cred.club/NERDPS?id=
+=3D186456=3DYR4HBQpUAgdQGRZGRkUYQ0JFGRhGRBJDE0UQQ0QSQUMUQhcUEkIWEkZFFkZGRRh=
+DQlVFXgVdBFoHBwRXUQdUAFdUBQYAUAcGBFJXUgVXXVYGVw4AUQIDWlAEU1tSAlhSUlQBAQYDB1=
+ZUXQdfBAcKV1VQDERXUwZTB1cCVFIEUVQHUQMMBx5eRhIVRVxJSlwGDgxPXRQdHABBAFRNB14UA=
+RsscmZ2MmUNDwFKEFU=3D">here</a> to unsubscribe=
+=
+
+--_----------=_1740460696274001027--
+

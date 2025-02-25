@@ -1,0 +1,1140 @@
+Delivered-To: alokns1@gmail.com
+Received: by 2002:a05:6a21:594:b0:1ee:a636:2ea with SMTP id lw20csp122732pzb;
+        Tue, 25 Feb 2025 01:52:02 -0800 (PST)
+X-Google-Smtp-Source: AGHT+IFbT8LKRJXmtA4090mN4c2Kho3AWFS6U8iSPDhOa0samW8wm6COY8C4K7FFdvpUx1pF/t4D
+X-Received: by 2002:a05:600c:35cb:b0:439:8dbc:1d0e with SMTP id 5b1f17b1804b1-43ab6e7b4f3mr2897355e9.10.1740477122383;
+        Tue, 25 Feb 2025 01:52:02 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1740477122; cv=none;
+        d=google.com; s=arc-20240605;
+        b=X/UR7yTvWTTotj5hoM5jUKuSCRieI02/xJq8MiwYjPSfbztr0PPdcguV5HHiX7+JfZ
+         QO1OAZ4hcmDqms9iPWnsE2R+kYGzktJtF0H1eH2C1gt1hbf987zNSJFxkRwnJQuyiD4j
+         R8/SEicwsyFDl98+TuRiybnv4rzxyBKdlJWeBsPoB1rhe0M3In+ZdoWjyHX320U+t6wm
+         F8dTgB63VlFx23c0SvscnMRN2FPaqkPRyPq7swTFU4tQpL4D1HNCpg3aIkTICuovw3yy
+         RRpx9XntaMv0V+9lU2h1A/DRuKbTwJ8Oe61NNZ6Oh1iJuAQIxs7Wv4mu+2R/h8s7Pr14
+         LOOw==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=reply-to:from:list-unsubscribe:subject:list-unsubscribe-post
+         :mime-version:date:message-id:to:content-transfer-encoding
+         :dkim-signature;
+        bh=nu+x1PdxWVQe2UoHB16zTkeIg6X2ns87cSThCgh9FLY=;
+        fh=Ji/RwdX+O/fe9XPULx9UANPReTbQNHrzpiODIkoy8fI=;
+        b=SkVWzBxuSSidSxqQ6VENMC69UqB96j0ruHN5h1568CuETLmG9gPNIu33kDXuM4WRFc
+         Ct+MLTulKVrCzC9WCoAsRa3nnziSLr+OQPYF5Nfg8YhyIAGkrqDydJANS4O68FEvGqn9
+         Q1D78bl/zN4PAzgDOhigX27LIfzng8f1s+xqpueND/QffCbTtSs/NrLJ4gZCV40vNn8D
+         NO6tV0HLZRGD5187ummISoVcXXv9knwgcxqK1LN5MeQb1LFyB0rRYgXtNZ/hb1AeBnr6
+         2Z1gLjjCVJRpD1KiUv0VFn+AXlxaMty8Ot7DEPGEHYzKriI+1mc77mBHMHwGqEK3Wjs5
+         OSJA==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@sg.booking.com header.s=scph0817 header.b="N/zSJ7A3";
+       spf=pass (google.com: domain of bounce@spe.booking.com designates 192.174.95.228 as permitted sender) smtp.mailfrom=bounce@spe.booking.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=sg.booking.com
+Return-Path: <bounce@spe.booking.com>
+Received: from mta-174-95-228.booking.com.sparkpostmail.com (mta-174-95-228.booking.com.sparkpostmail.com. [192.174.95.228])
+        by mx.google.com with ESMTPS id ffacd0b85a97d-390cd8fb283si794219f8f.665.2025.02.25.01.52.02
+        for <alokns1@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Tue, 25 Feb 2025 01:52:02 -0800 (PST)
+Received-SPF: pass (google.com: domain of bounce@spe.booking.com designates 192.174.95.228 as permitted sender) client-ip=192.174.95.228;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@sg.booking.com header.s=scph0817 header.b="N/zSJ7A3";
+       spf=pass (google.com: domain of bounce@spe.booking.com designates 192.174.95.228 as permitted sender) smtp.mailfrom=bounce@spe.booking.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=sg.booking.com
+Return-Path: <bounce@spe.booking.com>
+X-MSFBL: RTYYE2uO1HLW4or2u/rLThmsUEE0iX73FPQAmGVbkg8=|eyJzdWJhY2NvdW50X2l
+	kIjoiMSIsInRlbmFudF9pZCI6ImJvb2tpbmciLCJjdXN0b21lcl9pZCI6IjEiLCJ
+	yIjoiYWxva25zMUBnbWFpbC5jb20iLCJtZXNzYWdlX2lkIjoiNjdiOTlmNTdiZDY
+	3MjQwYTIxZGMifQ==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=sg.booking.com;
+	s=scph0817; t=1740461983; i=@sg.booking.com;
+	bh=nu+x1PdxWVQe2UoHB16zTkeIg6X2ns87cSThCgh9FLY=;
+	h=Content-Type:To:Message-ID:Date:List-Unsubscribe-Post:Subject:
+	 List-Unsubscribe:From:From:To:Cc:Subject;
+	b=N/zSJ7A3l01o8D+pxIDkS2eEoXJ++IMpninOtpBgXdzvyliSGGtB/inZOnZGm7yA9
+	 Ei2HLXEoWMDVB7GWIVUd6RpkF7Re5MC6RpZvsOuMbf13iIBDKCvapDuLdsgH5kth5B
+	 AmgtN2L7eNNac8rfOAvZ7UJoyYrPLo2d+fifeQNM=
+Received: from [10.95.196.21] ([10.95.196.21])
+	by i-0be99a3fc9ad2c811.mta3vrest.sd.prd.sparkpost (ecelerity 4.8.0.74368 r(msys-ecelerity:tags/4.8.0.17)) with REST
+	id CD/12-43045-F975DB76; Tue, 25 Feb 2025 05:39:43 +0000
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/html; charset="UTF-8"
+To: alokns1@gmail.com
+Message-ID: <CD.12.43045.F975DB76@i-0be99a3fc9ad2c811.mta3vrest.sd.prd.sparkpost>
+Date: Tue, 25 Feb 2025 05:39:43 +0000
+MIME-Version: 1.0
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+Subject: Alok, book early for 2025 and save big!
+List-Unsubscribe: <mailto:unsubscribe-HYRDYAFZBQ-booking-email-0@booking.com>,<https://www.booking.com/subscription_manager.html?aid=2434221&business_unit=booking&emk_token=HYRDYAFZBQ&message_channel=email&source_id=4&unsubscribe_all=1>
+From: "Booking.com" <email.campaign@sg.booking.com>
+Reply-To: noreply@booking.com
+
+<!doctype html>=0A      <html=0A        lang=3D"en-gb"=0A        dir=3Dltr=
+=0A        xmlns=3D"http://www.w3.org/1999/xhtml"=0A        xmlns:v=3D"urn:=
+schemas-microsoft-com:vml"=0A        xmlns:o=3D"urn:schemas-microsoft-com:o=
+ffice:office"=0A      >=0A        <head>=0A          <meta http-equiv=3D"co=
+ntent-type" content=3D"text/html; charset=3DUTF-8" />=0A          <meta htt=
+p-equiv=3D"content-style-type" content=3D"text/css" />=0A          <meta na=
+me=3D"robots" content=3D"index,follow" />=0A          <meta=0A            n=
+ame=3D"viewport"=0A            content=3D"width=3Ddevice-width, user-scalab=
+le=3Dno, initial-scale=3D1, minimum-scale=3D1, maximum-scale=3D1"=0A       =
+   />=0A          <style type=3D"text/css">=0A      body {=0A        -webki=
+t-text-size-adjust: 100%;=0A        -ms-text-size-adjust: 100%;=0A      }=
+=0A      body {=0A        -webkit-font-smoothing: antialiased;=0A      }=0A=
+      body {=0A        margin: 0 auto !important;=0A        padding: 0;=0A =
+     }=0A      body {=0A        width: 100% !important;=0A      }=0A      t=
+able {=0A        border-spacing: 0;=0A      }=0A      img {=0A        borde=
+r: 0 none;=0A        line-height: 100%;=0A        outline: none;=0A        =
+text-decoration: none;=0A        -ms-interpolation-mode: bicubic;=0A      }=
+=0A      a img {=0A        border: 0 none;=0A        text-decoration: none;=
+=0A      }=0A      table td {=0A        border-collapse: collapse;=0A      =
+}=0A      table {=0A        border-collapse: collapse;=0A        mso-table-=
+lspace: 0pt;=0A        mso-table-rspace: 0pt;=0A      }=0A      body {=0A  =
+      -webkit-font-smoothing: auto;=0A      }=0A      strong {=0A        fo=
+nt-weight: bold;=0A      }=0A      .appleLinksBlack {=0A        color: #000=
+000 !important;=0A        text-decoration: none !important;=0A      }=0A   =
+   a[x-apple-data-detectors] {=0A        color: inherit !important;=0A     =
+   text-decoration: none !important;=0A        font-size: inherit !importan=
+t;=0A        font-family: inherit !important;=0A        font-weight: inheri=
+t !important;=0A        line-height: inherit !important;=0A      }=0A      =
+@media only screen and (max-width: 575px) {=0A        .m-hide {=0A         =
+ display: none !important;=0A        }=0A        .m-block {=0A          dis=
+play: block !important;=0A        }=0A        .m-tr {=0A          display: =
+table-row !important;=0A        }=0A        .m-w-full {=0A          width: =
+100% !important;=0A        }=0A        .m-w-auto {=0A          width: auto =
+!important;=0A        }=0A        .m-m-auto {=0A          margin: 0 auto !i=
+mportant;=0A        }=0A        .m-text-center {=0A          text-align: ce=
+nter !important;=0A        }=0A        .m-text-right {=0A          text-ali=
+gn: right !important;=0A        }=0A        .m-text-left {=0A          text=
+-align: left !important;=0A        }=0A      }=0A  </style>=0A  <style data=
+-react-helmet=3D"true" >.links-black, .links-black div, .links-black a, a[x=
+-apple-data-detectors] {=0A    color: #1a1a1a !important;=0A    text-decora=
+tion: none !important;=0A  }</style><style data-react-helmet=3D"true" >body=
+ { margin: 0px;padding: 0px; }</style><style data-react-helmet=3D"true" >@m=
+edia only screen and (max-width: 575px) {.bui-mobile-1-R15n5gr{text-align: =
+center !important;}}</style><style data-react-helmet=3D"true" >@media only =
+screen and (max-width: 575px) {.bui-mobile-4-R7eppn5gr.bui-mobile-4-R7eppn5=
+gr{display: table-cell !important;}}</style><style data-react-helmet=3D"tru=
+e" >@media only screen and (max-width: 575px) {.bui-mobile-5-R9eppn5gr.bui-=
+mobile-5-R9eppn5gr{display: table-cell !important;}}</style><style data-rea=
+ct-helmet=3D"true" >@media only screen and (max-width: 575px) {.bui-mobile-=
+3-Reppn5gr{text-align: right !important;}}</style><style data-react-helmet=
+=3D"true" >@media only screen and (max-width: 575px) {.bui-mobile-6-Rbeppn5=
+gr.bui-mobile-6-Rbeppn5gr{display: table-cell !important;}}</style><style d=
+ata-react-helmet=3D"true" >@media only screen and (max-width: 575px) {.bui-=
+mobile-2-R9n5gr.bui-mobile-2-R9n5gr{display: none !important;}}</style><sty=
+le data-react-helmet=3D"true" >@media only screen and (max-width: 575px) {.=
+bui-mobile-10-R2bfb1b{width: 100% !important;display: block !important;}}</=
+style><style data-react-helmet=3D"true" >@media only screen and (max-width:=
+ 575px) {.bui-mobile-11-R1jfb1b{height: 8px !important;width: 8px !importan=
+t;}.bui-mobile-12-R1jfb1b{height: 8px !important;width: 8px !important;}}</=
+style><style data-react-helmet=3D"true" >@media only screen and (max-width:=
+ 575px) {.bui-mobile-13-R2jfb1b{width: 100% !important;display: block !impo=
+rtant;}}</style><style data-react-helmet=3D"true" >@media only screen and (=
+max-width: 575px) {.bui-mobile-7-R3b1b{width: 100% !important;display: bloc=
+k !important;}.bui-mobile-8-R3b1b{width: 100% !important;display: block !im=
+portant;}.bui-mobile-9-R3b1b{width: 100% !important;display: block !importa=
+nt;}}</style><style data-react-helmet=3D"true" >@media only screen and (max=
+-width: 575px) {.bui-mobile-14-R3b2r{font-size: 32px !important;line-height=
+: 40px !important;font-weight: 700 !important;}}</style><style data-react-h=
+elmet=3D"true" >@media only screen and (max-width: 575px) {.bui-mobile-15-R=
+3b3r{width: 100% !important;}}</style><style data-react-helmet=3D"true" >@m=
+edia only screen and (max-width: 575px) {.bui-mobile-16-R3b4r{font-size: 28=
+px !important;line-height: 36px !important;font-weight: 700 !important;}}</=
+style><style data-react-helmet=3D"true" >@media only screen and (max-width:=
+ 575px) {.bui-mobile-17-Rul5r{width: 100% !important;}}</style><style data-=
+react-helmet=3D"true" >@media only screen and (max-width: 575px) {.bui-mobi=
+le-18-Ruj7b{width: 100% !important;}}</style><style data-react-helmet=3D"tr=
+ue" >@media only screen and (max-width: 575px) {.bui-mobile-19-Rul8b{width:=
+ 100% !important;}}</style><style data-react-helmet=3D"true" >@media only s=
+creen and (max-width: 575px) {.bui-mobile-20-R1qr7bab{font-size: 28px !impo=
+rtant;line-height: 36px !important;font-weight: 700 !important;}}</style><s=
+tyle data-react-helmet=3D"true" >@media only screen and (max-width: 575px) =
+{.bui-mobile-21-R1qrnbab{width: 100% !important;}}</style>=0A          <tit=
+le>Alok, book early for 2025 and save big!</title>=0A        </head>=0A    =
+    <body style=3D"background-color: #ffffff; margin: 0;" id=3D"content-vie=
+wport">=0A          <div><!--[if mso | IE]>=0A<style>body, table, td, th { =
+font-family: BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Helvetica=
+, Arial, sans-serif !important; }</style>=0A<![endif]--></div><div style=3D=
+"font-size:14px;line-height:20px;font-weight:400;font-family:BlinkMacSystem=
+Font, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif"><div s=
+tyle=3D"display:none;overflow:hidden;line-height:1px;opacity:0;max-height:0=
+;max-width:0">Reset with a getaway that feels like home.=0A<div>=C2=A0=E2=
+=80=8C=E2=80=8B=E2=80=8D=E2=80=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=80=8C=E2=80=8B=
+=E2=80=8D=E2=80=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=80=8C=E2=80=8B=E2=80=8D=E2=80=
+=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=80=8C=E2=80=8B=E2=80=8D=E2=80=8E=E2=80=8F=EF=
+=BB=BF=C2=A0=E2=80=8C=E2=80=8B=E2=80=8D=E2=80=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=
+=80=8C=E2=80=8B=E2=80=8D=E2=80=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=80=8C=E2=80=8B=
+=E2=80=8D=E2=80=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=80=8C=E2=80=8B=E2=80=8D=E2=80=
+=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=80=8C=E2=80=8B=E2=80=8D=E2=80=8E=E2=80=8F=EF=
+=BB=BF=C2=A0=E2=80=8C=E2=80=8B=E2=80=8D=E2=80=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=
+=80=8C=E2=80=8B=E2=80=8D=E2=80=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=80=8C=E2=80=8B=
+=E2=80=8D=E2=80=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=80=8C=E2=80=8B=E2=80=8D=E2=80=
+=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=80=8C=E2=80=8B=E2=80=8D=E2=80=8E=E2=80=8F=EF=
+=BB=BF=C2=A0=E2=80=8C=E2=80=8B=E2=80=8D=E2=80=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=
+=80=8C=E2=80=8B=E2=80=8D=E2=80=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=80=8C=E2=80=8B=
+=E2=80=8D=E2=80=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=80=8C=E2=80=8B=E2=80=8D=E2=80=
+=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=80=8C=E2=80=8B=E2=80=8D=E2=80=8E=E2=80=8F=EF=
+=BB=BF=C2=A0=E2=80=8C=E2=80=8B=E2=80=8D=E2=80=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=
+=80=8C=E2=80=8B=E2=80=8D=E2=80=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=80=8C=E2=80=8B=
+=E2=80=8D=E2=80=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=80=8C=E2=80=8B=E2=80=8D=E2=80=
+=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=80=8C=E2=80=8B=E2=80=8D=E2=80=8E=E2=80=8F=EF=
+=BB=BF=C2=A0=E2=80=8C=E2=80=8B=E2=80=8D=E2=80=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=
+=80=8C=E2=80=8B=E2=80=8D=E2=80=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=80=8C=E2=80=8B=
+=E2=80=8D=E2=80=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=80=8C=E2=80=8B=E2=80=8D=E2=80=
+=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=80=8C=E2=80=8B=E2=80=8D=E2=80=8E=E2=80=8F=EF=
+=BB=BF=C2=A0=E2=80=8C=E2=80=8B=E2=80=8D=E2=80=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=
+=80=8C=E2=80=8B=E2=80=8D=E2=80=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=80=8C=E2=80=8B=
+=E2=80=8D=E2=80=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=80=8C=E2=80=8B=E2=80=8D=E2=80=
+=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=80=8C=E2=80=8B=E2=80=8D=E2=80=8E=E2=80=8F=EF=
+=BB=BF=C2=A0=E2=80=8C=E2=80=8B=E2=80=8D=E2=80=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=
+=80=8C=E2=80=8B=E2=80=8D=E2=80=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=80=8C=E2=80=8B=
+=E2=80=8D=E2=80=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=80=8C=E2=80=8B=E2=80=8D=E2=80=
+=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=80=8C=E2=80=8B=E2=80=8D=E2=80=8E=E2=80=8F=EF=
+=BB=BF=C2=A0=E2=80=8C=E2=80=8B=E2=80=8D=E2=80=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=
+=80=8C=E2=80=8B=E2=80=8D=E2=80=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=80=8C=E2=80=8B=
+=E2=80=8D=E2=80=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=80=8C=E2=80=8B=E2=80=8D=E2=80=
+=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=80=8C=E2=80=8B=E2=80=8D=E2=80=8E=E2=80=8F=EF=
+=BB=BF=C2=A0=E2=80=8C=E2=80=8B=E2=80=8D=E2=80=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=
+=80=8C=E2=80=8B=E2=80=8D=E2=80=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=80=8C=E2=80=8B=
+=E2=80=8D=E2=80=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=80=8C=E2=80=8B=E2=80=8D=E2=80=
+=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=80=8C=E2=80=8B=E2=80=8D=E2=80=8E=E2=80=8F=EF=
+=BB=BF=C2=A0=E2=80=8C=E2=80=8B=E2=80=8D=E2=80=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=
+=80=8C=E2=80=8B=E2=80=8D=E2=80=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=80=8C=E2=80=8B=
+=E2=80=8D=E2=80=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=80=8C=E2=80=8B=E2=80=8D=E2=80=
+=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=80=8C=E2=80=8B=E2=80=8D=E2=80=8E=E2=80=8F=EF=
+=BB=BF=C2=A0=E2=80=8C=E2=80=8B=E2=80=8D=E2=80=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=
+=80=8C=E2=80=8B=E2=80=8D=E2=80=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=80=8C=E2=80=8B=
+=E2=80=8D=E2=80=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=80=8C=E2=80=8B=E2=80=8D=E2=80=
+=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=80=8C=E2=80=8B=E2=80=8D=E2=80=8E=E2=80=8F=EF=
+=BB=BF=C2=A0=E2=80=8C=E2=80=8B=E2=80=8D=E2=80=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=
+=80=8C=E2=80=8B=E2=80=8D=E2=80=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=80=8C=E2=80=8B=
+=E2=80=8D=E2=80=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=80=8C=E2=80=8B=E2=80=8D=E2=80=
+=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=80=8C=E2=80=8B=E2=80=8D=E2=80=8E=E2=80=8F=EF=
+=BB=BF=C2=A0=E2=80=8C=E2=80=8B=E2=80=8D=E2=80=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=
+=80=8C=E2=80=8B=E2=80=8D=E2=80=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=80=8C=E2=80=8B=
+=E2=80=8D=E2=80=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=80=8C=E2=80=8B=E2=80=8D=E2=80=
+=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=80=8C=E2=80=8B=E2=80=8D=E2=80=8E=E2=80=8F=EF=
+=BB=BF=C2=A0=E2=80=8C=E2=80=8B=E2=80=8D=E2=80=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=
+=80=8C=E2=80=8B=E2=80=8D=E2=80=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=80=8C=E2=80=8B=
+=E2=80=8D=E2=80=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=80=8C=E2=80=8B=E2=80=8D=E2=80=
+=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=80=8C=E2=80=8B=E2=80=8D=E2=80=8E=E2=80=8F=EF=
+=BB=BF=C2=A0=E2=80=8C=E2=80=8B=E2=80=8D=E2=80=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=
+=80=8C=E2=80=8B=E2=80=8D=E2=80=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=80=8C=E2=80=8B=
+=E2=80=8D=E2=80=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=80=8C=E2=80=8B=E2=80=8D=E2=80=
+=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=80=8C=E2=80=8B=E2=80=8D=E2=80=8E=E2=80=8F=EF=
+=BB=BF=C2=A0=E2=80=8C=E2=80=8B=E2=80=8D=E2=80=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=
+=80=8C=E2=80=8B=E2=80=8D=E2=80=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=80=8C=E2=80=8B=
+=E2=80=8D=E2=80=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=80=8C=E2=80=8B=E2=80=8D=E2=80=
+=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=80=8C=E2=80=8B=E2=80=8D=E2=80=8E=E2=80=8F=EF=
+=BB=BF=C2=A0=E2=80=8C=E2=80=8B=E2=80=8D=E2=80=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=
+=80=8C=E2=80=8B=E2=80=8D=E2=80=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=80=8C=E2=80=8B=
+=E2=80=8D=E2=80=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=80=8C=E2=80=8B=E2=80=8D=E2=80=
+=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=80=8C=E2=80=8B=E2=80=8D=E2=80=8E=E2=80=8F=EF=
+=BB=BF=C2=A0=E2=80=8C=E2=80=8B=E2=80=8D=E2=80=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=
+=80=8C=E2=80=8B=E2=80=8D=E2=80=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=80=8C=E2=80=8B=
+=E2=80=8D=E2=80=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=80=8C=E2=80=8B=E2=80=8D=E2=80=
+=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=80=8C=E2=80=8B=E2=80=8D=E2=80=8E=E2=80=8F=EF=
+=BB=BF=C2=A0=E2=80=8C=E2=80=8B=E2=80=8D=E2=80=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=
+=80=8C=E2=80=8B=E2=80=8D=E2=80=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=80=8C=E2=80=8B=
+=E2=80=8D=E2=80=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=80=8C=E2=80=8B=E2=80=8D=E2=80=
+=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=80=8C=E2=80=8B=E2=80=8D=E2=80=8E=E2=80=8F=EF=
+=BB=BF=C2=A0=E2=80=8C=E2=80=8B=E2=80=8D=E2=80=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=
+=80=8C=E2=80=8B=E2=80=8D=E2=80=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=80=8C=E2=80=8B=
+=E2=80=8D=E2=80=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=80=8C=E2=80=8B=E2=80=8D=E2=80=
+=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=80=8C=E2=80=8B=E2=80=8D=E2=80=8E=E2=80=8F=EF=
+=BB=BF=C2=A0=E2=80=8C=E2=80=8B=E2=80=8D=E2=80=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=
+=80=8C=E2=80=8B=E2=80=8D=E2=80=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=80=8C=E2=80=8B=
+=E2=80=8D=E2=80=8E=E2=80=8F=EF=BB=BF</div></div><table align=3D"center" bor=
+der=3D"0" cellPadding=3D"0" cellSpacing=3D"0" role=3D"presentation" width=
+=3D"100%"><tbody><tr dir=3D"ltr"><td><table border=3D"0" cellPadding=3D"0" =
+cellSpacing=3D"0" role=3D"presentation" width=3D"100%"><tbody><tr><td style=
+=3D"background-color:#003b95;color:#ffffff;padding-left:16px;padding-right:=
+16px"><div><!--[if mso | IE]>=0A<table align=3D"center" border=3D"0" cellsp=
+acing=3D"0" cellpadding=3D"0" width=3D"624" role=3D"presentation">=0A<tbody=
+><tr><td valign=3D"top" width=3D"624">=0A<![endif]--></div><table align=3D"=
+center" border=3D"0" cellPadding=3D"0" cellSpacing=3D"0" role=3D"presentati=
+on" width=3D"100%" style=3D"max-width:624px"><tbody><tr><td><table border=
+=3D"0" cellPadding=3D"0" cellSpacing=3D"0" role=3D"presentation" width=3D"1=
+00%"><tbody><tr><th style=3D"padding-top:16px;padding-bottom:16px"><table b=
+order=3D"0" cellPadding=3D"0" cellSpacing=3D"0" role=3D"presentation" style=
+=3D"width:100%;display:table"><tbody style=3D"width:100%;display:table-row-=
+group"><tr style=3D"width:100%;display:table-row"><th class=3D"bui-mobile-1=
+-R15n5gr" style=3D"width:50%;display:table-cell;text-align:left;vertical-al=
+ign:middle;font-weight:normal"><a href=3D"https://t.spe.booking.com/f/a/ABv=
+nGjVtn3eEw9KkBJM6cw~~/AAAAARA~/jYFVnzP7R9lQR4f3vFZP0g2BmFOjGEQUi4tr3Yk-qIKP=
+Mge3U0fRePYGRRiWiP2ubEwMLvpwealsu8bDWJRVqd1GzeatCcyGkE8h0QDZ5jtlm9KJmp9P6N6=
+YwVDdjSYJ-NrutlXCGt7l-OkCF_tR3Y8KmXkaNo0m8tyJH6Il5-Nsaqq5n-8JFVAi_4K0btwaSM=
+Y3tyM4loQV1DgMYMMglsckZXaSLlBNR-kpXQHAHQx1KGCLVS-lOsh1tnCDZdBt" style=3D"te=
+xt-decoration:none;color:inherit;display:inline-block;vertical-align:middle=
+" target=3D"_blank" rel=3D"noreferrer"><img border=3D"none" style=3D"displa=
+y:block;border:none;width:144px;height:24px" class=3D"" height=3D"24" width=
+=3D"144" src=3D"https://r-xx.bstatic.com/data/mm/email_logo_white_trans_bg_=
+01.png" alt=3D"Booking.com"/></a></th><th class=3D"bui-mobile-2-R9n5gr" sty=
+le=3D"width:100%;display:table-cell;text-align:right;vertical-align:middle;=
+font-weight:normal"><table align=3D"right" border=3D"0" cellSpacing=3D"0" c=
+ellPadding=3D"0" role=3D"presentation"><tbody><tr><td class=3D"bui-mobile-4=
+-R7eppn5gr" valign=3D"middle" style=3D"display:table-cell" width=3D"34"><a =
+href=3D"https://t.spe.booking.com/f/a/lE0I9QDUYGuLa8K0zna3jw~~/AAAAARA~/kri=
+m_Fue7ZuW_EogYs3qr63xoAQ9RqA7eM5xLMR7-xqsfqwX6WetgJOlrBYuyJcwUUHJ7Ky1p1DYQP=
+nPXLj5NjESkVN1mM09s1WQG180HptbD4AzdVji7uiBSCRTRAbCS2aip6PuCqK69K9B-RITWDvW2=
+oshhRqZorEWaX0sDKb1QW9lMkyMgbRSnutAAWwQswWsxv4n48SG1ArCKitJAgFu2A255oP7nhQ2=
+XiUXDjwBOuFoZVaMMFj-ZmYVV3FAXNi39veXGRV49vlFHkID1o8l_owEXdwwC0LajJQweL4~" s=
+tyle=3D"text-decoration:none;color:inherit;display:block" target=3D"_blank"=
+ rel=3D"noreferrer"><span style=3D"border-radius:999px;display:block;width:=
+30px;border:2px solid #ffb700"><img style=3D"display:block;border:none;bord=
+er-radius:999px;width:30px;height:30px" class=3D"" height=3D"30" width=3D"3=
+0" src=3D"https://r-xx.bstatic.com/static/img/newsletters/avatar_default.pn=
+g" alt=3D""/></span></a></td><td class=3D"bui-mobile-5-R9eppn5gr" style=3D"=
+width:8px;display:table-cell"><span style=3D"height:8px;width:8px;display:b=
+lock;line-height:0"><img style=3D"height:8px;width:8px;line-height:0" src=
+=3D"https://r-xx.bstatic.com/static/img/transparent.gif" height=3D"8" width=
+=3D"8" alt=3D""/></span></td><td class=3D"bui-mobile-6-Rbeppn5gr bui-mobile=
+-3-Reppn5gr" valign=3D"middle" style=3D"display:table-cell;text-align:left"=
+><a href=3D"https://t.spe.booking.com/f/a/Yhl3CHkpvuEsc__0ACokVw~~/AAAAARA~=
+/lkVV_q_hksvQVqZ4E9Lfo-aqdXjWXDtuavf5Z0QXRKNOpMlkTsQjS096dN8NUwNsVLGl6f2dIz=
+-OdRLZW3tNK0ZptU0UnSclKS6kut8O5bgGXQJWu85Zl6hjCnAu5_yD_WGstOTzkX6doeq8TXRhT=
+d_0bXaQKKXFlhlt7WpNcDd6aaKOF8wZJMyi6L1f6_nx0-TTs7wy-JgWMSaSf67Gs9zfq_bYce_9=
+HC_NVEiTfzSF7Gp7xxCIVTIOqmCLUowcxJclXuNqAgncYSfpquKpZ1MCGNxQkbYK7udsQ2Y7bTc=
+~" style=3D"text-decoration:none;color:#ffffff" target=3D"_blank" rel=3D"no=
+referrer">Alok Sambuddha</a><table border=3D"0" cellSpacing=3D"0" cellPaddi=
+ng=3D"0" role=3D"presentation"><tbody><tr><td valign=3D"middle"><div style=
+=3D"margin:0;color:#febb02"><span style=3D"white-space:nowrap">Genius Level=
+ 1</span></div></td></tr></tbody></table></td></tr></tbody></table></th></t=
+r></tbody></table></th></tr></tbody></table></td></tr></tbody></table><div>=
+<!--[if mso | IE]>=0A</td></tr></tbody></table>=0A<![endif]--></div></td></=
+tr></tbody></table></td></tr><tr class=3D""><td style=3D"background-color:#=
+f0f6ff;padding:26px 16px 26px 16px"><table class=3D"m-w-full" width=3D"624"=
+ role=3D"presentation" cellPadding=3D"0" cellSpacing=3D"0" border=3D"0" ali=
+gn=3D"center" dir=3D"ltr"><tbody><tr><td class=3D"m-block m-w-full" style=
+=3D"background-color:rgba(26, 26, 26, 0);width:624px" valign=3D"top"><table=
+ border=3D"0" cellPadding=3D"0" cellSpacing=3D"0" role=3D"presentation" wid=
+th=3D"100%"><tbody><tr><td class=3D"" style=3D"text-align:left;line-height:=
+1px" align=3D"left"><table border=3D"0" cellPadding=3D"0" cellSpacing=3D"0"=
+ role=3D"presentation" style=3D"width:100%;display:table" class=3D"bui-mobi=
+le-7-R3b1b"><tbody style=3D"width:100%;display:table-row-group" class=3D"bu=
+i-mobile-8-R3b1b"><tr style=3D"width:100%;display:table-row" class=3D"bui-m=
+obile-9-R3b1b"><th class=3D"bui-mobile-10-R2bfb1b" style=3D"width:80px;disp=
+lay:table-cell;text-align:left;vertical-align:top;font-weight:normal"><img =
+width=3D"80" style=3D"display:block;max-width:100%" src=3D"https://r-xx.bst=
+atic.com/data/mm/Genius-level-pill-1.png"/></th><th class=3D"bui-mobile-11-=
+R1jfb1b" style=3D"width:16px"><span style=3D"height:16px;width:16px;display=
+:block;line-height:0" class=3D"bui-mobile-12-R1jfb1b"><img style=3D"height:=
+16px;width:16px;line-height:0" class=3D"bui-mobile-11-R1jfb1b" src=3D"https=
+://r-xx.bstatic.com/static/img/transparent.gif" height=3D"16" width=3D"16" =
+alt=3D""/></span></th><th class=3D"bui-mobile-13-R2jfb1b" style=3D"padding-=
+top:4px;display:table-cell;text-align:left;vertical-align:top;font-weight:n=
+ormal"><span style=3D"margin:0;color:inherit;font-size:14px;line-height:20p=
+x;font-weight:400;font-family:BlinkMacSystemFont, -apple-system, Segoe UI, =
+Roboto, Helvetica, Arial, sans-serif"><span>Combine <strong>Early 2025 Deal=
+s</strong> with your Genius travel rewards and save even more!... <a href=
+=3D"https://t.spe.booking.com/f/a/N4zkcXqY_5qzooUixULytw~~/AAAAARA~/6bN14-3=
+nhNfjuMFJS1LMLJEYmgVZ2PeddwdR2Y7D98ABqVlnIzWrjgBPy9aPhC03YX2M9mPPJ8owstVfeY=
+Tz_RlAYz38MPp4kXuLWG3xDYts_y8lCJ-crQzJEOXOrtHd3EUC-v409AEMi8zXuGAya38bmyk0G=
+uiJf1-4wDF5GUe8oTU_7qgw9LLQKKi_clYfseYGghmhmaznHqwKtu8MHUy1zjaWXBVEW6F6QahJ=
+TcA~" target=3D"_blank" rel=3D"noreferrer" style=3D"font-family:BlinkMacSys=
+temFont, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;text=
+-decoration:underline;color:#006ce4;;font-weight: 700;">Book now</a></span>=
+</span></th></tr></tbody></table></td></tr></tbody></table></td></tr></tbod=
+y></table></td></tr><tr class=3D""><td style=3D"background-color:#ffffff;pa=
+dding:40px 16px 0px 16px"><table class=3D"m-w-full" width=3D"624" role=3D"p=
+resentation" cellPadding=3D"0" cellSpacing=3D"0" border=3D"0" align=3D"cent=
+er" dir=3D"ltr"><tbody><tr><td class=3D"m-block m-w-full" style=3D"backgrou=
+nd-color:rgba(26, 26, 26, 0);width:624px" valign=3D"top"><table border=3D"0=
+" cellPadding=3D"0" cellSpacing=3D"0" role=3D"presentation" width=3D"100%">=
+<tbody><tr><td class=3D"" style=3D"text-align:left;line-height:1px" align=
+=3D"left"><a href=3D"https://t.spe.booking.com/f/uni/Oc43djHxK0tLnWgwrvnT9w=
+~~/AAAAARA~/t5sXPpXMLFl-MyjI61LBsfEAGdICGrxi_D33Nw9pMNaS7o8no7dT7uCM1BDCKYr=
+iuBJtl4uBIdW-8472_H-RgMNOEp73P05vGh5Z1dFa5OfWz6e6twhunEMLHSc6VqOorKCM_QtgCp=
+AcMhghxWM3Dk0zKbWxV95q3XHU9GYgaavc5qIgFXDygAauq8WD2fvYug24W3SNp5CQF10PtGvVh=
+8SNkbfizORV0k7LibAuEHHAGMKgFjsiBEUJq7rzOmF4WAAbORyLO6LWwRB7oc-SVmq57LGXXVnz=
+5R_-oL4PjMxrhg-ZgzW366F8mAnzD-gk" target=3D"_blank" rel=3D"noreferrer" univ=
+ersal=3D"true"><img width=3D"624" style=3D"display:block;max-width:100%;wid=
+th:624px" src=3D"https://r-xx.bstatic.com/data/mm/BS2_Hero_EU5_Deals_250225=
+.png" alt=3D"Dreams are meant to be lived (in)=0A"/></a></td></tr></tbody>=
+</table></td></tr></tbody></table></td></tr><tr class=3D""><td style=3D"bac=
+kground-color:#ffffff;padding:8px 16px 0px 16px"><table class=3D"m-w-full" =
+width=3D"624" role=3D"presentation" cellPadding=3D"0" cellSpacing=3D"0" bor=
+der=3D"0" align=3D"center" dir=3D"ltr"><tbody><tr><td class=3D"m-block m-w-=
+full" style=3D"background-color:rgba(26, 26, 26, 0);width:624px" valign=3D"=
+top"><table border=3D"0" cellPadding=3D"0" cellSpacing=3D"0" role=3D"presen=
+tation" width=3D"100%"><tbody><tr><td class=3D"" style=3D"text-align:left;l=
+ine-height:1px" align=3D"left"><table role=3D"presentation" cellPadding=3D"=
+0" cellSpacing=3D"0" border=3D"0" width=3D"100%"><tbody><tr><td width=3D"14=
+" valign=3D"top"><img src=3D"https://r-xx.bstatic.com/data/mm/612445e3-960a=
+-44c4-aa5a-52900ac030b7:BS2_Icon.png" width=3D"14" height=3D"19"/></td><td =
+width=3D"11" style=3D"font-size:0;line-height:0">=C2=A0</td><td><div><div s=
+tyle=3D"margin:0;color:#595959;font-size:16px;line-height:24px;font-weight:=
+400;font-family:BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Helvet=
+ica, Arial, sans-serif"><span>Indonesia, Labuan Bajo, Sudamala Resort</span=
+></div></div></td></tr></tbody></table></td></tr></tbody></table></td></tr>=
+</tbody></table></td></tr><tr class=3D""><td style=3D"background-color:#fff=
+fff;padding:40px 16px 0px 16px"><table class=3D"m-w-full" width=3D"624" rol=
+e=3D"presentation" cellPadding=3D"0" cellSpacing=3D"0" border=3D"0" align=
+=3D"center" dir=3D"ltr"><tbody><tr><td class=3D"m-block m-w-full" style=3D"=
+background-color:rgba(26, 26, 26, 0);width:624px" valign=3D"top"><table bor=
+der=3D"0" cellPadding=3D"0" cellSpacing=3D"0" role=3D"presentation" width=
+=3D"100%"><tbody><tr><td class=3D"" style=3D"text-align:left;line-height:1p=
+x" align=3D"left"><div style=3D"display:inline-block;vertical-align:top"><s=
+pan style=3D"margin:0;color:inherit;font-size:48px;line-height:62px;font-we=
+ight:700;font-family:&quot;Avenir Next&quot;, BlinkMacSystemFont, -apple-sy=
+stem, Segoe UI, Roboto, Helvetica, Arial, sans-serif" class=3D"bui-mobile-1=
+4-R3b2r"><span>Alok, dreams are meant to be lived (in)</span></span></div><=
+/td></tr></tbody></table></td></tr></tbody></table></td></tr><tr class=3D""=
+><td style=3D"background-color:#ffffff;padding:16px 16px 0px 16px"><table c=
+lass=3D"m-w-full" width=3D"624" role=3D"presentation" cellPadding=3D"0" cel=
+lSpacing=3D"0" border=3D"0" align=3D"center" dir=3D"ltr"><tbody><tr><td cla=
+ss=3D"m-block m-w-full" style=3D"background-color:rgba(26, 26, 26, 0);width=
+:624px" valign=3D"top"><table border=3D"0" cellPadding=3D"0" cellSpacing=3D=
+"0" role=3D"presentation" width=3D"100%"><tbody><tr><td class=3D"" style=3D=
+"text-align:left;line-height:1px" align=3D"left"><div style=3D"display:inli=
+ne-block;vertical-align:top"><span style=3D"margin:0;color:inherit;font-siz=
+e:16px;line-height:24px;font-weight:400;font-family:BlinkMacSystemFont, -ap=
+ple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif"><span>Wake up t=
+o dreamy views and discover how special stays create lifelong memories!</sp=
+an></span></div></td></tr></tbody></table></td></tr></tbody></table></td></=
+tr><tr class=3D""><td style=3D"background-color:#ffffff;padding:24px 16px 0=
+px 16px"><table class=3D"m-w-full" width=3D"624" role=3D"presentation" cell=
+Padding=3D"0" cellSpacing=3D"0" border=3D"0" align=3D"center" dir=3D"ltr"><=
+tbody><tr><td class=3D"m-block m-w-full" style=3D"background-color:rgba(26,=
+ 26, 26, 0);width:624px" valign=3D"top"><table border=3D"0" cellPadding=3D"=
+0" cellSpacing=3D"0" role=3D"presentation" width=3D"100%"><tbody><tr><td cl=
+ass=3D"" style=3D"text-align:left;line-height:1px" align=3D"left"><a univer=
+sal=3D"true" class=3D"bui-mobile-15-R3b3r" href=3D"https://t.spe.booking.co=
+m/f/uni/wg3z2mJs7Ult9mO3EQEwhg~~/AAAAARA~/siOFgx_hdROGJrZc_L1kfvPS7htTlFNXb=
+3GdOQUu9k4tzqkj2zoHVQ2NcfJJlMGcqBZUKsazr6z22Z3vBjXaEwbgrZn_8Ld-FMJArwPY94E2=
+fBleoIC2KyOW8ewcdT2Ukd8ABtvOLqpJl1N8i-BTOA7N7g5lucr9t8KBerH6PZGazHI7hPUAlUd=
+cEw8ocDN9a-C0uVLL2FlYrMfQmFSFrvD65JWoXOLQHiGhhzDPL-DatYe0Sd-hINGz-4F8Sbuj0i=
+E0gP9FTYWqY4D240paLHKBL2qwwJ7G7DQ1jkrUHo7ykFfngj2F0GWNG02J-l0e" style=3D"te=
+xt-decoration:none;color:#ffffff;background:#006ce4;font-size:16px;line-hei=
+ght:24px;font-weight:500;font-family:BlinkMacSystemFont, -apple-system, Seg=
+oe UI, Roboto, Helvetica, Arial, sans-serif;border-radius:4px;width:auto;bo=
+rder:1px solid transparent;display:inline-block;text-align:center" target=
+=3D"_blank" rel=3D"noreferrer"><span><!--[if mso | IE]>=0A          <i styl=
+e=3D"letter-spacing: 16px; mso-font-width: -100%; mso-text-raise: 24px" hid=
+den>&nbsp;</i>=0A        <![endif]--></span><span style=3D"display:inline-b=
+lock;mso-text-raise:12px;padding:12px 16px"><span>Explore deals </span></sp=
+an><span><!--[if mso | IE]>=0A          <i style=3D"letter-spacing: 16px; m=
+so-font-width: -100%; mso-text-raise: 24px" hidden>&nbsp;</i>=0A        <![=
+endif]--></span></a></td></tr></tbody></table></td></tr></tbody></table></t=
+d></tr><tr class=3D"m-hide"><td style=3D"background-color:#ffffff;padding:4=
+0px 16px 0px 16px"><table class=3D"m-w-full" width=3D"624" role=3D"presenta=
+tion" cellPadding=3D"0" cellSpacing=3D"0" border=3D"0" align=3D"center" dir=
+=3D"ltr"><tbody><tr><td class=3D"m-block m-w-full" style=3D"background-colo=
+r:rgba(26, 26, 26, 0);width:624px" valign=3D"top"><table border=3D"0" cellP=
+adding=3D"0" cellSpacing=3D"0" role=3D"presentation" width=3D"100%"><tbody>=
+<tr><td class=3D"" style=3D"text-align:left;line-height:1px" align=3D"left"=
+><img src=3D"https://r-xx.bstatic.com/static/img/transparent.gif" height=3D=
+"12" width=3D"1" alt=3D"" style=3D"height:12px"/></td></tr></tbody></table>=
+</td></tr></tbody></table></td></tr><tr class=3D""><td style=3D"background-=
+color:#ffffff;padding:40px 16px 8px 16px"><table class=3D"m-w-full" width=
+=3D"624" role=3D"presentation" cellPadding=3D"0" cellSpacing=3D"0" border=
+=3D"0" align=3D"center" dir=3D"ltr"><tbody><tr><td class=3D"m-block m-w-ful=
+l" style=3D"background-color:rgba(26, 26, 26, 0);width:624px" valign=3D"top=
+"><table border=3D"0" cellPadding=3D"0" cellSpacing=3D"0" role=3D"presentat=
+ion" width=3D"100%"><tbody><tr><td class=3D"" style=3D"text-align:left;line=
+-height:1px" align=3D"left"><div style=3D"display:inline-block;vertical-ali=
+gn:top"><span style=3D"margin:0;color:inherit;font-size:32px;line-height:40=
+px;font-weight:700;font-family:&quot;Avenir Next&quot;, BlinkMacSystemFont,=
+ -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif" class=3D"bu=
+i-mobile-16-R3b4r"><span>Where=E2=80=99s your next adventure=3F</span></spa=
+n></div></td></tr></tbody></table></td></tr></tbody></table></td></tr><!--[=
+if !mso]><!--><tr class=3D"m-tr" style=3D"display:none"><td style=3D"backgr=
+ound-color:#ffffff;padding:40px 16px 0px 16px"><table class=3D"m-w-full" wi=
+dth=3D"624" role=3D"presentation" cellPadding=3D"0" cellSpacing=3D"0" borde=
+r=3D"0" align=3D"center" dir=3D"ltr"><tbody><tr><td class=3D"m-block m-w-fu=
+ll" style=3D"background-color:rgba(26, 26, 26, 0);width:624px;border-radius=
+:8px 8px 8px 8px" valign=3D"top"><table border=3D"0" cellPadding=3D"0" cell=
+Spacing=3D"0" role=3D"presentation" width=3D"100%"><tbody><tr><td class=3D"=
+" style=3D"text-align:left;line-height:1px" align=3D"left"><a href=3D"https=
+://t.spe.booking.com/f/uni/Ihv_OfrjyZ1vHWIc7p8aeg~~/AAAAARA~/gZFbnYNKwYRolV=
+f5_rmW2Y6FDZ6Dt2Gc4AH60Q2Ctg0oyTT_55ee4Azk50Y3pCdXACkJRcQ9DGAfHRwysGybmixJq=
+Sa1YDJMOr19n3GKNHhWmhqhxs5iJ_TcZBwt3pkiTsjqntIxwC4cKgOm316-IiL1ws-dZr0AwNyz=
+iF3fUu8p2LJTZvDavPQog8JnPT33-slbHs8WQZtAUs7HT77vkiIsISlpdLRXmlNfPxpxkO1rvLI=
+AqLvP4GVOmANZPTJbVAduZ-NRXeLwWVzlfI8UvG3xAoWYZcs4WMp5itWkGl3ak3EXHXmbFD-aHD=
+da0Aeu81MAAgxlbznfZttyvCN6Isu30ED_8vxGXUoqSVuLfqwyHOR7zOq7aIlwPyE8HLLwtXkzk=
+SnLznpZIRgQk7ezs6n3btS5c2t-F2M3UfaeSEU~" target=3D"_blank" rel=3D"noreferre=
+r" universal=3D"true"><img width=3D"624" style=3D"display:block;max-width:1=
+00%;border-radius:8px 8px 8px 8px;width:624px" src=3D"https://q-xx.bstatic.=
+com/data/mm/e656adae-3961-45eb-8382-0b1dae8fc1cb:BS02_Mobile_img-1.png" alt=
+=3D"Discover the coast of Fuerteventura, Spain"/></a></td></tr></tbody></ta=
+ble></td></tr></tbody></table></td></tr><!--<![endif]--><tr class=3D""><td =
+style=3D"background-color:#ffffff;padding:0px 16px 0px 16px"><table class=
+=3D"m-w-full" width=3D"624" role=3D"presentation" cellPadding=3D"0" cellSpa=
+cing=3D"0" border=3D"0" align=3D"center" dir=3D"ltr"><tbody><tr><td class=
+=3D"m-hide" style=3D"background-color:#ffffff;width:324px" valign=3D"middle=
+"><table border=3D"0" cellPadding=3D"0" cellSpacing=3D"0" role=3D"presentat=
+ion" width=3D"100%"><tbody><tr><td height=3D"40"></td></tr><tr><td class=3D=
+"" style=3D"text-align:left;line-height:1px" align=3D"left"><a href=3D"http=
+s://t.spe.booking.com/f/uni/Ihv_OfrjyZ1vHWIc7p8aeg~~/AAAAARA~/gZFbnYNKwYRol=
+Vf5_rmW2Y6FDZ6Dt2Gc4AH60Q2Ctg0oyTT_55ee4Azk50Y3pCdXACkJRcQ9DGAfHRwysGybmixJ=
+qSa1YDJMOr19n3GKNHhWmhqhxs5iJ_TcZBwt3pkiTsjqntIxwC4cKgOm316-IiL1ws-dZr0AwNy=
+ziF3fUu8p2LJTZvDavPQog8JnPT33-slbHs8WQZtAUs7HT77vkiIsISlpdLRXmlNfPxpxkO1rvL=
+IAqLvP4GVOmANZPTJbVAduZ-NRXeLwWVzlfI8UvG3xAoWYZcs4WMp5itWkGl3ak3EXHXmbFD-aH=
+Dda0Aeu81MAAgxlbznfZttyvCN6Isu30ED_8vxGXUoqSVuLfqwyHOR7zOq7aIlwPyE8HLLwtXkz=
+kSnLznpZIRgQk7ezs6n3btS5c2t-F2M3UfaeSEU~" target=3D"_blank" rel=3D"noreferr=
+er" universal=3D"true"><img width=3D"300" style=3D"display:block;max-width:=
+100%;border-radius:0px 8px 8px 0px;width:300px" src=3D"https://q-xx.bstatic=
+.com/data/mm/faf89f65-f9b2-4159-a7ab-b53440352947:Bseasonal2-EU5-Desktop.p=
+ng" alt=3D"Discover the coast of Fuerteventura, Spain"/></a></td></tr></tbo=
+dy></table></td><td class=3D"m-block m-w-full" style=3D"background-color:rg=
+ba(26, 26, 26, 0);width:300px" valign=3D"middle"><table border=3D"0" cellPa=
+dding=3D"0" cellSpacing=3D"0" role=3D"presentation" width=3D"100%"><tbody><=
+tr><td height=3D"24"></td></tr><tr><td class=3D"" style=3D"text-align:left;=
+line-height:1px" align=3D"left"><div style=3D"display:inline-block;vertical=
+-align:top"><span style=3D"margin:0;color:inherit;font-size:24px;line-heigh=
+t:32px;font-weight:700;font-family:&quot;Avenir Next&quot;, BlinkMacSystemF=
+ont, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif"><span>D=
+iscover the coast of Fuerteventura, Spain</span></span></div></td></tr><tr>=
+<td class=3D"" style=3D"text-align:left;line-height:1px" align=3D"left"><im=
+g src=3D"https://r-xx.bstatic.com/static/img/transparent.gif" height=3D"16"=
+ width=3D"1" alt=3D"" style=3D"height:16px"/></td></tr><tr><td class=3D"" s=
+tyle=3D"text-align:left;line-height:1px" align=3D"left"><div style=3D"displ=
+ay:inline-block;vertical-align:top"><span style=3D"margin:0;color:inherit;f=
+ont-size:16px;line-height:24px;font-weight:400;font-family:BlinkMacSystemFo=
+nt, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif"><span>Wa=
+nder through golden dunes and volcanic landscapes to discover this stunning=
+ coastline.=0A</span></span></div></td></tr><tr><td class=3D"" style=3D"tex=
+t-align:left;line-height:1px" align=3D"left"><img src=3D"https://r-xx.bstat=
+ic.com/static/img/transparent.gif" height=3D"16" width=3D"1" alt=3D"" style=
+=3D"height:16px"/></td></tr><tr><td class=3D"" style=3D"text-align:left;lin=
+e-height:1px" align=3D"left"><table role=3D"presentation" cellPadding=3D"0"=
+ cellSpacing=3D"0" border=3D"0" width=3D"100%"><tbody><tr><td width=3D"24" =
+valign=3D"top"><a href=3D"https://t.spe.booking.com/f/uni/w6V3PLUXqT9GqtRuq=
+3bmrQ~~/AAAAARA~/WEKg3Ur43A2_w94NMsDCka0sfA2HS_si8d9XjNHMQjGWcRKoH-XbG3mIrt=
+Sd_yuQsT_d5pJZ3nl4X_6JHnWI8d-7go392nEGcy7IoRaQRlo4lAOZWqiXfMYCXCn7DfobWFLUa=
+_NNWkOnhYG4mWn2xL7cchiPTEGjCo4Wykw5myE99pmAcE2V6SvZahQWEjjV6etc41nf504l0BGm=
+RJbyZZOJ0c3WEDfpPO7lQJdaIZj31RM2Ccuwmbzx1EX2hNitSIeKuH-QTK2YJqxSrnftK37nyA1=
+b1UWbggn-ImtS8a3JtEWGvJWqYjj13JfAKa5IIyvfZGRSB_vtDvozQxR6x0SsZWkOJPSX10-N3y=
+hx59dzldNGqgcl9yNTHs1oHrQD_Exh0JuFEEChzrZs2Eoyli95k4V2O7wALDJfPz_avxU~" tar=
+get=3D"_blank" rel=3D"noreferrer" universal=3D"true"><img src=3D"https://r-=
+xx.bstatic.com/data/mm/BS11_tick_blue.png" width=3D"24" height=3D"24"/></a>=
+</td><td width=3D"16" style=3D"font-size:0;line-height:0">=C2=A0</td><td><d=
+iv><a target=3D"_blank" rel=3D"noreferrer" universal=3D"true" href=3D"https=
+://t.spe.booking.com/f/uni/xAuLQ6aONYi6rMbi29pcOA~~/AAAAARA~/_PRui-Rt3ZeV4B=
+M2lNXuTNch86due0QBKvzESTm3EK_jt_a1xPUS0o_bJpasXXHgEHxktBS45nHn9VlfSMlrqnmsn=
+uS8AiXGWEpLqXgj9KLae8-QxdiE1-EdfwpkEPCYc4Bet5fRqh649Q52C4Gt00xGxvDU8YvUAOmC=
+SBJvK561V7rqXBZeSN1-JEysghdZGhN3OruydyM8FDtvDfMsZzW2FWOPrTApMsJsB_G4u2irTfu=
+OQMSE0QoCPHhWxyCJe-CwdPROw3GiEOZS-SNUEdo-rogrDD7WdUjkIMcNV_3DZru86gRt-M3lJw=
+ZbdSB-S8E6KjRi3d6hNpaZ_QbI_VZdOBULpgPnHdTEpw2OPofdKt9tBU2_lD57iDl7_3cB7eWQY=
+6vVJRS1nF77RrB32ProTeAkHyhLCqnVuqvdD5I~" style=3D"text-decoration:none;colo=
+r:inherit"><div style=3D"margin:0;color:inherit;font-size:16px;line-height:=
+24px;font-weight:700;font-family:BlinkMacSystemFont, -apple-system, Segoe U=
+I, Roboto, Helvetica, Arial, sans-serif"><span>Sea view</span></div></a></d=
+iv></td></tr></tbody></table></td></tr><tr><td class=3D"" style=3D"text-ali=
+gn:left;line-height:1px" align=3D"left"><img src=3D"https://r-xx.bstatic.co=
+m/static/img/transparent.gif" height=3D"16" width=3D"1" alt=3D"" style=3D"h=
+eight:16px"/></td></tr><tr><td class=3D"" style=3D"text-align:left;line-hei=
+ght:1px" align=3D"left"><a universal=3D"true" class=3D"bui-mobile-17-Rul5r"=
+ href=3D"https://t.spe.booking.com/f/uni/SIowJswrRJeUxf-2nK5mew~~/AAAAARA~/=
+a1kZ6nnqUVU_EKmiPu7OuCwxvYoC-s3iD21mYTnTD9-1uSn4QnA2M_djBzxdvCF1QCAIK_FexYs=
+krBHh3KxIhXoLB49RDswNHtrRIQBIVKZhVAxpIpa6QIq9Mj02cIN2htJlSgyPlMamPXRY_qIxVd=
+5zCbavINUtEucGXFxVkSiB6mr-Xa2MTzT6MqDmVt8mkMon4FQLQI1uJ1CV4k9gp7NQgveaJTRg5=
+vyjHBkLz6Rf5gKxt2LCONLLtjQDEeFkCZ9dKVz1oV7EKppMo3J8ersXQrEwxSOZYkXgy3pgsi-r=
+qBIt64Nwg70RfyhkjDervvDkDUqFGyfpaitqDlMi7rU9gAa3M8lufiqmo1btfYZQtLNmxcp4zF7=
+gTJToqXahVtRD8ir4-gegoI9A9-zdWnz2DejCo9fOPi0fCCf5Slk~" style=3D"text-decora=
+tion:none;color:#006ce4;background:#ffffff;font-size:16px;line-height:24px;=
+font-weight:500;font-family:BlinkMacSystemFont, -apple-system, Segoe UI, Ro=
+boto, Helvetica, Arial, sans-serif;border-radius:4px;width:auto;border:1px =
+solid #006ce4;display:inline-block;text-align:center" target=3D"_blank" rel=
+=3D"noreferrer"><span><!--[if mso | IE]>=0A          <i style=3D"letter-spa=
+cing: 16px; mso-font-width: -100%; mso-text-raise: 24px" hidden>&nbsp;</i>=
+=0A        <![endif]--></span><span style=3D"display:inline-block;mso-text-=
+raise:12px;padding:12px 16px"><span>Explore Fuerteventura </span></span><sp=
+an><!--[if mso | IE]>=0A          <i style=3D"letter-spacing: 16px; mso-fon=
+t-width: -100%; mso-text-raise: 24px" hidden>&nbsp;</i>=0A        <![endif]=
+--></span></a></td></tr></tbody></table></td></tr></tbody></table></td></tr=
+><!--[if !mso]><!--><tr class=3D"m-tr" style=3D"display:none"><td style=3D"=
+background-color:#ffffff;padding:40px 16px 0px 16px"><table class=3D"m-w-fu=
+ll" width=3D"624" role=3D"presentation" cellPadding=3D"0" cellSpacing=3D"0"=
+ border=3D"0" align=3D"center" dir=3D"ltr"><tbody><tr><td class=3D"m-block =
+m-w-full" style=3D"background-color:rgba(26, 26, 26, 0);width:624px;border-=
+radius:0px 0px 0px 0px" valign=3D"top"><table border=3D"0" cellPadding=3D"0=
+" cellSpacing=3D"0" role=3D"presentation" width=3D"100%"><tbody><tr><td cla=
+ss=3D"" style=3D"text-align:left;line-height:1px" align=3D"left"><a href=3D=
+"https://t.spe.booking.com/f/uni/_YpMMs3CI_SZ52R9xxE6Sw~~/AAAAARA~/4JfadFpv=
+etwP0a8S0lc0vIo1BMOWuxMfsrumB5T10dqEJ9j0vXENLKz-6LV_CBBat1HjfndMolYDxwpdm8I=
+wPE_rRwapVS--BRFOQG1Bl7u5ezjaTpdeXx0eAwEDd2IvnpeQW9vL_J_LFjMDz6bYQaivyzJtAy=
+u64kx-cxdPunXAb26fVPFOx_gtpOB6TbGf-tULcE11i2Plw3MJspkyc-86DxdUaDMRZA9P2eKYC=
+xK11h33KUcAqOyfkADdyk_FXjCsHCJ70EE_5Okj6WUTf-vmXwOskVLa79eRYiWOpE800nP0lQyp=
+Gm1xMmoPcXwI-L8MCw4LqF5GVdusfczsuLNpkr9Mu0JMT5a7bzknz4qz4jA0Ywq_ysQH94jSa5_=
+VZ8simeWX87vKLYWj1tdIVw~~" target=3D"_blank" rel=3D"noreferrer" universal=
+=3D"true"><img width=3D"624" style=3D"display:block;max-width:100%;border-r=
+adius:8px 8px 8px 8px;width:624px" src=3D"https://r-xx.bstatic.com/data/mm/=
+b658ac44-8e08-431f-9b8e-bf7b7565d997:BS02_Mobile_img-4.png" alt=3D"Discover=
+ the beauty of Azores, Portugal"/></a></td></tr></tbody></table></td></tr><=
+/tbody></table></td></tr><!--<![endif]--><tr class=3D"m-hide"><td style=3D"=
+background-color:#ffffff;padding:0px 16px 0px 16px"><table class=3D"m-w-ful=
+l" width=3D"624" role=3D"presentation" cellPadding=3D"0" cellSpacing=3D"0" =
+border=3D"0" align=3D"center" dir=3D"ltr"><tbody><tr><td class=3D"m-block m=
+-w-full" style=3D"background-color:rgba(26, 26, 26, 0);width:624px" valign=
+=3D"top"><table border=3D"0" cellPadding=3D"0" cellSpacing=3D"0" role=3D"pr=
+esentation" width=3D"100%"><tbody><tr><td class=3D"" style=3D"text-align:le=
+ft;line-height:1px" align=3D"left"><img src=3D"https://r-xx.bstatic.com/sta=
+tic/img/transparent.gif" height=3D"16" width=3D"1" alt=3D"" style=3D"height=
+:16px"/></td></tr></tbody></table></td></tr></tbody></table></td></tr><tr c=
+lass=3D""><td style=3D"background-color:#ffffff;padding:24px 16px 0px 16px"=
+><table class=3D"m-w-full" width=3D"624" role=3D"presentation" cellPadding=
+=3D"0" cellSpacing=3D"0" border=3D"0" align=3D"center" dir=3D"ltr"><tbody><=
+tr><td class=3D"m-block m-w-full" style=3D"background-color:#ffffff;width:3=
+24px" valign=3D"middle"><table border=3D"0" cellPadding=3D"0" cellSpacing=
+=3D"0" role=3D"presentation" width=3D"100%"><tbody><tr><td class=3D"" style=
+=3D"text-align:left;line-height:1px" align=3D"left"><div style=3D"display:i=
+nline-block;vertical-align:top"><span style=3D"margin:0;color:inherit;font-=
+size:24px;line-height:32px;font-weight:700;font-family:&quot;Avenir Next&qu=
+ot;, BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Helvetica, Arial,=
+ sans-serif"><span>Discover the beauty of Azores, Portugal</span></span></d=
+iv></td></tr><tr><td class=3D"" style=3D"text-align:left;line-height:1px" a=
+lign=3D"left"><img src=3D"https://r-xx.bstatic.com/static/img/transparent.g=
+if" height=3D"16" width=3D"1" alt=3D"" style=3D"height:16px"/></td></tr><tr=
+><td class=3D"" style=3D"text-align:left;line-height:1px" align=3D"left"><d=
+iv style=3D"display:inline-block;vertical-align:top"><span style=3D"margin:=
+0;color:inherit;font-size:16px;line-height:24px;font-weight:400;font-family=
+:BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Helvetica, Arial, san=
+s-serif"><span>Wake up to the breathtaking views of the Azores. </span></sp=
+an></div></td></tr><tr><td class=3D"" style=3D"text-align:left;line-height:=
+1px" align=3D"left"><img src=3D"https://r-xx.bstatic.com/static/img/transpa=
+rent.gif" height=3D"16" width=3D"1" alt=3D"" style=3D"height:16px"/></td></=
+tr><tr><td class=3D"" style=3D"text-align:left;line-height:1px" align=3D"le=
+ft"><table role=3D"presentation" cellPadding=3D"0" cellSpacing=3D"0" border=
+=3D"0" width=3D"100%"><tbody><tr><td width=3D"24" valign=3D"top"><a href=3D=
+"https://t.spe.booking.com/f/uni/yPNPvbRk84ysUGSuNdPR8Q~~/AAAAARA~/52GNAbUi=
+8f_JnGwWAvhSnn8F7q_Pt5oivHDjsIBtpW10X4zo1i9KQNeE24SWdfGewwcs8_wehTOap5f-oG-=
+bsEyd-_i2GbKpPUz1NiLMHt6R9WQiwZ0tTEtRU83yH4SwJj5odYT95kwXvs_a4okwDKwp3ue5Ar=
+FdFvsNZd0wNjI1uOTU5T-fzTjhSK6OWGHvTa58QvDpv9hlyMByEeLIoMlPWfEwJ-g7rloFesvjz=
+j6vHnpXdQR5jqjN9DFGeiBpiwLg4YS-0mXC8sCYez9Hed9SK3QRrVWQdxez528vPgBRuFyxgGVH=
+_OUjW0Jpkhohz4Vs_41JI3DULdWZYGQWqwZdkbUIHlO11GGFMlgPZRIjn6iIvI1OXytaVIJ4jxe=
+OwfPJJPjHSjMuaZxMDeYeNg~~" target=3D"_blank" rel=3D"noreferrer" universal=
+=3D"true"><img src=3D"https://r-xx.bstatic.com/data/mm/BS11_tick_blue.png" =
+width=3D"24" height=3D"24"/></a></td><td width=3D"16" style=3D"font-size:0;=
+line-height:0">=C2=A0</td><td><div><a target=3D"_blank" rel=3D"noreferrer" =
+universal=3D"true" href=3D"https://t.spe.booking.com/f/uni/X5JpHbx0i5ZIEHaF=
+BQf9OQ~~/AAAAARA~/i2kTCBzUp_n_4Oz8Cc5POI0zefKMeQCtR9aPQf_MhwZHZYQcSJMvI7cof=
+gvsryyAyI6n5gsOhjFOSU_PIywidx5LnPSLdCzUweIwE4Bw_QcBPccqbMYmh_cNgKX19hZ_F4Ul=
+1JaF5oPktZsz6YSvDoXuMVTsss57033NBSI_X3htOtK7vkTaqBKUGChsaMMws8z8wcIIzDyoSqS=
+8ESroTd9gpBB1eRsgtO8ysHGa5qhZeHUOBzQ9zwSlYGfmwl7nu46UpcLUoA_MXy-fUQ2G153HXB=
+7wDs2bgjXBl3eD1cRAP3QsVb4xg_fBb1kq_XywZfskg-kAIzjhtCoO1r9ALHqOXAYsslK8NytTr=
+MZYX7mf0o1GWmzNUyY8itBxPAw-WZ6ZLw4nGfaPF8_eMML9Xg~~" style=3D"text-decorati=
+on:none;color:inherit"><div style=3D"margin:0;color:inherit;font-size:16px;=
+line-height:24px;font-weight:700;font-family:BlinkMacSystemFont, -apple-sys=
+tem, Segoe UI, Roboto, Helvetica, Arial, sans-serif"><span>View</span></div=
+></a></div></td></tr></tbody></table></td></tr><tr><td class=3D"" style=3D"=
+text-align:left;line-height:1px" align=3D"left"><img src=3D"https://r-xx.bs=
+tatic.com/static/img/transparent.gif" height=3D"16" width=3D"1" alt=3D"" st=
+yle=3D"height:16px"/></td></tr><tr><td class=3D"" style=3D"text-align:left;=
+line-height:1px" align=3D"left"><a universal=3D"true" class=3D"bui-mobile-1=
+8-Ruj7b" href=3D"https://t.spe.booking.com/f/uni/alNXOE3S018-S0QE92o8QQ~~/A=
+AAAARA~/b_4OqunyVJpvcaAlC77MFVb8aP7Vtldm8P9YuXkstNPk1QgFAhOZ21ryIiR00y1xDCY=
+JnhgbjAjkmgUkKzJtJx8PjqEXyubD2rT2rD5mk-QFKp9HVbScxqQXBeU3lheOs0fYBBRpfXXpwR=
+FtCo0LP6LPka9efhA0X_Qnprdph7Q4Wwfo2eT9EWkH4wnRPnn9qHKgB1GddyUZKheHJ4oHs5HfT=
+_9HEjFElcCy4kY9VeQdMtnd4k8QLQwFy3t6gk7NXjJOcNZ-PsDY8ljgbPsUp1i2nUHaNFGYJCZ_=
+OQqIJh7_ozZqEiauyr7MPzqiaK8dbPi3IDVKLL115xCta80RKPQIi5XHCdq1WJBKQOFt3GSi86H=
+5fnaYiFq9DP0pfoJpfFVD5ymoqHV7Y-Br-jGPcg~~" style=3D"text-decoration:none;co=
+lor:#006ce4;background:#ffffff;font-size:16px;line-height:24px;font-weight:=
+500;font-family:BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Helvet=
+ica, Arial, sans-serif;border-radius:4px;width:auto;border:1px solid #006ce=
+4;display:inline-block;text-align:center" target=3D"_blank" rel=3D"noreferr=
+er"><span><!--[if mso | IE]>=0A          <i style=3D"letter-spacing: 16px; =
+mso-font-width: -100%; mso-text-raise: 24px" hidden>&nbsp;</i>=0A        <!=
+[endif]--></span><span style=3D"display:inline-block;mso-text-raise:12px;pa=
+dding:12px 16px"><span>Explore Azores</span></span><span><!--[if mso | IE]>=
+=0A          <i style=3D"letter-spacing: 16px; mso-font-width: -100%; mso-t=
+ext-raise: 24px" hidden>&nbsp;</i>=0A        <![endif]--></span></a></td></=
+tr></tbody></table></td><td class=3D"m-hide" style=3D"background-color:rgba=
+(26, 26, 26, 0);width:300px" valign=3D"middle"><table border=3D"0" cellPadd=
+ing=3D"0" cellSpacing=3D"0" role=3D"presentation" width=3D"100%"><tbody><tr=
+><td class=3D"" style=3D"text-align:left;line-height:1px" align=3D"left"><a=
+ href=3D"https://t.spe.booking.com/f/uni/YtlE-rnXAdpC3y5lRWoqlA~~/AAAAARA~/=
+nnUwFPgBhQWzSqAdfIG4mECYWyDLnlI5sdI7S-p5X_3x1AdVQ1itfsghn9YyO92ko0JG7mxl6yp=
+BSXLS9M8jsIwdytz2AJfcEswlC9BzPxhHjxVNoThMCsIcZNLd6R4ryRUgXZRJhzZz4nq7tjPxT-=
+t2i18w9Bhf9RecccahweHvOIQUo5bWa9Cv5fcQVoxdLpnhs9z60kyTvB3SRJ5TOdNO28uFlYRN3=
+r700DP2gZ6Uesv9muw5kPfHgQNS38Jreta_Z9I78Z2_iBDvKObPb0u7P9eudIm8gQEGy0ozZq6v=
+8CskxPtINeDvRuqXAQ_duMywTLyploaekOlEEA7KWZpVDlilT1BhZf5CQ8ifa_3qt-ymBhm7UX3=
+3QXwq4ty4Bn6wjpVONmXJO8-E6xOLDA~~" target=3D"_blank" rel=3D"noreferrer" uni=
+versal=3D"true"><img width=3D"300" style=3D"display:block;max-width:100%;bo=
+rder-radius:0px 8px 8px 0px;width:300px" src=3D"https://q-xx.bstatic.com/da=
+ta/mm/4045db68-0ba0-4290-8063-b4dc4d1a0444:BS2_Azores_Deals_EU5_250225.png"=
+ alt=3D"Discover the beauty of Azores, Portugal"/></a></td></tr></tbody></t=
+able></td></tr></tbody></table></td></tr><!--[if !mso]><!--><tr class=3D"m-=
+tr" style=3D"display:none"><td style=3D"background-color:#ffffff;padding:40=
+px 16px 0px 16px"><table class=3D"m-w-full" width=3D"624" role=3D"presentat=
+ion" cellPadding=3D"0" cellSpacing=3D"0" border=3D"0" align=3D"center" dir=
+=3D"ltr"><tbody><tr><td class=3D"m-block m-w-full" style=3D"background-colo=
+r:rgba(26, 26, 26, 0);width:624px;border-radius:0px 0px 0px 0px" valign=3D"=
+top"><table border=3D"0" cellPadding=3D"0" cellSpacing=3D"0" role=3D"presen=
+tation" width=3D"100%"><tbody><tr><td class=3D"" style=3D"text-align:left;l=
+ine-height:1px" align=3D"left"><a href=3D"https://t.spe.booking.com/f/uni/H=
+xpijtwb5x9n5EFd_AYJVw~~/AAAAARA~/i2kTCBzUp_n_4Oz8Cc5POI0zefKMeQCtR9aPQf_Mhw=
+ZHZYQcSJMvI7cofgvsryyAqlDsHHMCmxtGWTh1WuSuwEL_UzwhCa2jgCIhE7HCYgvQBZynbte9L=
+Mc-COgdKtJhvv39U4pgQsSC6dQ7nP3JVGjQ0QRN2otNQntuK8xo2DeKVLjLJwy_uXjIyQY61pUH=
+yX9N4u1IpATxeRehwTh_HYLhpABCdSKB6i95iw81GDRL97oaNDQuVQZVbKLDafdev-BmLOqvjPP=
+BOpE80SXuWjFJu47dNTNwNcDU-R0QDriSMwKrQ9qUtc0fFU2pv-NNTUm-SLtKlS3DVi8KzURTwu=
+05K4qb9OJlZ8775d1AcWFRgzTYmM0BHnnafyVIAQplblAhtehMYDps8v6pBZspqA~~" target=
+=3D"_blank" rel=3D"noreferrer" universal=3D"true"><img width=3D"624" style=
+=3D"display:block;max-width:100%;border-radius:8px 8px 8px 8px;width:624px"=
+ src=3D"https://q-xx.bstatic.com/data/mm/9f7e0848-ec74-4b6d-a89f-dc8dc4d9c2=
+e2:BS02_Mobile_img-5.png" alt=3D"Take on the pace of Berlin, Germany"/></a>=
+</td></tr></tbody></table></td></tr></tbody></table></td></tr><!--<![endif]=
+--><tr class=3D""><td style=3D"background-color:#ffffff;padding:0px 16px 0p=
+x 16px"><table class=3D"m-w-full" width=3D"624" role=3D"presentation" cellP=
+adding=3D"0" cellSpacing=3D"0" border=3D"0" align=3D"center" dir=3D"ltr"><t=
+body><tr><td class=3D"m-hide" style=3D"background-color:#ffffff;width:324px=
+" valign=3D"middle"><table border=3D"0" cellPadding=3D"0" cellSpacing=3D"0"=
+ role=3D"presentation" width=3D"100%"><tbody><tr><td height=3D"40"></td></t=
+r><tr><td class=3D"" style=3D"text-align:left;line-height:1px" align=3D"lef=
+t"><a href=3D"https://t.spe.booking.com/f/uni/jRqmCnFftkOQ3JGKiPh3_Q~~/AAAA=
+ARA~/eMeN49b8ChJqJjB8M3UDS9tCZ2dCj_qJzifS1_kcOD0xbxslYMn4tqvo2ePZMyLXro3QIJ=
+z-4xiMLr6IlfmKtZN10WlPFGQLy6G6VtyT6OEicCcg-vEt8p7BkYsTWvvrZFFXXkH2ftqePC-0S=
+s8cUddg6QTBDdjbDnWsm1QuzVNMkVSD7ktEWEzSbxNM-uUqZsKqbMej6D9zrvWghHpJ8-sVREZK=
+f5-kuvCnG-pjpJz_ArwCmYdLfHLwEOqr3at81MJnY2ANZMFMkZq6MzQWhSr3NUW-PRnHHACwopK=
+IwPxNlwcoMk0xPaZSlakKlvzE5fF-0thcbWV6Q-kwBz1z1PyXiJP9w3h8gg4HhhYRkrULMq0-UV=
+-fZfJT4pQ_pHijsdz0hKZ2ySswHfs6fskAEZ2SnKR14pqKlBBLshEiZW4~" target=3D"_blan=
+k" rel=3D"noreferrer" universal=3D"true"><img width=3D"300" style=3D"displa=
+y:block;max-width:100%;border-radius:0px 8px 8px 0px;width:300px" src=3D"ht=
+tps://q-xx.bstatic.com/data/mm/ef9f0c7a-3cfc-4489-a4e9-e4ebe4fb4bd3:BS2_Ber=
+lin_Deals_EU5_250225.png" alt=3D"Take on the pace of Berlin, Germany"/></a>=
+</td></tr></tbody></table></td><td class=3D"m-block m-w-full" style=3D"back=
+ground-color:rgba(26, 26, 26, 0);width:300px" valign=3D"middle"><table bord=
+er=3D"0" cellPadding=3D"0" cellSpacing=3D"0" role=3D"presentation" width=3D=
+"100%"><tbody><tr><td height=3D"24"></td></tr><tr><td class=3D"" style=3D"t=
+ext-align:left;line-height:1px" align=3D"left"><div style=3D"display:inline=
+-block;vertical-align:top"><span style=3D"margin:0;color:inherit;font-size:=
+24px;line-height:32px;font-weight:700;font-family:&quot;Avenir Next&quot;, =
+BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans=
+-serif"><span>Take on the pace of Berlin, Germany</span></span></div></td><=
+/tr><tr><td class=3D"" style=3D"text-align:left;line-height:1px" align=3D"l=
+eft"><img src=3D"https://r-xx.bstatic.com/static/img/transparent.gif" heigh=
+t=3D"16" width=3D"1" alt=3D"" style=3D"height:16px"/></td></tr><tr><td clas=
+s=3D"" style=3D"text-align:left;line-height:1px" align=3D"left"><div style=
+=3D"display:inline-block;vertical-align:top"><span style=3D"margin:0;color:=
+inherit;font-size:16px;line-height:24px;font-weight:400;font-family:BlinkMa=
+cSystemFont, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif"=
+><span>From culture to cuisine, discover the versatile charm of Berlin.=0A<=
+/span></span></div></td></tr><tr><td class=3D"" style=3D"text-align:left;li=
+ne-height:1px" align=3D"left"><img src=3D"https://r-xx.bstatic.com/static/i=
+mg/transparent.gif" height=3D"16" width=3D"1" alt=3D"" style=3D"height:16px=
+"/></td></tr><tr><td class=3D"" style=3D"text-align:left;line-height:1px" a=
+lign=3D"left"><table role=3D"presentation" cellPadding=3D"0" cellSpacing=3D=
+"0" border=3D"0" width=3D"100%"><tbody><tr><td width=3D"24" valign=3D"top">=
+<a href=3D"https://t.spe.booking.com/f/uni/JakfzH7cRgOUP5U0IYLEqQ~~/AAAAARA=
+~/Lz3SOy5IBOIZuXQB-ChIQRx4t_UamHl0EmWIP0_vTu05IGeAj0kVLSVGFmQ4OJMlBADL4-QtD=
+iRrApeZ_5LOWfPN5HjktBbrL4zHOyYGLvRHV9JyvcLLJNsH6nVLl42P4iHJ5tmmE7QGAcGJyVkM=
+xg9BLkE67OUlM5WNAbDrhxS7nyABNmCsOfG0rJCX3746o771zIH0WxMW8BhI2zmc8A4fL0GJVR0=
+RVaO-_F17wiAS-UUw8Zz2LF6DVpWcTD8WRxIgo97L3ChbcF0BgmwzZ1zUiHJDSXvCW8EqasbAn2=
+EjN5FiHLBkBcnF-YRLY6BXjllwukkUiq94mRphFsGajTv0sJiNUCF2-dfm3zRJRN9crqcWkv3s0=
+HjYG-wCtLAGbpLE19QRFC1tf_qavsTh_g~~" target=3D"_blank" rel=3D"noreferrer" u=
+niversal=3D"true"><img src=3D"https://r-xx.bstatic.com/data/mm/BS11_tick_bl=
+ue.png" width=3D"24" height=3D"24"/></a></td><td width=3D"16" style=3D"font=
+-size:0;line-height:0">=C2=A0</td><td><div><a target=3D"_blank" rel=3D"nore=
+ferrer" universal=3D"true" href=3D"https://t.spe.booking.com/f/uni/JakfzH7c=
+RgOUP5U0IYLEqQ~~/AAAAARA~/Lz3SOy5IBOIZuXQB-ChIQRx4t_UamHl0EmWIP0_vTu05IGeAj=
+0kVLSVGFmQ4OJMlBADL4-QtDiRrApeZ_5LOWfPN5HjktBbrL4zHOyYGLvRHV9JyvcLLJNsH6nVL=
+l42P4iHJ5tmmE7QGAcGJyVkMxg9BLkE67OUlM5WNAbDrhxS7nyABNmCsOfG0rJCX3746o771zIH=
+0WxMW8BhI2zmc8A4fL0GJVR0RVaO-_F17wiAS-UUw8Zz2LF6DVpWcTD8WRxIgo97L3ChbcF0Bgm=
+wzZ1zUiHJDSXvCW8EqasbAn2EjN5FiHLBkBcnF-YRLY6BXjllwukkUiq94mRphFsGajTv0sJiNU=
+CF2-dfm3zRJRN9crqcWkv3s0HjYG-wCtLAGbpLE19QRFC1tf_qavsTh_g~~" style=3D"text-=
+decoration:none;color:inherit"><div style=3D"margin:0;color:inherit;font-si=
+ze:16px;line-height:24px;font-weight:700;font-family:BlinkMacSystemFont, -a=
+pple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif"><span>City cen=
+tre</span></div></a></div></td></tr></tbody></table></td></tr><tr><td class=
+=3D"" style=3D"text-align:left;line-height:1px" align=3D"left"><img src=3D"=
+https://r-xx.bstatic.com/static/img/transparent.gif" height=3D"16" width=3D=
+"1" alt=3D"" style=3D"height:16px"/></td></tr><tr><td class=3D"" style=3D"t=
+ext-align:left;line-height:1px" align=3D"left"><a universal=3D"true" class=
+=3D"bui-mobile-19-Rul8b" href=3D"https://t.spe.booking.com/f/uni/mZ1CpUCLRI=
+nhPdH2ZhS6zw~~/AAAAARA~/SaCBE_wTkYn1pR76mfq4dpiYUdIlcpJCg5bhb9v5sW9oqmw5agM=
+U55Sq8eCfjOUZupl-GVwC0hJKEc3rCUeWdWknu_E6xpXagXqmm2KXHcTXSBW_eJiYSdRzEs1iAu=
+KOPGGXbRMF0i0S6PjCrhDIC6HXl-lOseRkJK6K5TE-T-vcihBQNSzST0xl77cJhoZZgZzdJDy8E=
+W7hrs2Y3ep7cX36wGanJZ3enScEomhMreZRLn1z4D7wscTCRkSsbncalNeHlQdYyghp6mGlx_U7=
+GYwTM3A-ETZNfpgeQu7usblRG56f-YZfYPj3vRkeMydSDPGzSlXNcXd3AEK1SlpaHnIWHvzqk-j=
+D-pPh1OUT9oCrDdUiVQwhMwUkNsU8vGjG" style=3D"text-decoration:none;color:#006=
+ce4;background:#ffffff;font-size:16px;line-height:24px;font-weight:500;font=
+-family:BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Helvetica, Ari=
+al, sans-serif;border-radius:4px;width:auto;border:1px solid #006ce4;displa=
+y:inline-block;text-align:center" target=3D"_blank" rel=3D"noreferrer"><spa=
+n><!--[if mso | IE]>=0A          <i style=3D"letter-spacing: 16px; mso-font=
+-width: -100%; mso-text-raise: 24px" hidden>&nbsp;</i>=0A        <![endif]-=
+-></span><span style=3D"display:inline-block;mso-text-raise:12px;padding:12=
+px 16px"><span>Explore Berlin </span></span><span><!--[if mso | IE]>=0A    =
+      <i style=3D"letter-spacing: 16px; mso-font-width: -100%; mso-text-rai=
+se: 24px" hidden>&nbsp;</i>=0A        <![endif]--></span></a></td></tr></tb=
+ody></table></td></tr></tbody></table></td></tr><tr class=3D""><td style=3D=
+"background-color:#ffffff;padding:40px 16px 0px 16px"><table class=3D"m-w-f=
+ull" width=3D"624" role=3D"presentation" cellPadding=3D"0" cellSpacing=3D"0=
+" border=3D"0" align=3D"center" dir=3D"ltr"><tbody><tr><td class=3D"m-block=
+ m-w-full" style=3D"background-color:rgba(26, 26, 26, 0);width:624px" valig=
+n=3D"top"><table border=3D"0" cellPadding=3D"0" cellSpacing=3D"0" role=3D"p=
+resentation" width=3D"100%"><tbody><tr><td class=3D"" style=3D"text-align:l=
+eft;line-height:1px" align=3D"left"><div style=3D"margin:4px 0 4px"><hr sty=
+le=3D"height:1px;background:#e7e7e7;border:0;margin:0"/></div></td></tr></t=
+body></table></td></tr></tbody></table></td></tr><tr class=3D""><td style=
+=3D"background-color:#ffffff;padding:40px 16px 0px 16px"><table class=3D"m-=
+w-full" width=3D"624" role=3D"presentation" cellPadding=3D"0" cellSpacing=
+=3D"0" border=3D"0" align=3D"center" dir=3D"ltr"><tbody><tr><td class=3D"m-=
+block m-w-full" style=3D"background-color:rgba(26, 26, 26, 0);width:624px" =
+valign=3D"top"><table border=3D"0" cellPadding=3D"0" cellSpacing=3D"0" role=
+=3D"presentation" width=3D"100%"><tbody><tr><td class=3D"" style=3D"text-al=
+ign:left;line-height:1px" align=3D"left"><div style=3D"display:inline-block=
+;vertical-align:top"><span style=3D"margin:0;color:inherit;font-size:24px;l=
+ine-height:32px;font-weight:700;font-family:&quot;Avenir Next&quot;, BlinkM=
+acSystemFont, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif=
+"><span>Enjoy peace of mind</span></span></div></td></tr></tbody></table></=
+td></tr></tbody></table></td></tr><tr class=3D""><td style=3D"background-co=
+lor:#ffffff;padding:24px 16px 0px 16px"><table class=3D"m-w-full" width=3D"=
+624" role=3D"presentation" cellPadding=3D"0" cellSpacing=3D"0" border=3D"0"=
+ align=3D"center" dir=3D"ltr"><tbody><tr><td class=3D"m-block m-w-full" sty=
+le=3D"background-color:#f0f6ff;width:304px;border-radius:4px 4px 4px 4px" v=
+align=3D"top"><table border=3D"0" cellPadding=3D"0" cellSpacing=3D"0" role=
+=3D"presentation" width=3D"100%"><tbody><tr><td height=3D"20"></td></tr><tr=
+><td class=3D"" style=3D"padding-left:10px;padding-right:40px;text-align:le=
+ft;line-height:1px" align=3D"left"><table role=3D"presentation" cellPadding=
+=3D"0" cellSpacing=3D"0" border=3D"0" width=3D"100%"><tbody><tr><td width=
+=3D"80" valign=3D"top"><img src=3D"https://r-xx.bstatic.com/data/mm/985f9ce=
+a-a93c-4d59-882e-f2c634f07162:BS11_icon1.png" width=3D"80" height=3D"80"/><=
+/td><td width=3D"16" style=3D"font-size:0;line-height:0">=C2=A0</td><td><di=
+v><div style=3D"margin:0;color:inherit;font-size:20px;line-height:28px;font=
+-weight:700;font-family:&quot;Avenir Next&quot;, BlinkMacSystemFont, -apple=
+-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif"><span>No hidden fe=
+es</span></div></div><div><div style=3D"margin:0;color:inherit;font-size:16=
+px;line-height:24px;font-weight:500;font-family:BlinkMacSystemFont, -apple-=
+system, Segoe UI, Roboto, Helvetica, Arial, sans-serif"><span>The price you=
+ see is the price you pay.</span></div></div></td></tr></tbody></table></td=
+></tr><tr><td height=3D"20"></td></tr></tbody></table></td><td class=3D"m-b=
+lock m-w-full" width=3D"16" height=3D"16" valign=3D"top" style=3D"font-size=
+:0">=C2=A0</td><td class=3D"m-block m-w-full" style=3D"background-color:#f0=
+f6ff;width:304px;border-radius:4px 4px 4px 4px" valign=3D"top"><table borde=
+r=3D"0" cellPadding=3D"0" cellSpacing=3D"0" role=3D"presentation" width=3D"=
+100%"><tbody><tr><td height=3D"20"></td></tr><tr><td class=3D"" style=3D"pa=
+dding-left:10px;padding-right:30px;text-align:left;line-height:1px" align=
+=3D"left"><table role=3D"presentation" cellPadding=3D"0" cellSpacing=3D"0" =
+border=3D"0" width=3D"100%"><tbody><tr><td width=3D"80" valign=3D"top"><img=
+ src=3D"https://r-xx.bstatic.com/data/mm/7bb970bd-897d-4e19-83fc-b7810459f3=
+52:BS11_icon2.png" width=3D"80" height=3D"80"/></td><td width=3D"16" style=
+=3D"font-size:0;line-height:0">=C2=A0</td><td><div><div style=3D"margin:0;c=
+olor:inherit;font-size:20px;line-height:28px;font-weight:700;font-family:&q=
+uot;Avenir Next&quot;, BlinkMacSystemFont, -apple-system, Segoe UI, Roboto,=
+ Helvetica, Arial, sans-serif"><span>Free cancellation</span></div></div><d=
+iv><div style=3D"margin:0;color:inherit;font-size:16px;line-height:24px;fon=
+t-weight:500;font-family:BlinkMacSystemFont, -apple-system, Segoe UI, Robot=
+o, Helvetica, Arial, sans-serif"><span>Many properties offer free cancellat=
+ion.</span></div></div></td></tr></tbody></table></td></tr><tr><td height=
+=3D"20"></td></tr></tbody></table></td></tr></tbody></table></td></tr><tr c=
+lass=3D""><td style=3D"background-color:#ffffff;padding:64px 16px 0px 16px"=
+><table class=3D"m-w-full" width=3D"624" role=3D"presentation" cellPadding=
+=3D"0" cellSpacing=3D"0" border=3D"0" align=3D"center" dir=3D"ltr"><tbody><=
+tr><td class=3D"m-block m-w-full" style=3D"background-color:rgba(26, 26, 26=
+, 0);width:624px" valign=3D"top"><table border=3D"0" cellPadding=3D"0" cell=
+Spacing=3D"0" role=3D"presentation" width=3D"100%"><tbody><tr><td class=3D"=
+" style=3D"text-align:left;line-height:1px" align=3D"left"><table border=3D=
+"0" cellPadding=3D"0" cellSpacing=3D"0" role=3D"presentation" width=3D"100%=
+"><tbody><tr><th style=3D"padding-bottom:16px"><table border=3D"0" cellPadd=
+ing=3D"0" cellSpacing=3D"0" role=3D"presentation" style=3D"width:100%;displ=
+ay:table"><tbody style=3D"width:100%;display:table-row-group"><tr style=3D"=
+width:100%;display:table-row"><th class=3D"" style=3D"width:100%;display:ta=
+ble-cell;text-align:left;vertical-align:top;font-weight:normal"><div style=
+=3D"margin:0;color:inherit;font-size:32px;line-height:40px;font-weight:700;=
+font-family:&quot;Avenir Next&quot;, BlinkMacSystemFont, -apple-system, Seg=
+oe UI, Roboto, Helvetica, Arial, sans-serif" class=3D"bui-mobile-20-R1qr7ba=
+b"><span>Everything you need in one place</span></div></th></tr></tbody></t=
+able></th></tr></tbody></table><table border=3D"0" cellPadding=3D"0" cellSp=
+acing=3D"0" role=3D"presentation" width=3D"100%"><tbody><tr><th style=3D"pa=
+dding-bottom:16px"><table border=3D"0" cellPadding=3D"0" cellSpacing=3D"0" =
+role=3D"presentation" style=3D"width:100%;display:table"><tbody style=3D"wi=
+dth:100%;display:table-row-group"><tr style=3D"width:100%;display:table-row=
+"><th class=3D"" style=3D"width:100%;display:table-cell;text-align:left;ver=
+tical-align:top;font-weight:normal"><div style=3D"margin:0;color:inherit;fo=
+nt-size:16px;line-height:24px;font-weight:400;font-family:BlinkMacSystemFon=
+t, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif"><span>You=
+ get the group together, we=E2=80=99ll make the trip planning easy.</span><=
+/div></th></tr></tbody></table></th></tr></tbody></table><table role=3D"pre=
+sentation" cellPadding=3D"0" cellSpacing=3D"0"><tr><td width=3D"116" valign=
+=3D"top" style=3D"max-width:33.333333333333336%"><table role=3D"presentatio=
+n"><tr><td style=3D"padding:0 8px" align=3D"center"><a universal=3D"true" h=
+ref=3D"https://t.spe.booking.com/f/uni/TBhNqxQCwOibntH5ZRCrHQ~~/AAAAARA~/8C=
+jJjRMGqNaf_n7FgtxTNpA5BwqxWqlw2joXpkqE1pviY9lyou30p4alqxH_e0I2H7BwRR8ZWi1iq=
+72BoZpXUgC-mi2xyTSp5I3eJQk_EKvtmPi6zHdO6jgMBKHnHXAHoTZp3TR9UzxUTtVw0JtMKxe1=
+WU_t_oniXIyxth7MCcC4hTMyTbTGVjWF8kIfI9O0DwbkDbInbO20dkvRCalmEL0fh2uUThIlboW=
+f9CWvNkw~" style=3D"text-decoration:none;color:inherit" target=3D"_blank" r=
+el=3D"noreferrer"><img src=3D"https://r-xx.bstatic.com/data/mm/GN_vert_stay=
+s.png" width=3D"100" style=3D"max-width:100%;width:100px;display:inline-blo=
+ck;max-height:100px" alt=3D"Stays"/></a></td></tr><tr class=3D"m-hide"><td =
+style=3D"padding:8px 8px 0" align=3D"center"><a universal=3D"true" href=3D"=
+https://t.spe.booking.com/f/uni/TBhNqxQCwOibntH5ZRCrHQ~~/AAAAARA~/8CjJjRMGq=
+Naf_n7FgtxTNpA5BwqxWqlw2joXpkqE1pviY9lyou30p4alqxH_e0I2H7BwRR8ZWi1iq72BoZpX=
+UgC-mi2xyTSp5I3eJQk_EKvtmPi6zHdO6jgMBKHnHXAHoTZp3TR9UzxUTtVw0JtMKxe1WU_t_on=
+iXIyxth7MCcC4hTMyTbTGVjWF8kIfI9O0DwbkDbInbO20dkvRCalmEL0fh2uUThIlboWf9CWvNk=
+w~" style=3D"text-decoration:none;color:inherit" target=3D"_blank" rel=3D"n=
+oreferrer"><span style=3D"margin:0;color:#595959;font-size:16px;line-height=
+:24px;font-weight:700;font-family:BlinkMacSystemFont, -apple-system, Segoe =
+UI, Roboto, Helvetica, Arial, sans-serif">Stays</span></a></td></tr></table=
+></td><td width=3D"116" valign=3D"top" style=3D"max-width:33.33333333333333=
+6%"><table role=3D"presentation"><tr><td style=3D"padding:0 8px" align=3D"c=
+enter"><a universal=3D"true" href=3D"https://t.spe.booking.com/f/uni/UXIM8K=
+-UK9HOAD1QiM-0kw~~/AAAAARA~/2WJaNjDbXux02J4mQqTilpvBf1_DsCyhyz_J42_KzYVzLvo=
+op5Pbc9nxvol1UPsJ_k9tF4bvvpAo5ObB9qkMJA5EqmbhETUzYDaxhM6sw2TpBns51aEbe5l2l8=
+EOZvGmh4oiNynS7ziK24InLkpeP09A3DFaLHyInFFIR3aOJy7Tq3bYPxtl2mvq2SIGPkFG_ij3K=
+7ujj1WA-E5chBeWJO3HQiL79FlPZ9Bn0Az0nYo~" style=3D"text-decoration:none;colo=
+r:inherit" target=3D"_blank" rel=3D"noreferrer"><img src=3D"https://r-xx.bs=
+tatic.com/data/mm/GN_vert_flights.png" width=3D"100" style=3D"max-width:100=
+%;width:100px;display:inline-block;max-height:100px" alt=3D"Flights"/></a><=
+/td></tr><tr class=3D"m-hide"><td style=3D"padding:8px 8px 0" align=3D"cent=
+er"><a universal=3D"true" href=3D"https://t.spe.booking.com/f/uni/UXIM8K-UK=
+9HOAD1QiM-0kw~~/AAAAARA~/2WJaNjDbXux02J4mQqTilpvBf1_DsCyhyz_J42_KzYVzLvoop5=
+Pbc9nxvol1UPsJ_k9tF4bvvpAo5ObB9qkMJA5EqmbhETUzYDaxhM6sw2TpBns51aEbe5l2l8EOZ=
+vGmh4oiNynS7ziK24InLkpeP09A3DFaLHyInFFIR3aOJy7Tq3bYPxtl2mvq2SIGPkFG_ij3K7uj=
+j1WA-E5chBeWJO3HQiL79FlPZ9Bn0Az0nYo~" style=3D"text-decoration:none;color:i=
+nherit" target=3D"_blank" rel=3D"noreferrer"><span style=3D"margin:0;color:=
+#595959;font-size:16px;line-height:24px;font-weight:700;font-family:BlinkMa=
+cSystemFont, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif"=
+>Flights</span></a></td></tr></table></td><td width=3D"116" valign=3D"top" =
+style=3D"max-width:33.333333333333336%"><table role=3D"presentation"><tr><t=
+d style=3D"padding:0 8px" align=3D"center"><a universal=3D"true" href=3D"ht=
+tps://t.spe.booking.com/f/uni/GpRDXnm3idHDxqKLcpE8kQ~~/AAAAARA~/FtG3IwyIV_z=
+oZ1R-NRHZvpNDigC2mOOuiiV6eU_DvwUDLmL1hJ7Tkf7cxpguWQa6qbz2Mx8tmbV37oenFchEE8=
+shpakMG_9VdWB_-6y61_a0XtuKpO_o4nrrOU1v7bs0SWjbMMA2eCsdAqbTIKjvF8tJiUn6oCtwZ=
+7BFX_BVIAKdgAItdNH_-YbLLL-F7DR8c-NGXaGSiOTgLFx7jfsH-IDDBuYjE7bNjgR6kkTOyqE~=
+" style=3D"text-decoration:none;color:inherit" target=3D"_blank" rel=3D"nor=
+eferrer"><img src=3D"https://r-xx.bstatic.com/data/mm/GN_vert_attractions.p=
+ng" width=3D"100" style=3D"max-width:100%;width:100px;display:inline-block;=
+max-height:100px" alt=3D"Attractions"/></a></td></tr><tr class=3D"m-hide"><=
+td style=3D"padding:8px 8px 0" align=3D"center"><a universal=3D"true" href=
+=3D"https://t.spe.booking.com/f/uni/GpRDXnm3idHDxqKLcpE8kQ~~/AAAAARA~/FtG3I=
+wyIV_zoZ1R-NRHZvpNDigC2mOOuiiV6eU_DvwUDLmL1hJ7Tkf7cxpguWQa6qbz2Mx8tmbV37oen=
+FchEE8shpakMG_9VdWB_-6y61_a0XtuKpO_o4nrrOU1v7bs0SWjbMMA2eCsdAqbTIKjvF8tJiUn=
+6oCtwZ7BFX_BVIAKdgAItdNH_-YbLLL-F7DR8c-NGXaGSiOTgLFx7jfsH-IDDBuYjE7bNjgR6kk=
+TOyqE~" style=3D"text-decoration:none;color:inherit" target=3D"_blank" rel=
+=3D"noreferrer"><span style=3D"margin:0;color:#595959;font-size:16px;line-h=
+eight:24px;font-weight:700;font-family:BlinkMacSystemFont, -apple-system, S=
+egoe UI, Roboto, Helvetica, Arial, sans-serif">Attractions</span></a></td><=
+/tr></table></td></tr></table><table border=3D"0" cellPadding=3D"0" cellSpa=
+cing=3D"0" role=3D"presentation" width=3D"100%"><tbody><tr><th style=3D"pad=
+ding-top:24px"><table border=3D"0" cellPadding=3D"0" cellSpacing=3D"0" role=
+=3D"presentation" style=3D"width:100%;display:table"><tbody style=3D"width:=
+100%;display:table-row-group"><tr style=3D"width:100%;display:table-row"><t=
+h class=3D"" style=3D"width:100%;display:table-cell;text-align:left;vertica=
+l-align:top;font-weight:normal"><a universal=3D"true" class=3D"bui-mobile-2=
+1-R1qrnbab" href=3D"https://t.spe.booking.com/f/uni/TTgAGBqaRfnzUf9uyd0x_g~=
+~/AAAAARA~/I9ET5KNELKaf4ryWCtV1pgYWpeb3AeVTMKu9L3JRUzgfbwiNG65-clsfZjcuIbqL=
+PrarWlHW_da1rqapqVt5LXNG0X0COVbk0M54NEVzbUKUkaAUtF5_6jVSj2fweFMuZq3VooH4vgQ=
+L2lZxByijCTlHbfSuuTMYUR4_u95KMuKK9rd-hIHJoeic1OqgOGYlx_cZt_Yije3MS-HZt5CLmg=
+~~" style=3D"text-decoration:none;color:#006ce4;background:#ffffff;font-siz=
+e:16px;line-height:24px;font-weight:500;font-family:BlinkMacSystemFont, -ap=
+ple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;border-radius:4p=
+x;width:auto;border:1px solid #006ce4;display:inline-block;text-align:cente=
+r" target=3D"_blank" rel=3D"noreferrer"><span><!--[if mso | IE]>=0A        =
+  <i style=3D"letter-spacing: 16px; mso-font-width: -100%; mso-text-raise: =
+24px" hidden>&nbsp;</i>=0A        <![endif]--></span><span style=3D"display=
+:inline-block;mso-text-raise:12px;padding:12px 16px"><span>Start your trip<=
+/span></span><span><!--[if mso | IE]>=0A          <i style=3D"letter-spacin=
+g: 16px; mso-font-width: -100%; mso-text-raise: 24px" hidden>&nbsp;</i>=0A =
+       <![endif]--></span></a></th></tr></tbody></table></th></tr></tbody><=
+/table></td></tr></tbody></table></td></tr></tbody></table></td></tr><tr cl=
+ass=3D""><td style=3D"background-color:#ffffff;padding:24px 16px 0px 16px">=
+<table class=3D"m-w-full" width=3D"624" role=3D"presentation" cellPadding=
+=3D"0" cellSpacing=3D"0" border=3D"0" align=3D"center" dir=3D"ltr"><tbody><=
+tr><td class=3D"m-block m-w-full" style=3D"background-color:rgba(26, 26, 26=
+, 0);width:624px" valign=3D"top"><table border=3D"0" cellPadding=3D"0" cell=
+Spacing=3D"0" role=3D"presentation" width=3D"100%"><tbody><tr><td class=3D"=
+" style=3D"text-align:left;line-height:1px" align=3D"left"><div style=3D"ma=
+rgin:4px 0 4px"><hr style=3D"height:1px;background:#e7e7e7;border:0;margin:=
+0"/></div></td></tr></tbody></table></td></tr></tbody></table></td></tr><tr=
+ class=3D""><td style=3D"background-color:#ffffff;padding:64px 16px 76px 16=
+px"><table class=3D"m-w-full" width=3D"624" role=3D"presentation" cellPaddi=
+ng=3D"0" cellSpacing=3D"0" border=3D"0" align=3D"center" dir=3D"ltr"><tbody=
+><tr><td class=3D"m-block m-w-full" style=3D"background-color:rgba(26, 26, =
+26, 0);width:624px" valign=3D"top"><table border=3D"0" cellPadding=3D"0" ce=
+llSpacing=3D"0" role=3D"presentation" width=3D"100%"><tbody><tr><td class=
+=3D"" style=3D"text-align:left;line-height:1px" align=3D"left"><table width=
+=3D"100%" cellPadding=3D"0" cellSpacing=3D"0" border=3D"0" role=3D"presenta=
+tion"><tbody><tr><td style=3D"padding-bottom:8px;color:#1A1A1A"><a href=3D"=
+https://t.spe.booking.com/f/a/oej6Ta4Rtqy7P6ejGpjOJQ~~/AAAAARA~/mgPFWpil5pA=
+kqAamhdhW5zzDli41PA4WFNUoWcEVe6mmo79FUUxGJna4pP5ZWv0HP3nvrZ4Olp-k6sT_uISdhR=
+Co8EmhP366HcRaERonw178FOoLs9nX5F6LOV-M_8j4A3X96FaxPx0FiuOxBtbuZ5CQT7vlFupav=
+k_Vhs99mc3qWtWYpa1deYnZVCdOpAn2u0jOCkajbdTezucLtGX4eA~~" style=3D"text-deco=
+ration:none;color:#1A1A1A;display:block" target=3D"_blank" rel=3D"noreferre=
+r"><span style=3D"margin:0;color:inherit;font-size:20px;line-height:28px;fo=
+nt-weight:700;font-family:&quot;Avenir Next&quot;, BlinkMacSystemFont, -app=
+le-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif">What are you dre=
+aming about=3F</span></a></td></tr><tr><td><table align=3D"left" width=3D"1=
+00%" cellPadding=3D"0" cellSpacing=3D"0" border=3D"0" role=3D"presentation"=
+ style=3D"border:4px solid #FFB700;border-collapse:separate;border-radius:8=
+px"><tbody><tr><td width=3D"100%" style=3D"padding:4px"><table width=3D"100=
+%" align=3D"left" cellPadding=3D"0" cellSpacing=3D"0" border=3D"0" style=3D=
+"border-collapse:separate;border-radius:8px" role=3D"presentation"><tbody><=
+tr><td valign=3D"middle" width=3D"24" style=3D"padding:16px"><a target=3D"_=
+blank" rel=3D"noreferrer" href=3D"https://t.spe.booking.com/f/a/oej6Ta4Rtqy=
+7P6ejGpjOJQ~~/AAAAARA~/mgPFWpil5pAkqAamhdhW5zzDli41PA4WFNUoWcEVe6mmo79FUUxG=
+Jna4pP5ZWv0HP3nvrZ4Olp-k6sT_uISdhRCo8EmhP366HcRaERonw178FOoLs9nX5F6LOV-M_8j=
+4A3X96FaxPx0FiuOxBtbuZ5CQT7vlFupavk_Vhs99mc3qWtWYpa1deYnZVCdOpAn2u0jOCkajbd=
+TezucLtGX4eA~~" style=3D"display:block"><img style=3D"display:block;border:=
+0" src=3D"https://r-xx.bstatic.com/data/mm/iconsearch.png" width=3D"24" hei=
+ght=3D"24" alt=3D""/></a></td><td valign=3D"middle" style=3D"color:#1A1A1A"=
+><a href=3D"https://t.spe.booking.com/f/a/oej6Ta4Rtqy7P6ejGpjOJQ~~/AAAAARA~=
+/mgPFWpil5pAkqAamhdhW5zzDli41PA4WFNUoWcEVe6mmo79FUUxGJna4pP5ZWv0HP3nvrZ4Olp=
+-k6sT_uISdhRCo8EmhP366HcRaERonw178FOoLs9nX5F6LOV-M_8j4A3X96FaxPx0FiuOxBtbuZ=
+5CQT7vlFupavk_Vhs99mc3qWtWYpa1deYnZVCdOpAn2u0jOCkajbdTezucLtGX4eA~~" style=
+=3D"text-decoration:none;color:#1A1A1A;display:block" target=3D"_blank" rel=
+=3D"noreferrer"><span style=3D"margin:0;color:inherit;font-size:16px;line-h=
+eight:24px;font-weight:400;font-family:BlinkMacSystemFont, -apple-system, S=
+egoe UI, Roboto, Helvetica, Arial, sans-serif">Find your stay today</span><=
+/a></td></tr></tbody></table></td></tr></tbody></table></td></tr></tbody></=
+table></td></tr></tbody></table></td></tr></tbody></table></td></tr><tr dir=
+=3D"ltr"><td><table border=3D"0" cellPadding=3D"0" cellSpacing=3D"0" role=
+=3D"presentation" width=3D"100%"><tbody><tr><td style=3D"background-color:#=
+f5f5f5;border-bottom:1px solid #e7e7e7;border-top:1px solid #e7e7e7;color:#=
+1a1a1a;padding-top:48px;padding-bottom:48px;padding-left:16px;padding-right=
+:16px"><div><!--[if mso | IE]>=0A<table align=3D"center" border=3D"0" cells=
+pacing=3D"0" cellpadding=3D"0" width=3D"624" role=3D"presentation">=0A<tbod=
+y><tr><td valign=3D"top" width=3D"624">=0A<![endif]--></div><table align=3D=
+"center" border=3D"0" cellPadding=3D"0" cellSpacing=3D"0" role=3D"presentat=
+ion" width=3D"100%" style=3D"max-width:624px"><tbody><tr><td><div style=3D"=
+width:100%;display:block"><div style=3D"width:100%;display:block"><div styl=
+e=3D"width:100%;display:block"><div class=3D"" style=3D"display:block;text-=
+align:left;vertical-align:top;font-weight:normal"><div class=3D"links-black=
+"><div style=3D"margin:0;color:inherit;font-size:16px;line-height:24px;font=
+-weight:700;font-family:BlinkMacSystemFont, -apple-system, Segoe UI, Roboto=
+, Helvetica, Arial, sans-serif">Booking.com</div></div></div><div class=3D"=
+" style=3D"width:24px"><span style=3D"height:24px;width:24px;display:block;=
+line-height:0"><img style=3D"height:24px;width:24px;line-height:0" src=3D"h=
+ttps://r-xx.bstatic.com/static/img/transparent.gif" height=3D"24" width=3D"=
+24" alt=3D""/></span></div><div class=3D"" style=3D"display:block;text-alig=
+n:left;vertical-align:top;font-weight:normal"><div class=3D"links-black"><d=
+iv style=3D"width:100%;display:block"><div style=3D"width:100%;display:bloc=
+k"><div style=3D"width:100%;display:block"><div class=3D"" style=3D"display=
+:block;text-align:left;vertical-align:top;font-weight:normal"><div style=3D=
+"margin:0;color:inherit;font-size:14px;line-height:20px;font-weight:400;fon=
+t-family:BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Helvetica, Ar=
+ial, sans-serif">Oosterdokskade 163</div></div><div class=3D"" style=3D"wid=
+th:4px"><span style=3D"height:4px;width:4px;display:block;line-height:0"><i=
+mg style=3D"height:4px;width:4px;line-height:0" src=3D"https://r-xx.bstatic=
+.com/static/img/transparent.gif" height=3D"4" width=3D"4" alt=3D""/></span=
+></div><div class=3D"" style=3D"display:block;text-align:left;vertical-alig=
+n:top;font-weight:normal"><div style=3D"margin:0;color:inherit;font-size:14=
+px;line-height:20px;font-weight:400;font-family:BlinkMacSystemFont, -apple-=
+system, Segoe UI, Roboto, Helvetica, Arial, sans-serif">1011 DL Amsterdam</=
+div></div><div class=3D"" style=3D"width:4px"><span style=3D"height:4px;wid=
+th:4px;display:block;line-height:0"><img style=3D"height:4px;width:4px;line=
+-height:0" src=3D"https://r-xx.bstatic.com/static/img/transparent.gif" heig=
+ht=3D"4" width=3D"4" alt=3D""/></span></div><div class=3D"" style=3D"displa=
+y:block;text-align:left;vertical-align:top;font-weight:normal"><div style=
+=3D"margin:0;color:inherit;font-size:14px;line-height:20px;font-weight:400;=
+font-family:BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Helvetica,=
+ Arial, sans-serif">The Netherlands</div></div></div></div></div></div></di=
+v><div class=3D"" style=3D"width:24px"><span style=3D"height:24px;width:24p=
+x;display:block;line-height:0"><img style=3D"height:24px;width:24px;line-he=
+ight:0" src=3D"https://r-xx.bstatic.com/static/img/transparent.gif" height=
+=3D"24" width=3D"24" alt=3D""/></span></div><div class=3D"" style=3D"displa=
+y:block;text-align:left;vertical-align:top;font-weight:normal"><hr style=3D=
+"height:1px;background:#e7e7e7;border:0;margin:0"/></div><div class=3D"" st=
+yle=3D"width:24px"><span style=3D"height:24px;width:24px;display:block;line=
+-height:0"><img style=3D"height:24px;width:24px;line-height:0" src=3D"https=
+://r-xx.bstatic.com/static/img/transparent.gif" height=3D"24" width=3D"24" =
+alt=3D""/></span></div><div class=3D"" style=3D"display:block;text-align:le=
+ft;vertical-align:top;font-weight:normal"><div style=3D"width:100%;display:=
+block"><div style=3D"width:100%;display:block"><div style=3D"width:100%;dis=
+play:block"><div class=3D"" style=3D"display:block;text-align:left;vertical=
+-align:top;font-weight:normal"><a href=3D"https://t.spe.booking.com/f/a/DDD=
+dIuLazXi3BjR2EUxA4w~~/AAAAARA~/Lz3SOy5IBOIZuXQB-ChIQRx4t_UamHl0EmWIP0_vTu2B=
+GF6EZSLkkvuRBQ5inaFiAjkIcJ6CAEa8Kv2atnXZbqJfAckL8ZGXU6d7uP3vbyowXLyzlKrcq-1=
+J4d4aZwV6GuqY4ITxTLEGXHawKB22tEykU1C5BN79QVJgY_rTyfhTPQ12vZiFQNo2zJfesq-idw=
+PYcm-PeL-BnKf5PRB4LcCvP2oBeVW34i_XB5re_ZVXNTRJi2s1i3YZb12RCem8KcT2BLJkbK4VY=
+ULcMLaw6VZ8IzBdIqZvkSYDePXFLsjDMTAgzDTf4WPntk8tuIGpVwetddnFPLySK1Fr8-hePCHD=
+RePOfLJGXJVA55y2h_A3tx1EbD_hvhv8tW1dJ3bPYRQw68vFhcF-avBzwD-nRg~~" style=3D"=
+text-decoration:none;color:#1a1a1a;display:inline" target=3D"_blank" rel=3D=
+"noreferrer"><span style=3D"margin:0;color:inherit;font-size:14px;line-heig=
+ht:20px;font-weight:400;font-family:BlinkMacSystemFont, -apple-system, Sego=
+e UI, Roboto, Helvetica, Arial, sans-serif">Manage email subscriptions</spa=
+n></a></div><div class=3D"" style=3D"width:24px"><span style=3D"height:24px=
+;width:24px;display:block;line-height:0"><img style=3D"height:24px;width:24=
+px;line-height:0" src=3D"https://r-xx.bstatic.com/static/img/transparent.gi=
+f" height=3D"24" width=3D"24" alt=3D""/></span></div><div class=3D"" style=
+=3D"display:block;text-align:left;vertical-align:top;font-weight:normal"><a=
+ href=3D"https://t.spe.booking.com/f/a/IUnXoesAGdwIbirQIuPIkA~~/AAAAARA~/_P=
+Rui-Rt3ZeV4BM2lNXuTNch86due0QBKvzESTm3EK9E1DFo5oqnU2_R8hI6mHrF5k2IpgAeFvM81=
+MQ1xneco1UpnHpZSPr9qXoHf-j-wQQsxuvHzzosT_cowqysxUYxkowB6mBDN1sIZuDVLS9-pDmi=
+5dxRvtvKXnJTufCS6ZS4aTZKtIiKrhUZwxdK5xv7B3w1YNGe79-mTHERepr3ff3gLWz6OF6x2uL=
+-5_yW45CIvT4kMH0ip6XLwtWWYlivK7-CSMRaDV0aN_RT4rSBp4pRKet8ivn058tNiY80HbF1E5=
+9wnCIo2bAquQ199oewS_4hzLs6Yx8qqbO1r1SDXhTUJu5F9EVOjtyULWT4_SmPiY_Hz7QYFx_zt=
+a4Q85CJ-e9skEsH1-c46ifbgba7xUBsXfHu71TIQE8sD9iq59Q~" style=3D"text-decorati=
+on:none;color:#1a1a1a;display:inline" target=3D"_blank" rel=3D"noreferrer">=
+<span style=3D"margin:0;color:inherit;font-size:14px;line-height:20px;font-=
+weight:400;font-family:BlinkMacSystemFont, -apple-system, Segoe UI, Roboto,=
+ Helvetica, Arial, sans-serif">Unsubscribe from this email</span></a></div>=
+<div class=3D"" style=3D"width:24px"><span style=3D"height:24px;width:24px;=
+display:block;line-height:0"><img style=3D"height:24px;width:24px;line-heig=
+ht:0" src=3D"https://r-xx.bstatic.com/static/img/transparent.gif" height=3D=
+"24" width=3D"24" alt=3D""/></span></div><div class=3D"" style=3D"display:b=
+lock;text-align:left;vertical-align:top;font-weight:normal"><a href=3D"http=
+s://t.spe.booking.com/f/a/hVB4RUNC-JBSFYlxH3GRew~~/AAAAARA~/QVQGH1u2urZIpkg=
+-S_knxp5pXuqdyesurwYWQPYqFO9Fk0EGNX7mh3NqxOUYlf6kmCE6WQJj3AMnevxnBWcFISxjLO=
+B-uzdIodx5_I6-nnkbe9oh8geWJSnnTsa3rugt5EAdUgxcWPFZ8zM6jQPZzALWHd3XC2Caa3vFd=
+7sj9aKbBqx53nEqZD4wTvnnc5dhk-8eQGq5yrQxm0aHF0KG5_Jo15Kpz-uacSawLPXWwQOlRmxg=
+Huk0AaJl5D1Q9gozAR2zd444HijsQRTSegZtEKSu6-XbYjjlV3WqTc3l0tUfN0U-T8dm3HTMT8Y=
+SdEh3wYRhmmMcTKiRvLzXzyqeZHh28aEEUX-DquP8-9AbZiWE2viLByzPdGEZ9iD0k5ObRkcTL2=
+iGfgGrUuvLgY8GNA~~" style=3D"text-decoration:none;color:#1a1a1a;display:inl=
+ine" target=3D"_blank" rel=3D"noreferrer"><span style=3D"margin:0;color:inh=
+erit;font-size:14px;line-height:20px;font-weight:400;font-family:BlinkMacSy=
+stemFont, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif">Un=
+subscribe from all marketing emails</span></a></div><div class=3D"" style=
+=3D"width:24px"><span style=3D"height:24px;width:24px;display:block;line-he=
+ight:0"><img style=3D"height:24px;width:24px;line-height:0" src=3D"https://=
+r-xx.bstatic.com/static/img/transparent.gif" height=3D"24" width=3D"24" alt=
+=3D""/></span></div><div class=3D"" style=3D"display:block;text-align:left;=
+vertical-align:top;font-weight:normal"><a href=3D"https://t.spe.booking.com=
+/f/a/k6-Rcn2L9rm4XC7ywvc21Q~~/AAAAARA~/nFmKDdU3zzzbz-ALFt8-SgtaaMMK_aio6nf-=
+rqWLFY2thc32SV72Z5v599ZsRkBH5mMhZ68Fm9oR4jx8fx5rHYNYKvnL0ihgSKIjZKnw0g-aL9T=
+9Jw9GSbJ0UCZKYH4Xr2EimDPsbkmEDIeb2D83iDJepfjg2fFA6VD3-YoY_ZVSuDDo7RrQb6uwuL=
+FMkDQcyndYAtQPRrsDLUgRt-gh4Cjytngi_huFXG8nWXIg83hyTAA6o5I46Xsgo2iBxNuN8vSIu=
+q3IvV5zs4esoR4fIA~~" style=3D"text-decoration:none;color:#1a1a1a;display:in=
+line" target=3D"_blank" rel=3D"noreferrer"><span style=3D"margin:0;color:in=
+herit;font-size:14px;line-height:20px;font-weight:400;font-family:BlinkMacS=
+ystemFont, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif">C=
+ustomer support</span></a></div><div class=3D"" style=3D"width:24px"><span =
+style=3D"height:24px;width:24px;display:block;line-height:0"><img style=3D"=
+height:24px;width:24px;line-height:0" src=3D"https://r-xx.bstatic.com/stati=
+c/img/transparent.gif" height=3D"24" width=3D"24" alt=3D""/></span></div><d=
+iv class=3D"" style=3D"display:block;text-align:left;vertical-align:top;fon=
+t-weight:normal"><a href=3D"https://t.spe.booking.com/f/a/v4LFaRrp6Yb-WLbsY=
+YMM3g~~/AAAAARA~/d2ydvMoRoVtCVmiSPdNZydk05D6WockXj9oS79GQM4GXoS954iUfFUuzPC=
+ATVHCEqUf5yxXDW2fe5MyLUP5-8ydj1Q9zoDRj3275bkcf3cHaJGjEhuFlUO2m0DWMU5Ht6B-UK=
+imsXJa4gArRqw1YbIsaohfOwTA7b5vUGNO0NN4HqAoeHTwbXg_WzpIyfj1RRYD1zbAEqhCmJejh=
+LYZXFwlETy-3WWOHRTrbb6aDQ3LJVQv-iEPSCI-SoRXx56ccvsLuW1_FJLZT6rH-ncl17A~~" s=
+tyle=3D"text-decoration:none;color:#1a1a1a;display:inline" target=3D"_blank=
+" rel=3D"noreferrer"><span style=3D"margin:0;color:inherit;font-size:14px;l=
+ine-height:20px;font-weight:400;font-family:BlinkMacSystemFont, -apple-syst=
+em, Segoe UI, Roboto, Helvetica, Arial, sans-serif">Privacy policy</span></=
+a></div></div></div></div></div><div class=3D"" style=3D"width:24px"><span =
+style=3D"height:24px;width:24px;display:block;line-height:0"><img style=3D"=
+height:24px;width:24px;line-height:0" src=3D"https://r-xx.bstatic.com/stati=
+c/img/transparent.gif" height=3D"24" width=3D"24" alt=3D""/></span></div><d=
+iv class=3D"" style=3D"display:block;text-align:left;vertical-align:top;fon=
+t-weight:normal"><hr style=3D"height:1px;background:#e7e7e7;border:0;margin=
+:0"/></div><div class=3D"" style=3D"width:24px"><span style=3D"height:24px;=
+width:24px;display:block;line-height:0"><img style=3D"height:24px;width:24p=
+x;line-height:0" src=3D"https://r-xx.bstatic.com/static/img/transparent.gif=
+" height=3D"24" width=3D"24" alt=3D""/></span></div><div class=3D"" style=
+=3D"display:block;text-align:left;vertical-align:top;font-weight:normal"><d=
+iv style=3D"width:100%;display:block"><div style=3D"width:100%;display:bloc=
+k"><div style=3D"width:100%;display:block"><div class=3D"" style=3D"display=
+:block;text-align:left;vertical-align:top;font-weight:normal"><div style=3D=
+"margin:0;color:inherit;font-size:12px;line-height:18px;font-weight:400;fon=
+t-family:BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Helvetica, Ar=
+ial, sans-serif"><div style=3D"margin:0;color:inherit;font-size:12px;line-h=
+eight:18px;font-weight:400;font-family:BlinkMacSystemFont, -apple-system, S=
+egoe UI, Roboto, Helvetica, Arial, sans-serif"><span>Minimum 15% saving ava=
+ilable on new accommodation bookings at participating properties indicated =
+by the =E2=80=9CEarly 2025=E2=80=9D badge on the search results and room se=
+lection pages. Saving varies depending on the destination country, a full b=
+reakdown of discounts is detailed below: minimum 20% saving on properties i=
+n Asia and Oceania; minimum 15% saving elsewhere. Bookings must be made bef=
+ore 10:00 am CET on 01/04/25 for stays with check-in from 01/01/25 and chec=
+k-out on or before 01/04/25. Discount applies to the cost of room only (exc=
+luding any additional fees or taxes). If you make any changes to your booki=
+ng you may lose your discount and be liable for the full amount. Discount c=
+annot be used in conjunction with any other promotion except Genius discoun=
+ts. Room rates labelled =E2=80=9CPartner Offer=E2=80=9D are excluded from t=
+his promotion. This offer is provided by the participating property and sub=
+ject to availability.</span></div></div></div></div></div></div></div></div=
+></div></div></td></tr></tbody></table><div><!--[if mso | IE]>=0A</td></tr>=
+</tbody></table>=0A<![endif]--></div></td></tr></tbody></table></td></tr></=
+tbody></table></div>=0A        </body>=0A      </html>
+
