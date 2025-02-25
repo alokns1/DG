@@ -1,0 +1,235 @@
+Delivered-To: alokns1@gmail.com
+Received: by 2002:a05:6a21:594:b0:1ee:a636:2ea with SMTP id lw20csp75737pzb;
+        Mon, 24 Feb 2025 23:52:32 -0800 (PST)
+X-Google-Smtp-Source: AGHT+IEo2cRm4wiguTOV+/k4U/LEPi31Z/xvm0cqWfD6Tqy+pXzsLpT2J7jXyN5O44eT2ou0nKO6
+X-Received: by 2002:a05:620a:4552:b0:7c0:a46d:fa87 with SMTP id af79cd13be357-7c0cf8e624bmr2357667885a.27.1740469952422;
+        Mon, 24 Feb 2025 23:52:32 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1740469952; cv=none;
+        d=google.com; s=arc-20240605;
+        b=IZPmwj0ddaeJ+I7Z+lVEpVwyIojpQjc54dYfvKmOL2chcEXt0xZKnTaBlIPgzHU8tK
+         wyh1LMvTasvgwDf4nE256XKA9ah1b9x2L4IibxoFLgGJuWOzaNGPzrn6azNtISbFndjG
+         uODvOT8ywoGorqqup6KFiBSWRJKuZgD8SVmG948w+HgMLh+4NfGu32DH36YGpLuylMME
+         T1PvOSrha5tuuI17HdDToijwEue6Gxj4z3Z90pSPxupbyoRqvA2eLVF/DReylVvQsAr/
+         aSrMFS96Y9Tt6UoYHKrb8E+gpbd/ehWTXdiODBdf/aWHQhnF6YUI/4tKQ/sicMKqAeJQ
+         kYyw==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=to:list-unsubscribe-post:list-unsubscribe:subject:message-id
+         :mime-version:from:date:content-transfer-encoding:dkim-signature
+         :dkim-signature;
+        bh=W4LNx1Lyc/rLHz3vfOjYSu9ghpBatLGL1AU96EDU5TU=;
+        fh=Ji/RwdX+O/fe9XPULx9UANPReTbQNHrzpiODIkoy8fI=;
+        b=buFKv6YOzIkBvcsTAL6BXckwPOm788Qm14EPV/dQBwJmA+5QR8/4wUP/iRBB0kioMq
+         MLJiFDYc8UuBUv6Drg9jtzM8y3HsyuA4ReHT7VDoFzUm2RoqA/86pSUqcqsLaoL8LGxl
+         iAgaRbhx4qPqcG+eAkCmqk4sqwMbHeCYliGqywY4D47zqCjAYRaXyrM52DPueMhZz6wO
+         AIYqYfAxyUrrEzCg8GdO7on3gvbBQMLxrEuvigXo72UaUOfzyojj+2qME1HUB5TC6ywG
+         HHRL37YImGf81hwJyCN2oUaSwgoD1XOpIru4M/MWwvCTl5KBUDa2+vqecQ70035Qzahr
+         8CKw==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@mailer.jiomart.com header.s=s1 header.b=iyOho4Nu;
+       dkim=pass header.i=@sendgrid.info header.s=smtpapi header.b="cxZPu/rP";
+       spf=pass (google.com: domain of bounces+33818043-4a49-alokns1=gmail.com@em2847.mailer.jiomart.com designates 149.72.148.124 as permitted sender) smtp.mailfrom="bounces+33818043-4a49-alokns1=gmail.com@em2847.mailer.jiomart.com";
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=jiomart.com
+Return-Path: <bounces+33818043-4a49-alokns1=gmail.com@em2847.mailer.jiomart.com>
+Received: from o1182.ptr3875.mailer.jiomart.com (o1182.ptr3875.mailer.jiomart.com. [149.72.148.124])
+        by mx.google.com with ESMTPS id af79cd13be357-7c23c238ec0si118489385a.2.2025.02.24.23.52.31
+        for <alokns1@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
+        Mon, 24 Feb 2025 23:52:32 -0800 (PST)
+Received-SPF: pass (google.com: domain of bounces+33818043-4a49-alokns1=gmail.com@em2847.mailer.jiomart.com designates 149.72.148.124 as permitted sender) client-ip=149.72.148.124;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@mailer.jiomart.com header.s=s1 header.b=iyOho4Nu;
+       dkim=pass header.i=@sendgrid.info header.s=smtpapi header.b="cxZPu/rP";
+       spf=pass (google.com: domain of bounces+33818043-4a49-alokns1=gmail.com@em2847.mailer.jiomart.com designates 149.72.148.124 as permitted sender) smtp.mailfrom="bounces+33818043-4a49-alokns1=gmail.com@em2847.mailer.jiomart.com";
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=jiomart.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=mailer.jiomart.com;
+	h=content-transfer-encoding:content-type:from:mime-version:subject:
+	list-unsubscribe:list-unsubscribe-post:x-feedback-id:to:cc:content-type:from:subject:
+	to;
+	s=s1; bh=W4LNx1Lyc/rLHz3vfOjYSu9ghpBatLGL1AU96EDU5TU=;
+	b=iyOho4NuuM4GdMPCkJlVqStzLFKlWMjwYjY0+EfifvyKGZSOW4N61/pZS/+yA79Unyph
+	qz0udc8voS8L8pV6KwyAulX0RSg/sYCRvgpN5TKj8fgDxNWguu2vxIml84NZ0zXaTXqD3f
+	HaoKVaURjFtitibhXTMP/dVNSxQDt98yIrA7Gh/vMF/ei8mV51R1mXSJDrFDOaYtXsVxWj
+	x4aHWcA1l3yHUn7Krw+8tOmQzHxHpmnZVAvxb4TGTI2pmVNnXI6icsFH6rmklo+RzVEgBv
+	bgjoMPk1+INdg9IvepLWF/DWdHe1SDI5+FjRgPZELJquih/MK0D3/alW5EWM+x9A==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=sendgrid.info;
+	h=content-transfer-encoding:content-type:from:mime-version:subject:
+	list-unsubscribe:list-unsubscribe-post:x-feedback-id:to:cc:content-type:from:subject:
+	to;
+	s=smtpapi; bh=W4LNx1Lyc/rLHz3vfOjYSu9ghpBatLGL1AU96EDU5TU=;
+	b=cxZPu/rPPyJ8N2IvMZFjPvi+JyPCgcSF9P1DUwsMbKZiZAVDBduF4nRhRRgvigITBFFd
+	NBsjDw2l/nVxc+1yzqfZa5MQn5CR4OjbE8TuOajytujFYrmLubcL65EwaJDKDHRe+awK/9
+	BUcAZBig6isT8MolecGisbZDbnyN4kIwA=
+Received: by recvd-7ddb668d7b-s84kg with SMTP id recvd-7ddb668d7b-s84kg-1-67BD6793-13
+	2025-02-25 06:47:47.395248942 +0000 UTC m=+8846600.139690119
+Received: from MzM4MTgwNDM (unknown)
+	by geopod-ismtpd-14 (SG) with HTTP
+	id iiNxTAYmQ2aNWOtkN70ACw
+	Tue, 25 Feb 2025 06:47:47.291 +0000 (UTC)
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/html; charset=us-ascii
+Date: Tue, 25 Feb 2025 06:47:47 +0000 (UTC)
+From: JioMart <offers@mailer.jiomart.com>
+Mime-Version: 1.0
+Message-ID: <iiNxTAYmQ2aNWOtkN70ACw@geopod-ismtpd-14>
+Subject: Crazy Deals on Best-Selling Electronics
+List-Unsubscribe: 
+ =?us-ascii?Q?=3Chttps=3A=2F=2Fu33818043=2Ect=2Esendgrid=2Enet=2Flu=2Funsubscribe=3Foc=3Du001=2ElB9i?=
+ =?us-ascii?Q?z=5FGd-XShQDugvLSaJZYCN2Jb5rJXLrYaKoguNSH?=
+ =?us-ascii?Q?ls2ZdNc9Ya5reWgVaIEeM35y0xGNMpHcsQdExwv?=
+ =?us-ascii?Q?hram6xTXkhsgv0Hgo18b-hlY9Os49WIK637rsjW?=
+ =?us-ascii?Q?0LizUd7U6FocAS2gvwjxkuULDVR6rTz5X0TRayL?=
+ =?us-ascii?Q?vdMT5rQRP7HNdehcF8YrTcgiWqvUrXCZ94n8bW1?=
+ =?us-ascii?Q?SWjZSeCaE-avKtmb2gZ1Zg4nrSoxuIwzx5cC=5FS8?=
+ =?us-ascii?Q?6NVHpOYgj5bUB7FS7Vsb1l2taZ4YKCitk6xTd=5Fx?=
+ =?us-ascii?Q?NriC2CpGCN7t2GGxILAAfVx-vqpXmy4ETtFvoD5?=
+ =?us-ascii?Q?Ey8NVTokccfqAKLbPT6rYnZkAHRE6Wd5LzeaE4A?=
+ =?us-ascii?Q?bQoYIc5gBSr0f-pUdlOSmj6vrufisRImSZUMEis?=
+ =?us-ascii?Q?z2wXo2=5F6SrvY4PZ1OexTT12WqQ4sh6OXDp=5FPZyh?=
+ =?us-ascii?Q?eSXj6lnikH7AwMO4j0MofueKwwzZSZHJtJQh4ZC?=
+ =?us-ascii?Q?8Jq0VFUKib1Kipanc-1nkkqYWTQ9Bj9YtuIDzwt?=
+ =?us-ascii?Q?YHQm=5FamPkFV5zl5qdChRwvlFQaKv=5FRdDO9o8ixz?=
+ =?us-ascii?Q?yB8bFEnr9FzyRMrzW1SsxbKG5JhG0iWVHaT0xKz?=
+ =?us-ascii?Q?Iqxt1TCvixWEoip9rUmDA71bmIzOg7BmKfan1co?=
+ =?us-ascii?Q?P2QrxWyNTKdODrqm6nEcXXfg5bWqEq0bzVx6Ipw?=
+ =?us-ascii?Q?aQV7y3vo04POlu8ATkAYnYd6Aq7u8Fvxsx5Ww-N?=
+ =?us-ascii?Q?SBvAQPLH923s0Z9Fa-sNpI33ILQdDwzEaIVDtyr?=
+ =?us-ascii?Q?Y3NrwpX7-NIZAh=5F2pCZBEAX8MGyqGEJ3E-9saoO?=
+ =?us-ascii?Q?FNAv2xliRuByLeap=5FDn73ARs4F0=3E=2C=3Cmailto=3Aun?=
+ =?us-ascii?Q?subscribe=40em2847=2Emailer=2Ejiomart=2Ecom=3Fsub?=
+ =?us-ascii?Q?ject=3Dhttps=3A=2F=2Fu33818043=2Ect=2Esendgrid=2Enet=2F?=
+ =?us-ascii?Q?mt=2Fu=2Fu001=2E99zlpDlaJuChCco0RGYth7cYON8=5F9?=
+ =?us-ascii?Q?J4KfpZFRbhGv0E=2F4eb=2Fu001=2E58xywsWX=2Fu001=2Es?=
+ =?us-ascii?Q?KW6OTCej4N9sBgJibH35uCUlpX-2BOIKvu-2BKb?=
+ =?us-ascii?Q?dN7FPM2ycbWPUpYI9lPvwUDYX2Kno4c9DKoIMnO?=
+ =?us-ascii?Q?TvVYEXJxbHRoIGvVd9uDObD9tpvuTXp9klEDQH-?=
+ =?us-ascii?Q?2F6XfJcAHxmDxc2DYHaSi1gp4S4q0aD0k-2BXEh?=
+ =?us-ascii?Q?uITcjTP-2BFPBI-2B7-2BM-2FgFvoNm6CSTKy94?=
+ =?us-ascii?Q?Lx7Tlu54hcAR7y6QhbBPF0SQxYDtFr5bVMHQpAA?=
+ =?us-ascii?Q?h8eCSbqDkXrLdAdzjOWojRZLKBrvXFyYja8Tdil?=
+ =?us-ascii?Q?NZ2IO6fGLhvah08tF1Iwav7G1fM2LM1R-2BMvjS?=
+ =?us-ascii?Q?dePsqxRXhYPvejoELALi3hoL2mLdGjalcXfJsQ7?=
+ =?us-ascii?Q?c9vrtRAQ11b8UgABCwplygjWyprC5apGBFOErwe?=
+ =?us-ascii?Q?9sIX-2F2jnWycdkldMCM7z-2BP510NqQVrxMYjO?=
+ =?us-ascii?Q?ks8-2FkP0e79VgiQGvkUmjqMBGAzMkeYAnTJ046?=
+ =?us-ascii?Q?XT8TbdhWwpvF6MHmd9Z0yJE1p26v76BqvAlY-2B?=
+ =?us-ascii?Q?PKQzDChsu9QL9ksn485EplwEku5Xnp=2Fu001=2EebP?=
+ =?us-ascii?Q?e2lWX=3E?=
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+X-Feedback-ID: 33818043:SG
+X-SG-EID: 
+ =?us-ascii?Q?u001=2ERVIjMZMFhusjfMeeeKNMXTIxePOdcvrARYUwOp0pjV0OBoQrpFxs1zj5k?=
+ =?us-ascii?Q?ep+kw+IPWxCLVReVJi1utsg6CQj5vrFu6gAgVT+?=
+ =?us-ascii?Q?14f8osX1u5vq2YQzVepwxsXUYOhx=2FP=2FI5VKcP4k?=
+ =?us-ascii?Q?9P1ib5ZiBftZoIXN69T64Hb9o5VUlK4LBulKFnB?=
+ =?us-ascii?Q?LXiFiK+YUUsq59Lft8F+p=2F4qkfV6hJHzG1Vgg4B?=
+ =?us-ascii?Q?2ZXRWczwmRT4ehlS=2FJm04QMkwfsQ0p84zeGXTLH?= =?us-ascii?Q?2LTl?=
+X-SG-ID: 
+ =?us-ascii?Q?u001=2ESdBcvi+Evd=2FbQef8eZF3BpSpIryk4HVbb8CB1YKP+aV+ZF4P1kWZyhy0r?=
+ =?us-ascii?Q?nuikCQycmfHpQ5pEtAPaKdUNzq=2Fq9ZaHob7PCYC?=
+ =?us-ascii?Q?JLWNxhDipJ=2FRPRM4uVb204l2NFVKNDpT6lUXuPm?=
+ =?us-ascii?Q?NphIFRZOgJgp3MPAS4hLDT7byUo=2FPEtO0m8Spg2?=
+ =?us-ascii?Q?ly9ikRjqR7FLSS8UNNOwCRX3euvrrSRR8gMyDgZ?=
+ =?us-ascii?Q?u0vEh3cq2IOmy4NIOooSfpOPlibqZLx=2Fnn5GiD0?=
+ =?us-ascii?Q?k7MdzIMcWScNPYTLtNm5kOsLO3QBJXZltLZG2P7?=
+ =?us-ascii?Q?mLrDnfBs=3D?=
+To: alokns1@gmail.com
+X-Entity-ID: u001.IXE33JEaFQoyeZo6YlfcYQ==
+
+<!DOCTYPE html><html xmlns:v=3D"urn:schemas-microsoft-com:vml" xmlns:o=3D"u=
+rn:schemas-microsoft-com:office:office" lang=3D"en"><head><title></title><m=
+eta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8"><met=
+a name=3D"viewport" content=3D"width=3Ddevice-width,initial-scale=3D1"><!--=
+[if mso]><xml><o:OfficeDocumentSettings><o:PixelsPerInch>96</o:PixelsPerInc=
+h><o:AllowPNG/></o:OfficeDocumentSettings></xml><![endif]--><style>
+*{box-sizing:border-box}body{margin:0;padding:0}a[x-apple-data-detectors]{c=
+olor:inherit!important;text-decoration:inherit!important}#MessageViewBody a=
+{color:inherit;text-decoration:none}p{line-height:inherit}.desktop_hide,.de=
+sktop_hide table{mso-hide:all;display:none;max-height:0;overflow:hidden}.im=
+age_block img+div{display:none}sub,sup{font-size:75%;line-height:0} @media =
+(max-width:530px){.mobile_hide{display:none}.row-content{width:100%!importa=
+nt}.stack .column{width:100%;display:block}.mobile_hide{min-height:0;max-he=
+ight:0;max-width:0;overflow:hidden;font-size:0}.desktop_hide,.desktop_hide =
+table{display:table!important;max-height:none!important}}
+</style><!--[if mso ]><style>sup, sub { font-size: 100% !important; } sup {=
+ mso-text-raise:10% } sub { mso-text-raise:-10% }</style> <![endif]--></hea=
+d><body class=3D"body" style=3D"background-color:#fff;margin:0;padding:0;-w=
+ebkit-text-size-adjust:none;text-size-adjust:none">
+<div itemscope itemtype=3D"http://schema.org/Organization">
+
+</div>
+<div itemscope itemtype=3D"http://schema.org/DiscountOffer">
+<meta itemprop=3D"description" content=3D"Up to 80% Off" />
+
+
+
+</div>
+<span class=3D"preheader" style=3D"color:blue; display:none !important;heig=
+ht:0; opacity:0; visibility:hidden; width:0">DigiUtsav</span><table class=
+=3D"nl-container" width=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=
+=3D"0" role=3D"presentation" style=3D"mso-table-lspace:0;mso-table-rspace:0=
+;background-color:#fff"><tbody><tr><td><table class=3D"row row-1" align=3D"=
+center"=20
+width=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"pre=
+sentation" style=3D"mso-table-lspace:0;mso-table-rspace:0"><tbody><tr><td><=
+table class=3D"row-content stack" align=3D"center" border=3D"0" cellpadding=
+=3D"0" cellspacing=3D"0" role=3D"presentation" style=3D"mso-table-lspace:0;=
+mso-table-rspace:0;border-radius:0;color:#000;width:510px;margin:0 auto" wi=
+dth=3D"510"><tbody><tr><td class=3D"column column-1" width=3D"100%"=20
+style=3D"mso-table-lspace:0;mso-table-rspace:0;font-weight:400;text-align:l=
+eft;vertical-align:top"><table class=3D"image_block block-1" width=3D"100%"=
+ border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentation" sty=
+le=3D"mso-table-lspace:0;mso-table-rspace:0"><tr><td class=3D"pad" style=3D=
+"width:100%"><div class=3D"alignment" align=3D"center" style=3D"line-height=
+:10px"><div style=3D"max-width:510px"><a href=3D"https://u33818043.ct.sendg=
+rid.net/ls/click?upn=3Du001.K8awjGd-2BKarym0lTFGsaT2eU-2FCcySXeL9tsTqt8RLwo=
+VDTcpxFihFyQkrWFUwQPGtKUQvr9H901DYB2GvK7XaPGITh-2FSBH6-2BNwTUxPxZ3-2FJziUAq=
+VSyxs5IUt-2FcV9mAY297MJHC-2FF8BYnsqCr-2B2edAAtdmo4VWNtnzBTwnZAENPLihd-2FpIo=
+XvqMU0-2Bc7ZUKkzFbSCO-2FaeqH0PIVZPJTnNdZE3zygDoKByehnBB8y671GPGuR8OxW5U1hI-=
+2BGma-2BdmXHK7u5TquWxqv0a9-2BsYOcMkRyB07IVcFVm5xvN0Mo-2FZ6CpUuelBTERIzaeyCD=
+O-2FXpCdmyn3pXDeXY-2B-2BoYLMEbAH9w491RlxY-2Fs8pfD7OBVDpXvGt0bqL556uxZeQ1C-2=
+BBt1LrDoOFFV0u6tQpKsMIzXcwdVhdA3KQQkR8rAeErT663jLqDr2aDbHJ4qVJ-2FU8JDwJVpsV=
+zdTAipERZ5LtjT5O3Tc1QhusZWkr-2FbveMsqHwhJur05BQ4igXVnwFJbwxDnDBTdLZicN436CS=
+gC8civYCLoMsXDjJz3ZDG-2FtUlCiy-2B08rzAIDCKIxrgli4CQMs7RMV02MAjQK3g1XAzF0AsA=
+uyOE7Ha9ZWnvBLoqs-2BKLlahtbh-2FfxNxDB9972fvXHlxUqowpSQvhEZdh88HcQRHNdKg4-2B=
+bmBqCOikSjBcPUc-3DabyT_BN9z8aIw-2BZj-2FmFI-2Bt6ALlR1xgO5JgLFjzAEKVux6y3wwUg=
+4IbeUygSXQE3-2Bvu5D7LZg-2BHZ4yu0PVjDQ6KywhfDyiMUw4v-2B7NmJ6QPjWWUlRDbiET-2F=
+r8DCPrGdAIcpn9Ca4xr1V1Nw21eleWPJ97qU2K2FzFbfzBigzc-2BBTPazC6k8Xam0tS0WNDW4K=
+ujMfv1dwzL5RgZV2w9oIRJKpG403Fo9zstMkg3nKS4-2F1YvUt9LMHwCE8jUGyitmiGWPhKi9XP=
+3FmeLUFLaNhV5ranPw4gMKB-2FGENWdSk9UOMOU6hmKjc7R6CtnkVmY0RVSW6EkURnDAxfTtGPr=
+-2FDS-2BwUo3YfJDfGUcnMkon9ipTADrv4SiWbGWcHUF7Nv3O-2BKF4l6rV85ra72mWu9pvpMRO=
+O-2B3vFtnhHo4Ix7Tht8ZOlmuqJqT3aXs3IBEhlyHCQ5bpQ9o4LPb0mpBD4hSNLTUuvt3sdwNho=
+mj-2FT5qZnAHJ-2FwuA8w-3D" target=3D"_blank" style=3D"outline:none" tabindex=
+=3D"-1">
+<img src=3D"https://d1qzvqecfo5h8o.cloudfront.net/images/88R-W4Z-495Z/21st%=
+20feb%20-%20digiutsav%20emailer1_796X1125_V002.2_120kb%20%281%29.jpg" style=
+=3D"display:block;height:auto;border:0;width:100%" width=3D"510" alt title =
+height=3D"auto"></a></div></div></td></tr></table></td></tr></tbody></table=
+></td></tr></tbody></table></td></tr></tbody></table><!-- End --><p>If you&=
+#39;d like to unsubscribe and stop receiving these emails <a href=3D"https:=
+//u33818043.ct.sendgrid.net/wf/unsubscribe?upn=3Du001.YTPVcFFcxa95hDK-2FyHU=
+gJsX4UEDM7nTqpMC-2FV5ZgHIrhF-2FFQVOmKdxOYjdvJdzpNGSKrl6KHoekIcyrl-2FEVW4LMK=
+T2EpADLUDBUV1LnohsL6ZuvRCwbb0IRL7e5KrWdbtiQROTOJU5vbwwGa3wWGnON8aNpJnPOplmh=
+hhpAUxXWX3rGlAlqG0KNOq4gS10Iiz-2Flr3cwKNOg0mt2e3g44i57gzQSfal0DK9cGJrnkmfgZ=
+eqJvWvi2MyT-2B5QIzI94XcZMdBV54CdxD4EwVl9JS3ywcb4YDbVWCjRH7DsG5htauMLFZVH62d=
+UfFnr9vRelSE9Dmxptn27NAWpQ2AG4frEvw5CIO6jnkCAxSYFy2BUdDBpE0HR-2B-2B-2BXvITz=
+iBjNxq92J-2FkArHUBvpXtPrYiHIDY4SCPbhOQrfTWPph8pYuUvAC-2BxxF8TGPaJNYUHQIYWfe=
+Ft1LbXRxOVatPRXtztD0zxXH-2BwiD1R4VOfRahnpIK4oZi0-2Bxu6jdQR1f1vY-2Fpj7"> cli=
+ck here </a>.</p>
+<img src=3D"https://u33818043.ct.sendgrid.net/wf/open?upn=3Du001.YTPVcFFcxa=
+95hDK-2FyHUgJsX4UEDM7nTqpMC-2FV5ZgHIrhF-2FFQVOmKdxOYjdvJdzpNGSKrl6KHoekIcyr=
+l-2FEVW4LMKT2EpADLUDBUV1LnohsL6ZuvRCwbb0IRL7e5KrWdbtiQROTOJU5vbwwGa3wWGnON8=
+aNpJnPOplmhhhpAUxXWX3rGlAlqG0KNOq4gS10Iiz-2Flr3cwKNOg0mt2e3g44i57gzQSfal0DK=
+9cGJrnkmfgZeqJvWvi2MyT-2B5QIzI94XcZMdBV54CdxD4EwVl9JS3ywcb4YDbVWCjRH7DsG5ht=
+b7ssFXY4V9E-2BmD9JUi7SbxUj6Im6HjLd70Gv3KH36blJBkG5b8etqFbslfUYYFT9gERnY7r-2=
+FSwc2dtal8LAghVWZajj8Rz2QWcNHzk-2FZOQOPE7w-2B-2BtuNeY6pAd3clvVAc0R6sbWvh7IY=
+tM-2F62SKZo-2Bu-2FMWouP1U4fMbSeBDEd3CXDxXA7omjopYT7lPImddHA-3D" alt=3D"" wi=
+dth=3D"1" height=3D"1" border=3D"0" style=3D"height:1px !important;width:1p=
+x !important;border-width:0 !important;margin-top:0 !important;margin-botto=
+m:0 !important;margin-right:0 !important;margin-left:0 !important;padding-t=
+op:0 !important;padding-bottom:0 !important;padding-right:0 !important;padd=
+ing-left:0 !important;"/></body></html><img  alt=3D"" border=3D"0" height=
+=3D"1" width=3D"1" src=3D"https://in1.wizrocketmail.net/r?e=3DK2JqGR9nBW56b=
+mt%2BDSZjegQDBwJiaWR6KSQsPExOTwVma2Z8Y2xgcgtMcXQkPyE4PjU8FFFfXl8%2BPxILK2su=
+LkRVX0ArFD0%2FPjw7KFNEWFs5egQiMi03L05LE0MtKDkUPj5wcRABBgBnaWp6b29iFAAAAwFna=
+GB%2BdXZwPEhCWmsnMyQkI3hoaUVKQ18IPjctNi8%2BPxBN&c=3D766929088"></img>

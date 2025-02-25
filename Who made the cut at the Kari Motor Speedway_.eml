@@ -1,0 +1,479 @@
+Delivered-To: alokns1@gmail.com
+Received: by 2002:a05:6a21:594:b0:1ee:a636:2ea with SMTP id lw20csp164953pzb;
+        Tue, 25 Feb 2025 03:27:04 -0800 (PST)
+X-Google-Smtp-Source: AGHT+IGCxvLQaXFVqPiL6EVC7UrBz06QQqUptEums6aCdqDC6afmXa2x6eDzO+zVOkJdEqgzlFX/
+X-Received: by 2002:a17:902:e54f:b0:21f:68ae:56e3 with SMTP id d9443c01a7336-22307e6b74emr40471915ad.39.1740482824424;
+        Tue, 25 Feb 2025 03:27:04 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1740482824; cv=none;
+        d=google.com; s=arc-20240605;
+        b=DpBmVNtgmPdGXZahBjKLP0xupZePPJny5HztEeEMZhxIwg+dDV9trYTu0yTvAhtbz4
+         rBvvrO1nhXtBzpy4O8jMJdMHhXFRNKUPfUpqI+/opwJmBZWE8Eo61F2zcyKVVmM7k9pc
+         tW4EoJY1aFiBKwRt2bRfBY16qqu22gBb2NgYaJyOLAc82wucZrWTCkC30Iaw0gTVE/ot
+         Q45ED2lN/1App8oqEgTRP6xlnv9PCQYcFf6DvWT2q4CCVXLJJvFaf7/ErX2sPepF14wH
+         ubF4d+PCjJDNcrRQ8OM2eWUMwdAVT4ihWc1/djLV3JnpWlfd1orvo6ePjSTPJICKXwUE
+         DZVA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=feedback-id:message-id:reply-to:mime-version:list-unsubscribe-post
+         :list-unsubscribe:date:subject:to:from:dkim-signature:dkim-signature;
+        bh=tWambf+3drxUL/EatcNvAsTUQWuAVgMM7QCK3+cAw/U=;
+        fh=n+v1Mf/K/A52U2bSIUshyk55FUHqe3b2Z5fyAOGPSOs=;
+        b=QlBAkLNPaoqitm9AOil6Vx0q3lau+DIue8LPquf4zqc10xi31mdYUXC0t4dshoUj0g
+         YcqBDCQZaZ1U5IMN6vDbPGx0ps+dVsmMkQwvtz6EhkoAAmrOAMJDpva+q/YcWNBxkrpe
+         BcFa3mxBrdz3jlzh+EvO+0zRpf5DEQUThk82eKo5Qbo0fUav++YmALXhMble8+05bRAP
+         EiEiANPmT9OEFv/5tplakKH2zWyykb3AY+Qn/NCswPkPKXt7YDbilKQi9yyS1Yt1m2qw
+         1NTLeMhDVLAlbaL1s9gL+EXixoYpnUZsxbh8og7vm6t3nSpIR/8Oxp5weGnLouiOkJvc
+         FvsA==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@1901.royalenfield.com header.s=12dkim1 header.b=VNBoFt8v;
+       dkim=pass header.i=@s12.y.mc.salesforce.com header.s=fbldkim12 header.b=PJDqm7bA;
+       spf=pass (google.com: domain of bounce-229_html-10744596-179639-534007137-702@bounce.msg.royalenfield.com designates 128.245.176.157 as permitted sender) smtp.mailfrom=bounce-229_HTML-10744596-179639-534007137-702@bounce.msg.royalenfield.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=1901.royalenfield.com
+Return-Path: <bounce-229_HTML-10744596-179639-534007137-702@bounce.msg.royalenfield.com>
+Received: from mta6.msg.royalenfield.com (mta6.msg.royalenfield.com. [128.245.176.157])
+        by mx.google.com with ESMTPS id d9443c01a7336-2230a09939csi19948725ad.327.2025.02.25.03.27.03
+        for <ALOKNS1@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Tue, 25 Feb 2025 03:27:04 -0800 (PST)
+Received-SPF: pass (google.com: domain of bounce-229_html-10744596-179639-534007137-702@bounce.msg.royalenfield.com designates 128.245.176.157 as permitted sender) client-ip=128.245.176.157;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@1901.royalenfield.com header.s=12dkim1 header.b=VNBoFt8v;
+       dkim=pass header.i=@s12.y.mc.salesforce.com header.s=fbldkim12 header.b=PJDqm7bA;
+       spf=pass (google.com: domain of bounce-229_html-10744596-179639-534007137-702@bounce.msg.royalenfield.com designates 128.245.176.157 as permitted sender) smtp.mailfrom=bounce-229_HTML-10744596-179639-534007137-702@bounce.msg.royalenfield.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=1901.royalenfield.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; s=12dkim1; d=1901.royalenfield.com;
+ h=From:To:Subject:Date:List-Unsubscribe:List-Unsubscribe-Post:MIME-Version:
+ Reply-To:Message-ID:Content-Type; i=email@1901.royalenfield.com;
+ bh=tWambf+3drxUL/EatcNvAsTUQWuAVgMM7QCK3+cAw/U=;
+ b=VNBoFt8vvDdPmxrUpa8Y0uublCfrclvrhQZB+cRy4wxRUfZOIY0aYCcNDZj1573LyZq/30BmsxVy
+   ut7QOtX+S+oj1lWl/m0aMmzK+hnm0qJjXj9c5jbSNR8T+VS/A491PdjdgE0ylK8QW89vPTqTCbmJ
+   MbCXTGWKRvvsjJd+xTo5CueFFvNTgTSlZEvceisfVSdmVl8Howl64uKLJkLQA8lQ52HuzJ9pXp3T
+   VwcNEr7e1WeUiu54VRorP28vtOYdVcIJMJFkp1TUTzm3uGmxm0jbOoY3NcH67M2yTB356fkFEJJM
+   7x7ww8JYjMbfxCTiIERy4ZQ50dtii+vWbTFbCA==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; s=fbldkim12; d=s12.y.mc.salesforce.com;
+ h=From:To:Subject:Date:List-Unsubscribe:MIME-Version:Reply-To:Message-ID:
+ Content-Type;
+ bh=tWambf+3drxUL/EatcNvAsTUQWuAVgMM7QCK3+cAw/U=;
+ b=PJDqm7bA9TjozzGJbULZVLadFp6DeqBcdp1mjb9oNhOshjL1EiqiwwfpxrC3EcAdk2gBBBvFbWqu
+   VFrN/2AvFbDZhOYt0DvquPCrsU+Ap4+6VevuBP4ePKMcvuQPgdSH2VZoIzzjzwl5bu3G5mwKYQQz
+   akkMdEiBYEy25sOwQdYOPC29Hh65r4nINK62n7v8RDS4DPjSQm3h+58M/luXvTgzQJnXrRVVxL5I
+   T++BmOSn+Av93r1v1yyuf5r57kyZ3KHr8HCW094BVTCTUqPdPJ0uAgZPLkQvhTtpKIhpCrQ1yDWU
+   1rCIF3B4gx5ctQ4bUE9DZEzDhQtn/kIBUj1vTw==
+Received: by mta6.msg.royalenfield.com id hnmkgg2fmd4m for <ALOKNS1@GMAIL.COM>; Tue, 25 Feb 2025 11:10:55 +0000 (envelope-from <bounce-229_HTML-10744596-179639-534007137-702@bounce.msg.royalenfield.com>)
+From: "Royal Enfield" <email@1901.royalenfield.com>
+To: <ALOKNS1@GMAIL.COM>
+Subject: Who made the cut at the Kari Motor Speedway?
+Date: Tue, 25 Feb 2025 05:10:54 -0600
+List-Unsubscribe: <https://click.msg.royalenfield.com/subscription_center.aspx?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJtaWQiOiI1MzQwMDcxMzciLCJzIjoiMTA3NDQ1OTYiLCJsaWQiOiIyMjkiLCJqIjoiMTc5NjM5IiwiamIiOiI3MDIiLCJkIjoiMTIwMDIxIn0.o5bAW7uAf6YRxeCeVDFte7PvkYaqJtAc3jYZde7qYe0>, <mailto:leave-fd4e16727c0b5c392848-fe5b1570726000787c12-febc15777c620774-fe3111737164047a741777-ff66137077@leave.msg.royalenfield.com>
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+MIME-Version: 1.0
+Reply-To: "Royal Enfield" <reply-febc15777c620774-229_HTML-10744596-534007137-702@royalenfield.com>
+X-SFMC-Stack: 12
+x-job: 534007137_179639
+Message-ID: <b9b9512c-30d0-43a5-92ea-781f7364e1f6@iad4s12mta1052.xt.local>
+Feedback-ID: 534007137:179639:128.245.176.157:sfmktgcld
+Content-Type: multipart/alternative;
+	boundary="y4zvWkdGjgDL=_?:"
+
+This is a multi-part message in MIME format.
+
+--y4zvWkdGjgDL=_?:
+Content-Type: text/plain;
+	charset="utf-8"
+Content-Transfer-Encoding: 8bit
+
+To view this email as a web page, click 
+https://view.msg.royalenfield.com/?qs=b1e2c3926e1f0df9723a4d9c66d2e023103c9902455f7d1029e6139105ec208c0f17e74549df690666faa1b06f6b11032312bca87677aa6d773477d65e412f16f4b5534f84683651286d6258f64067d6 
+here. ROYAL ENFIELD
+https://click.msg.royalenfield.com/?qs=b5f0352b69e112dbc5b9dd4ffd33cf75dc7041f995f7c6fa6359a7280b8a1508b6e22a9060b7dccf6f73ce94bba5a173a53ec88b3056a23a 
+
+On the tracks of Kari Motor Speedway, the fast races against the fastest. Catch 60 amateur and pro riders face higher speeds and longer straights as they throttle through the final battle for the
+GT Cup Season '24 selection.
+
+
+Now streaming exclusively on Royal Enfield TV
+
+https://click.msg.royalenfield.com/?qs=b5f0352b69e112db45082f4d6849d1c4c7f8f9a6e586d1ac4a11c176e69fdeb7c59697447d0e99ce1325c874862e61aabd9c2e8693813cb0 
+
+https://click.msg.royalenfield.com/?qs=b5f0352b69e112dbc5b9dd4ffd33cf75dc7041f995f7c6fa6359a7280b8a1508b6e22a9060b7dccf6f73ce94bba5a173a53ec88b3056a23a 
+
+https://click.msg.royalenfield.com/?qs=b5f0352b69e112dbf958e69acb477c36d97bc3008f8e756fb2d6713d0897f4dc9cf4d0ecacfec5a5564cc467f612a6e45449335087f952e4 
+
+https://click.msg.royalenfield.com/?qs=b5f0352b69e112dba4bff47b07069029c2777e5d6c858f8e48a747c2d628aa81744305574d0d520a4024d617b9185507956c0a2ea36ff633 
+
+https://click.msg.royalenfield.com/?qs=b5f0352b69e112db9faf1226766d6f46c3d5a2ef855339278fd8e7f7a7415a12e6b12469c7d5017ebb576c8682becf46e9f25f175ce67f0a 
+
+https://click.msg.royalenfield.com/?qs=b5f0352b69e112db42bfecd21041aadbf339a0334860cd0ccf7d4f66f0ab07302c04e5657d718ae01ec75bd2ba84cec77ede4537591ca78a 
+
+mailto:support@royalenfield.com 
+support@royalenfield.com 
+
+tel:+91 18002100008 
+18002100008 
+
+You are receiving this message because you have been in contact with Royal Enfield or an affiliate. To no longer receive message from Royal Enfield, 
+https://click.msg.royalenfield.com/unsub_center.aspx?qs=31963134181416cf29b4b7992900e6e63eb44c863c6bf2db39862d037e418a63cd9976886b920b7206487c022d532b2be7610203ee4a6ca2fc0039eff0f9397df9cb5d1921a0976d 
+click here .
+
+
+
+--y4zvWkdGjgDL=_?:
+Content-Type: text/html;
+	charset="utf-8"
+Content-Transfer-Encoding: 8bit
+
+<center>To view this email as a web page, click <a href="https://view.msg.royalenfield.com/?qs=b1e2c3926e1f0df9723a4d9c66d2e023103c9902455f7d1029e6139105ec208c0f17e74549df690666faa1b06f6b11032312bca87677aa6d773477d65e412f16f4b5534f84683651286d6258f64067d6">here.</a></center>
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no,">
+    <meta http-equiv="X-UA-Compatible" content="IE=9, IE=8, IE=7, IE=EDGE" />
+    <meta name="format-detection" content="telephone=no">
+    <link href="https://fonts.googleapis.com/css?family=Hind:300,400,500,600,700&display=swap" rel="stylesheet">
+    <title>ROYAL ENFIELD</title>
+    <style type="text/css">
+      a{outline:0 !important;}
+      body {}
+      table td {border-collapse:collapse !important; mso-table-lspace:0px !important; mso-table-rspace:0px !important;}
+      @media all and (max-width: 480px) 
+      {
+      a { outline:0 !important;}
+      body,table,td,p,a,li,blockquote 
+      {
+      -webkit-text-size-adjust:none !important;
+      }
+      table
+      {
+      width: 100% !important;
+      }
+      .mailerColumnContainer{
+      display:block !important;
+      width:100% !important;
+      }
+      .responsive-image
+      {
+      height: auto !important;
+      max-width: 100% !important;
+      width: 100% !important;
+      }
+      .responsive-image1
+      {
+      height: auto !important;
+      max-width: 100% !important;
+      width: 100% !important;
+      }  
+      .hideline{ display:none !important;}
+      .padbottom{ padding-bottom:15px !important;}
+      .bodyfonthead{font-size:25px !important; line-height:29px !important;}
+      .bodyfontsub2{font-size:22px !important; line-height:27px !important;}
+      .bodyfont1{font-size:38px !important; line-height:42px !important;}
+      .bodyfont{font-size:17px !important; line-height:24px !important;}
+      .iconscape{ padding-left:10px !important; padding-right:10px !important;}
+      /* compusorly css for mobile */
+      .mobilescape{ padding-left:15px !important; padding-right:15px !important;}
+      .customRE{ width:200px  !important;}
+      .socialicons{width:230px !important;}
+      .socialicons1{width:100px !important;} 
+      .customphone{width:134px !important;}
+      .custommail{width:231px !important;}
+      .button1 {height: 40px !important;} 
+      .padleftright5{ padding-left:5px !important; padding-right:5px;} 
+      .playstore{ height:42px !important;}
+      .bottonnone1{ padding-bottom:0px !important;}
+      .custombutton1{ height: 40px !important;}
+      .footericon {height: 36px  !important; 
+      } 
+      .hiddenimg1{ display: none !important;}
+      .emailtb {
+      width: 340px !important;
+      margin: auto !important;
+      }
+      .customcenter{ text-align: center !important; padding-bottom: 10px !important;}
+      .customcenter1{  padding-bottom: 5px !important;}
+      .padtop5{ padding-top: 5px !important;}
+      }
+
+      .mob-image
+      {
+        width: 350px;
+      }
+      .mob-font
+      {
+        font-size: 21px;
+      }
+      .mob-font2
+      {
+        font-size: 18px;
+      }
+
+      @media all and (max-width: 430px) 
+      {
+      .mob-font
+      {
+        font-size: 18px;
+      }  
+      .mob-font2
+      {
+        font-size: 15px;
+      }
+       .mob-image
+      {
+        width: 200px
+      } 
+      .footerfont{font-size:13px !important; line-height:20px !important; padding-left:2px !important; padding-right:2px !important;}
+      .bodyfont{font-size:17px !important; line-height:24px !important; }
+      .iconfont{font-size:16px !important; line-height:24px !important; }
+      .footericon {height: 36px  !important; 
+      } 
+      .paddingbot20{ padding-bottom:20px !important;} 
+      .button1 {height: 40px !important;} 
+      .padleftright5{ padding-left:5px !important; padding-right:5px;} 
+      .playstore{ height:42px !important;}
+      .bottonnone1{ padding-bottom:0px !important;}
+      .socialicons{width:150px !important;}
+      .socialicons1{width:100px !important;} 
+      }
+      .responsive-image {height: auto !important;
+      max-width: 100% !important;
+      width: 100% !important;
+      }  
+    </style>
+  </head>
+  <body><style type="text/css">
+div.preheader 
+{ display: none !important; } 
+</style>
+<div class="preheader" style="font-size: 1px; display: none !important;">Tap. Stream. Find out.</div>
+    <img src="https://click.msg.royalenfield.com/open.aspx?ffcb10-febc15777c620774-fe601671726d06797314-fe3111737164047a741777-ff6216727c-fe5b1570726000787c12-ff66137077&d=120021&bmt=0" width="1" height="1" alt="">
+    <table width="600" border="0" align="center" cellpadding="0" cellspacing="0">
+      <tr>
+        <td align="center" valign="top" style="border-bottom:1px solid #5d5c5c; border-top:1px solid #5d5c5c; border-right:1px solid #5d5c5c; border-left:1px solid #5d5c5c;background: #000;" >
+          <table width="600" border="0" align="center" cellpadding="0" cellspacing="0">
+            <tr>
+              <td align="center" valign="top"  style=" " >
+                <table width="600" border="0" align="center" cellpadding="0" cellspacing="0">
+                  <tr>
+                    <td align="center" valign="top" class="mobilescape" style="  ">
+                      <table width="530" border="0" align="center" cellpadding="0" cellspacing="0">
+                        <tbody>
+                          <tr>
+                            <td align="center" valign="top" class="bodyfont" style=" font-family:Arial, Helvetica, sans-serif;  font-size:21px; line-height:26px; color:#000000; text-align:center; padding-bottom:20px; padding-top:20px;">
+                              <a href="https://click.msg.royalenfield.com/?qs=b5f0352b69e112dbc5b9dd4ffd33cf75dc7041f995f7c6fa6359a7280b8a1508b6e22a9060b7dccf6f73ce94bba5a173a53ec88b3056a23a" target="_blank"><img src="https://image.msg.royalenfield.com/lib/fe3111737164047a741777/m/1/69dd16da-77fb-4d2b-96ca-ef945a5c6675.png" class="responsive-image12" style=" color:#ffffff; display:block !important; margin:0px auto !important;width: 250px" border="0"></a>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </td>
+                  </tr>
+                 
+
+
+
+                  <tr>
+                    <td align="center" valign="top" class="mobilescape1" style="  ">
+                      <table width="600" border="0" align="center" cellpadding="0" cellspacing="0">
+                        <tbody>
+                          <tr>
+                            <td align="center" valign="top" class="bodyfont" style=" font-family:Arial, Helvetica, sans-serif;  font-size:21px; line-height:26px; color:#000000; text-align:center; padding-bottom:0px; padding-top:10px;">
+                              <a href="#" target="_blank"><img src="https://image.msg.royalenfield.com/lib/fe3111737164047a741777/m/1/6b1d7bc2-788c-4698-a945-cacb8083a05a.gif" class="responsive-image1" style=" color:#ffffff; display:block !important; margin:0px auto !important;width: 100%" border="0"></a>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </td>
+                  </tr>
+
+
+
+
+<tr>
+                    <td align="center" valign="top" class="mobilescape">
+                      <table width="480" border="0" align="center" cellpadding="0" cellspacing="0">
+                        <tbody>
+                          <tr>
+                            <td align="center" valign="top" class="bodyfont" style=" font-family:Arial, Helvetica, sans-serif;  font-size:21px; line-height:26px; color:#fff; text-align:center;padding-top: 30px;padding-bottom: 0px;padding-left: 10px ;padding-right:10px;">
+                              <div style="text-align:center;line-height:150%">
+                                <span style="font-family:Arial,Helvetica,sans-serif"><strong><span class="mob-font" style="line-height:1.4;font-weight: 400;font-size: 18px"><span style="color:#fff">On the tracks of Kari Motor Speedway, the fast races against the fastest. Catch 60 amateur and pro riders face higher speeds and longer straights as they throttle through the final battle for the
+GT Cup Season '24 selection.
+</span></span></strong></span>
+                              </div>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </td>
+                  </tr>
+
+
+
+
+
+
+
+<tr>
+                    <td align="center" valign="top" class="mobilescape" style="  ">
+                      <table width="530" border="0" align="center" cellpadding="0" cellspacing="0">
+                        <tbody><tr>
+                          <td align="center" valign="top" class="bodyfont" style=" font-family:Arial, Helvetica, sans-serif;  font-size:21px; line-height:26px; color:#000000; text-align:left; padding-bottom:15px; padding-top:40px;">
+                           <a href="#" target="_blank"><img src=" https://image.msg.royalenfield.com/lib/fe3111737164047a741777/m/1/d5d81fcb-43bc-4bcd-94fc-1174000442dd.png" class="responsive-image12" style=" color:#ffffff; display:block !important;width:250px;margin:0 auto !important" border="0"></a>
+                          </td>
+                        </tr>
+                      </tbody></table>
+                    </td>
+                  </tr>
+
+
+<tr>
+                    <td align="center" valign="top" class="mobilescape">
+                      <table width="530" border="0" align="center" cellpadding="0" cellspacing="0">
+                        <tbody>
+                          <tr>
+                            <td align="center" valign="top" class="bodyfont" style=" font-family:Arial, Helvetica, sans-serif;  font-size:18px; line-height:26px; color:#fff; text-align:center;padding-top: 5px;padding-bottom: 0px;padding-left: 10px ;padding-right:10px;">
+                              <div style="text-align:center;line-height:150%">
+                                <span style="font-family:Arial,Helvetica,sans-serif"><strong><span class="mob-font2" style="line-height:1.4;font-weight: 700;text-transform: uppercase;"><span style="color:#fff">Now streaming exclusively on Royal Enfield TV</span> 
+</span></span>
+                              </strong></span></div>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </td>
+                  </tr>
+
+<tr>
+                    <td align="center" valign="top" class="mobilescape" style="  ">
+                      <table width="530" border="0" align="center" cellpadding="0" cellspacing="0">
+                        <tbody><tr>
+                          <td align="center" valign="top" class="bodyfont" style=" font-family:Arial, Helvetica, sans-serif;  font-size:21px; line-height:26px; color:#000000; text-align:left; padding-bottom:40px; padding-top:30px;">
+                           <a href="https://click.msg.royalenfield.com/?qs=b5f0352b69e112db45082f4d6849d1c4c7f8f9a6e586d1ac4a11c176e69fdeb7c59697447d0e99ce1325c874862e61aabd9c2e8693813cb0" target="_blank"><img src="https://image.msg.royalenfield.com/lib/fe3111737164047a741777/m/1/360fd0ae-8b09-45d8-81fa-c26307e2b482.png" class="responsive-image12 mob-image" style=" color:#ffffff; display:block !important;margin:0 auto !important" border="0"></a>
+                          </td>
+                        </tr>
+                      </tbody></table>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td align="center" valign="top" class="mobilescape" style="  ">
+                      <table width="530" border="0" align="center" cellpadding="0" cellspacing="0">
+                        <tbody><tr>
+                          <td align="center" valign="top" class="bodyfont" style=" font-family:Arial, Helvetica, sans-serif;  font-size:21px; line-height:26px; color:#000000; text-align:left; padding-bottom:10px; padding-top:10px;">
+                           <a href="https://click.msg.royalenfield.com/?qs=b5f0352b69e112dbc5b9dd4ffd33cf75dc7041f995f7c6fa6359a7280b8a1508b6e22a9060b7dccf6f73ce94bba5a173a53ec88b3056a23a" target="_blank"><img src="https://image.msg.royalenfield.com/lib/fe3111737164047a741777/m/1/a4a70c58-d486-47fc-b4ec-5c44633c8eb6.png" class="responsive-image12" style=" color:#ffffff; display:block !important;width: 200px;margin:0 auto !important" border="0"></a>
+                          </td>
+                        </tr>
+                      </tbody></table>
+                    </td>
+                  </tr>
+
+
+
+
+
+            <tr>
+              <td align="center" valign="top"  style="background: #000">
+                <table width="600" border="0" align="center" cellpadding="0" cellspacing="0">
+                  <tr>
+                    <td align="center" valign="top"    class=" " style="  " >
+                      <table width="530" border="0" align="center" cellpadding="0" cellspacing="0">
+                       <tr>
+                          <td align="center" valign="top" style="">
+                            <table width="130" cellpadding="0" cellspacing="0" border="0" align="center" class="socialicons">
+                              <tbody><tr>
+<td align="center" valign="top"  style="background-color: #000;padding-top: 16px;padding-bottom: 16px">
+<table width="150" cellpadding="0" cellspacing="0" border="0" align="center" class="socialicons">
+<tr>
+<td align="center" valign="top" style=" "><a href="https://click.msg.royalenfield.com/?qs=b5f0352b69e112dbf958e69acb477c36d97bc3008f8e756fb2d6713d0897f4dc9cf4d0ecacfec5a5564cc467f612a6e45449335087f952e4" target="_blank" style="color:#ffffff; outline:none;"><img src="https://image.msg.royalenfield.com/lib/fe3111737164047a741777/m/1/09d84a7d-f3b9-4d75-9530-697ef08544a9.png" alt="Facebook" style=" margin:0 auto !important; display:block !important;height: 20px;" border="0"></a>
+</td>
+<td align="center" valign="top" style=" "><a href="https://click.msg.royalenfield.com/?qs=b5f0352b69e112dba4bff47b07069029c2777e5d6c858f8e48a747c2d628aa81744305574d0d520a4024d617b9185507956c0a2ea36ff633" target="_blank" style="color:#ffffff; outline:none;"><img src="https://image.msg.royalenfield.com/lib/fe3111737164047a741777/m/1/d5b54d93-ddf2-4294-855b-311d7b2de35f.png" alt="Twitter" style=" margin:0 auto !important; display:block !important;height: 20px;" border="0"></a>
+</td>
+<td align="center" valign="top" style=" "><a href="https://click.msg.royalenfield.com/?qs=b5f0352b69e112db9faf1226766d6f46c3d5a2ef855339278fd8e7f7a7415a12e6b12469c7d5017ebb576c8682becf46e9f25f175ce67f0a" target="_blank" style="color:#ffffff; outline:none;"><img src="https://image.msg.royalenfield.com/lib/fe3111737164047a741777/m/1/9eb7d336-1959-4b32-9d20-f1f5f9e5e3f5.png" alt="Instagram" style=" margin:0 auto !important; display:block !important;height: 20px;" border="0"></a>
+</td>
+
+<td align="center" valign="top"><a href="https://click.msg.royalenfield.com/?qs=b5f0352b69e112db42bfecd21041aadbf339a0334860cd0ccf7d4f66f0ab07302c04e5657d718ae01ec75bd2ba84cec77ede4537591ca78a" target="_blank" style="color:#ffffff; outline:none;"><img src="https://image.msg.royalenfield.com/lib/fe3111737164047a741777/m/1/214c8ec1-07ca-4ec2-aa73-d84eff6c795b.png" alt="Linkedin" style=" margin:0 auto !important; display:block !important;height: 20px;" border="0"></a>
+</td>
+                              </tr>
+                            </tbody></table>
+                          </td>
+                        </tr>
+
+                  
+  
+      <tr>
+        <td align="center" valign="top" class="" style="font-family: Arial, Helvetica, sans-serif; font-size:14px; line-height:20px; color:#000000; text-align:center; padding-bottom:0px;padding-top: 10px;padding-left: 15px !important;     padding-right: 15px !important;">
+          <table width="530" border="0" align="center" cellpadding="0" cellspacing="0" class="customwidth1">
+            <tbody>
+
+            
+
+
+              <tr>
+        <td align="center" valign="top" class="" style="font-family: Arial, Helvetica, sans-serif; font-size:14px; line-height:20px; color:#000000; text-align:center; padding-bottom:0px;padding-top: 0px">
+          <table width="375" border="0" align="center" cellpadding="0" cellspacing="0" class="customwidth1">
+            <tbody><tr>
+              <td align="center" valign="middle" class="mailerColumnContainer">
+                <table width="130" border="0" align="center" cellpadding="0" cellspacing="0" class="custommail2" style="width:130px !important">
+                  <tbody><tr>
+                    <td width="19" align="center" valign="middle" style=" margin:0 auto !important; display: block !important;">
+                      <img src="https://image.msg.royalenfield.com/lib/fe3111737164047a741777/m/1/6516f7bb-1197-47d7-8217-c3ef4e06a420.png" style="width:14px;margin:0 auto !important; display:block !important;" border="0">
+                    </td>
+                    <td align="center" valign="middle" style="font-family: Arial, Helvetica, sans-serif; font-size:12px; line-height:16px; color:#fff; text-align:left; padding-left:5px;">
+                      <a href="mailto:support@royalenfield.com" target="_self" style="color:#fff; text-decoration:none; outline:none;">support@royalenfield.com</a>
+                    </td>
+                  </tr>
+                </tbody></table>
+              </td>
+            </tr>
+          </tbody></table>
+        </td>
+      </tr>
+              
+              <tr>
+        <td align="center" valign="top" class="" style="font-family: Arial, Helvetica, sans-serif; font-size:14px; line-height:20px; color:#000000; text-align:center; padding-bottom:30px;padding-top: 10px">
+          <table width="375" border="0" align="center" cellpadding="0" cellspacing="0" class="customwidth1">
+            <tbody><tr>
+              <td align="center" valign="middle" class="mailerColumnContainer">
+                <table width="130" border="0" align="center" cellpadding="0" cellspacing="0" class="custommail2" style="width:130px !important">
+                  <tbody><tr>
+                    <td width="19" align="center" valign="middle" style=" margin:0 auto !important; display: block !important;">
+                      <img src="https://image.msg.royalenfield.com/lib/fe3111737164047a741777/m/1/62aa5dc7-6e86-4844-817f-ea986e2d6072.png" style="width:14px;margin:0 auto !important; display:block !important;" border="0">
+                    </td>
+                    <td align="center" valign="middle" style="font-family: Arial, Helvetica, sans-serif; font-size:12px; line-height:16px; color:#fff; text-align:left; padding-left:5px;">
+                      <a href="tel:+91 18002100008" target="_self" style="color:#fff; text-decoration:none; outline:none;">18002100008</a>
+                    </td>
+                  </tr>
+                </tbody></table>
+              </td>
+            </tr>
+          </tbody></table>
+        </td>
+      </tr>
+
+          </tbody></table>
+        </td>
+      </tr>
+
+
+
+
+                </table>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+                        <tr>
+                    <td align="center" valign="top"    class="mobilescape" style="  " >
+                      <table width="530" border="0" align="center" cellpadding="0" cellspacing="0">
+                     
+                         <tr>
+<td align="center" valign="top" style=" padding: 5px 5px 15px;font-family:Arial, Helvetica, sans-serif;  font-size:12px; line-height:16px; color:#fff; text-align:center; ">You are receiving this message because you have been in contact with Royal Enfield or an affiliate. To no longer receive message from Royal Enfield, <a href="https://click.msg.royalenfield.com/unsub_center.aspx?qs=31963134181416cf29b4b7992900e6e63eb44c863c6bf2db39862d037e418a63cd9976886b920b7206487c022d532b2be7610203ee4a6ca2fc0039eff0f9397df9cb5d1921a0976d" target="_blank" style="color:#fff; text-decoration:none; outline:none;">click here</a>.</td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+    </table>
+  </body>
+</html>
+
+--y4zvWkdGjgDL=_?:--
+
